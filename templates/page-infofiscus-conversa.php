@@ -95,6 +95,31 @@ $faqs = array(
 		</div>
 	</section>
 
+	<section class="icp-assurance" aria-label="Enterprise delivery strengths">
+		<div class="icp-shell icp-assurance-grid">
+			<article>
+				<span class="icp-icon"><svg><use href="#icp-i-chart"></use></svg></span>
+				<h2>Proven Methodology</h2>
+				<p>Outcome-driven delivery for measurable analytics impact.</p>
+			</article>
+			<article>
+				<span class="icp-icon"><svg><use href="#icp-i-shield"></use></svg></span>
+				<h2>Enterprise Security</h2>
+				<p>Built with governance, privacy, and compliance in mind.</p>
+			</article>
+			<article>
+				<span class="icp-icon"><svg><use href="#icp-i-layer"></use></svg></span>
+				<h2>Scalable Architecture</h2>
+				<p>Cloud-native, secure, and ready for future growth.</p>
+			</article>
+			<article>
+				<span class="icp-icon"><svg><use href="#icp-i-chat"></use></svg></span>
+				<h2>Customer Success</h2>
+				<p>Long-term partnerships that turn insight into adoption.</p>
+			</article>
+		</div>
+	</section>
+
 	<section class="icp-problem" aria-labelledby="icp-problem-title">
 		<div class="icp-shell">
 			<div class="icp-section-heading">
