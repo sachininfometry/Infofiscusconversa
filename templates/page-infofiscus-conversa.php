@@ -85,21 +85,6 @@ $personas = array(
 
 	<section class="icp-hero" aria-labelledby="icp-hero-title">
 		<div class="icp-shell">
-			<nav class="icp-hero-nav" aria-label="Product navigation">
-				<a class="icp-nav-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">Infometry<span>Analytics that answers</span></a>
-				<div class="icp-nav-links">
-					<a href="#icp-capabilities">Platform</a>
-					<a href="#icp-workflow">Solutions</a>
-					<a href="#icp-use-cases">Resources</a>
-					<a href="#icp-personas">Customers</a>
-					<a href="#icp-footer">Company</a>
-				</div>
-				<div class="icp-nav-actions">
-					<a class="icp-signin" href="<?php echo esc_url( $contact_url ); ?>">Sign in</a>
-					<a class="icp-demo" href="<?php echo esc_url( $demo_url ); ?>">Request Demo</a>
-				</div>
-			</nav>
-
 			<div class="icp-hero-grid">
 				<div class="icp-hero-copy">
 					<p class="icp-eyebrow">INFOFISCUS Conversa</p>

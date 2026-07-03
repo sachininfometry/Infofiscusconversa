@@ -15,6 +15,18 @@ body.infometry-conversa-product-page .mcb-section-page-title {
   overflow: hidden !important;
 }
 
+body.infometry-conversa-product-page #Footer,
+body.infometry-conversa-product-page #Footer_wrapper,
+body.infometry-conversa-product-page .mfn-footer,
+body.infometry-conversa-product-page footer#Footer {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
 .infometry-conversa-product,
 .infometry-conversa-product *,
 .infometry-conversa-product *::before,
@@ -52,6 +64,10 @@ body.infometry-conversa-product-page .mcb-section-page-title {
 .infometry-conversa-product svg {
   display: block;
   max-width: 100%;
+}
+
+.infometry-conversa-product img {
+  height: auto;
 }
 
 .icp-icon-sprite {
@@ -94,6 +110,10 @@ body.infometry-conversa-product-page .mcb-section-page-title {
 .icp-hero > .icp-shell {
   position: relative;
   z-index: 1;
+}
+
+.infometry-conversa-product .icp-hero-nav {
+  display: none !important;
 }
 
 .icp-hero-nav {
@@ -1016,8 +1036,9 @@ body.infometry-conversa-product-page .mcb-section-page-title {
   background: #6548ff;
 }
 
-.icp-product-footer-legacy,
-.icp-product-footer + .icp-product-footer {
+.infometry-conversa-product .icp-product-footer,
+.infometry-conversa-product .icp-product-footer-legacy,
+.infometry-conversa-product .icp-product-footer + .icp-product-footer {
   display: none;
 }
 
