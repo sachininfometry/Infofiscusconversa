@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Infometry Product Templates
  * Description: Adds isolated product page templates for Infometry product experiences.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Infometry
  * Text Domain: infometry-product-templates
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'INFOMETRY_PT_VERSION', '1.0.4' );
+define( 'INFOMETRY_PT_VERSION', '1.0.5' );
 define( 'INFOMETRY_PT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INFOMETRY_PT_URL', plugin_dir_url( __FILE__ ) );
 define( 'INFOMETRY_PT_CONVERSA_TEMPLATE', 'templates/page-infofiscus-conversa.php' );
@@ -108,6 +108,44 @@ function infometry_pt_body_classes( $classes ) {
 	return array_unique( $classes );
 }
 add_filter( 'body_class', 'infometry_pt_body_classes' );
+
+/**
+ * Print critical page-scoped overrides before cached/minified assets load.
+ */
+function infometry_pt_print_conversa_critical_css() {
+	if ( ! infometry_pt_should_use_conversa_template() ) {
+		return;
+	}
+	?>
+	<style id="infometry-conversa-critical-css">
+		body.infometry-conversa-product-page #Footer,
+		body.infometry-conversa-product-page #Footer_wrapper,
+		body.infometry-conversa-product-page .mfn-footer,
+		body.infometry-conversa-product-page footer#Footer,
+		body.infometry-conversa-product-page #mfn-rev-slider,
+		body.infometry-conversa-product-page .mfn-rev-slider,
+		body.infometry-conversa-product-page rs-module-wrap,
+		body.infometry-conversa-product-page .forcefullwidth_wrapper_tp_banner,
+		body.infometry-conversa-product-page .rev_slider_wrapper,
+		body.infometry-conversa-product-page [id^="rev_slider_"][id$="_wrapper"],
+		body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] {
+			display: none !important;
+			height: 0 !important;
+			min-height: 0 !important;
+			padding: 0 !important;
+			margin: 0 !important;
+			overflow: hidden !important;
+		}
+		body.infometry-conversa-product-page .infometry-conversa-product .icp-product-footer {
+			display: block !important;
+			height: auto !important;
+			min-height: 0 !important;
+			overflow: hidden;
+		}
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'infometry_pt_print_conversa_critical_css', 1 );
 
 /**
  * Enqueue isolated assets only when the Conversa product template is active.
