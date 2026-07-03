@@ -27,6 +27,21 @@ body.infometry-conversa-product-page footer#Footer {
   overflow: hidden !important;
 }
 
+body.infometry-conversa-product-page #mfn-rev-slider,
+body.infometry-conversa-product-page .mfn-rev-slider,
+body.infometry-conversa-product-page rs-module-wrap,
+body.infometry-conversa-product-page .forcefullwidth_wrapper_tp_banner,
+body.infometry-conversa-product-page .rev_slider_wrapper,
+body.infometry-conversa-product-page [id^="rev_slider_"][id$="_wrapper"],
+body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
 .infometry-conversa-product,
 .infometry-conversa-product *,
 .infometry-conversa-product *::before,
@@ -1036,7 +1051,6 @@ body.infometry-conversa-product-page footer#Footer {
   background: #6548ff;
 }
 
-.infometry-conversa-product .icp-product-footer,
 .infometry-conversa-product .icp-product-footer-legacy,
 .infometry-conversa-product .icp-product-footer + .icp-product-footer {
   display: none;
