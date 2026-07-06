@@ -103,7 +103,63 @@ $personas = array(
 					</div>
 				</div>
 
-				<div class="icp-dashboard" aria-label="INFOFISCUS Conversa analytics dashboard mockup">
+				<div class="icp-dashboard" aria-label="INFOFISCUS Conversa dashboard mockup">
+					<aside class="icp-dashboard-rail" aria-hidden="true">
+						<span class="icp-rail-menu"></span>
+						<span class="is-active"><svg><use href="#icp-i-analyst"></use></svg></span>
+						<span><svg><use href="#icp-i-spark"></use></svg></span>
+						<span><svg><use href="#icp-i-monitor"></use></svg></span>
+						<span><svg><use href="#icp-i-eye"></use></svg></span>
+						<span><svg><use href="#icp-i-gauge"></use></svg></span>
+					</aside>
+					<div class="icp-dashboard-stage">
+						<div class="icp-dashboard-head">
+							<img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/infofiscus-conversa-logo.png' ); ?>" alt="INFOFISCUS Conversa">
+							<span aria-hidden="true">...</span>
+						</div>
+						<div class="icp-chat-question">Why did revenue decline in the Western Region this quarter?</div>
+						<div class="icp-ai-orb">AI</div>
+						<div class="icp-answer-card">Revenue declined by 12% in the Western Region primarily due to stockouts in key products and lower repeat purchases.</div>
+						<div class="icp-dashboard-cards">
+							<article class="icp-revenue-card">
+								<h3>Revenue Change</h3>
+								<strong>-12%</strong>
+								<span>vs Last Quarter</span>
+								<div class="icp-revenue-line" aria-hidden="true">
+									<svg viewBox="0 0 180 78" focusable="false">
+										<path class="icp-chart-area" d="M8 62 L38 48 L68 54 L100 34 L132 42 L172 16 L172 72 L8 72 Z"></path>
+										<path class="icp-chart-line" d="M8 62 L38 48 L68 54 L100 34 L132 42 L172 16"></path>
+										<g class="icp-chart-points">
+											<circle cx="8" cy="62" r="3"></circle>
+											<circle cx="38" cy="48" r="3"></circle>
+											<circle cx="68" cy="54" r="3"></circle>
+											<circle cx="100" cy="34" r="3"></circle>
+											<circle cx="132" cy="42" r="3"></circle>
+											<circle cx="172" cy="16" r="3"></circle>
+										</g>
+									</svg>
+								</div>
+							</article>
+							<article class="icp-impact-card">
+								<h3>Impact by Category</h3>
+								<div class="icp-impact-donut" aria-hidden="true"></div>
+								<ul>
+									<li><span></span>Stockouts <strong>48%</strong></li>
+									<li><span></span>Repeat Purchases <strong>32%</strong></li>
+									<li><span></span>Pricing <strong>20%</strong></li>
+								</ul>
+							</article>
+							<article class="icp-recommend-card">
+								<h3>Top Recommendations</h3>
+								<ul>
+									<li>Improve inventory availability</li>
+									<li>Boost customer retention</li>
+									<li>Optimize promotions</li>
+								</ul>
+							</article>
+						</div>
+						<div class="icp-dashboard-input"><span>Ask another question...</span><button type="button" aria-label="Send sample prompt">▶</button></div>
+					</div>
 					<div class="icp-dashboard-top">
 						<strong>Conversa</strong>
 						<div><span>Sales Overview</span><span>Filters</span></div>
@@ -140,10 +196,10 @@ $personas = array(
 				<h2 id="icp-intro-title">INFOFISCUS Conversa</h2>
 				<p>A next-generation conversational analytics platform that lets your teams explore, analyze, and act on data using natural language. Built for the enterprise. Governed for trust. Designed for outcomes.</p>
 				<div class="icp-mini-stats">
-					<span><strong>3X</strong>Faster Insights</span>
-					<span><strong>70%+</strong>Self-Service Adoption</span>
-					<span><strong>2X</strong>Productivity Gain</span>
-					<span><strong>92%+</strong>Trusted Accuracy</span>
+					<span><strong data-icp-count="3" data-icp-suffix="X">3X</strong>Faster Insights</span>
+					<span><strong data-icp-count="70" data-icp-suffix="%+">70%+</strong>Self-Service Adoption</span>
+					<span><strong data-icp-count="2" data-icp-suffix="X">2X</strong>Productivity Gain</span>
+					<span><strong data-icp-count="92" data-icp-suffix="%+">92%+</strong>Trusted Accuracy</span>
 				</div>
 			</div>
 		</div>
@@ -219,7 +275,7 @@ $personas = array(
 				<?php foreach ( $outcomes as $outcome ) : ?>
 					<article class="icp-outcome-card">
 						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $outcome['icon'] ); ?>"></use></svg></span>
-						<strong><?php echo esc_html( $outcome['stat'] ); ?></strong>
+						<strong data-icp-count="<?php echo esc_attr( preg_replace( '/[^0-9.]/', '', $outcome['stat'] ) ); ?>" data-icp-suffix="<?php echo esc_attr( preg_replace( '/[0-9.]/', '', $outcome['stat'] ) ); ?>"><?php echo esc_html( $outcome['stat'] ); ?></strong>
 						<p><?php echo esc_html( $outcome['copy'] ); ?></p>
 					</article>
 				<?php endforeach; ?>
@@ -232,27 +288,63 @@ $personas = array(
 			<div class="icp-section-heading icp-center">
 				<h2 id="icp-use-cases-title">Industry Use Cases</h2>
 			</div>
-			<div class="icp-use-case-panel">
-				<div class="icp-tabs" aria-label="Industry tabs"><span class="is-active">Finance</span><span>Sales</span><span>Operations</span><span>Marketing</span><span>HR</span></div>
-				<div class="icp-finance-layout">
+			<div class="icp-use-case-panel" data-icp-use-cases>
+				<div class="icp-tabs" aria-label="Industry tabs">
+					<button class="is-active" type="button" data-icp-use-tab="finance">Finance</button>
+					<button type="button" data-icp-use-tab="sales">Sales</button>
+					<button type="button" data-icp-use-tab="operations">Operations</button>
+					<button type="button" data-icp-use-tab="marketing">Marketing</button>
+					<button type="button" data-icp-use-tab="hr">HR</button>
+				</div>
+				<div class="icp-use-panel is-active" data-icp-use-panel="finance">
 					<div class="icp-finance-copy">
 						<span class="icp-use-icon"><svg><use href="#icp-i-bank"></use></svg></span>
 						<h3>Finance</h3>
 						<p>Monitor performance, analyze variance, and forecast with confidence.</p>
-						<ul>
-							<li>P&L and balance sheet insights</li>
-							<li>Cash flow and working capital analysis</li>
-							<li>Budget vs actuals and forecasting</li>
-						</ul>
+						<ul><li>P&L and balance sheet insights</li><li>Cash flow and working capital analysis</li><li>Budget vs actuals and forecasting</li></ul>
 					</div>
-					<div class="icp-finance-chart">
-						<h4>Net Profit Trend</h4>
-						<div class="icp-chart-card-line"></div>
+					<div class="icp-finance-chart"><h4>Net Profit Trend</h4><div class="icp-chart-card-line" data-chart="finance"></div></div>
+					<div class="icp-finance-kpis"><article><span>Gross Margin</span><strong>31.6%</strong><small>Up 4.2% vs Prior Period</small></article><article><span>EBITDA</span><strong>$34.2M</strong><small>Up 12.7% vs Prior Period</small></article></div>
+				</div>
+				<div class="icp-use-panel" data-icp-use-panel="sales">
+					<div class="icp-finance-copy">
+						<span class="icp-use-icon"><svg><use href="#icp-i-chart"></use></svg></span>
+						<h3>Sales</h3>
+						<p>Track pipeline, conversion quality, and regional performance in real time.</p>
+						<ul><li>Pipeline health and win-rate trends</li><li>Revenue by region and channel</li><li>Account risk and next-best actions</li></ul>
 					</div>
-					<div class="icp-finance-kpis">
-						<article><span>Gross Margin</span><strong>31.6%</strong><small>↑ 4.2% vs Prior Period</small></article>
-						<article><span>EBITDA</span><strong>$34.2M</strong><small>↑ 12.7% vs Prior Period</small></article>
+					<div class="icp-finance-chart"><h4>Pipeline Conversion</h4><div class="icp-chart-card-line" data-chart="sales"></div></div>
+					<div class="icp-finance-kpis"><article><span>Win Rate</span><strong>42.8%</strong><small>Up 8.4% vs Prior Period</small></article><article><span>Pipeline</span><strong>$18.7M</strong><small>Up 15.1% vs Prior Period</small></article></div>
+				</div>
+				<div class="icp-use-panel" data-icp-use-panel="operations">
+					<div class="icp-finance-copy">
+						<span class="icp-use-icon"><svg><use href="#icp-i-nodes"></use></svg></span>
+						<h3>Operations</h3>
+						<p>Spot bottlenecks, forecast capacity, and improve delivery performance.</p>
+						<ul><li>Inventory and fulfillment signals</li><li>Capacity and utilization analysis</li><li>Exception monitoring and alerts</li></ul>
 					</div>
+					<div class="icp-finance-chart"><h4>Fulfillment Efficiency</h4><div class="icp-chart-card-line" data-chart="operations"></div></div>
+					<div class="icp-finance-kpis"><article><span>Cycle Time</span><strong>18%</strong><small>Improvement this quarter</small></article><article><span>On-Time SLA</span><strong>96.4%</strong><small>Up 5.8% vs Prior Period</small></article></div>
+				</div>
+				<div class="icp-use-panel" data-icp-use-panel="marketing">
+					<div class="icp-finance-copy">
+						<span class="icp-use-icon"><svg><use href="#icp-i-spark"></use></svg></span>
+						<h3>Marketing</h3>
+						<p>Understand campaign ROI, audience engagement, and funnel movement.</p>
+						<ul><li>Campaign spend and return insights</li><li>Lead scoring and conversion paths</li><li>Audience segments and channel mix</li></ul>
+					</div>
+					<div class="icp-finance-chart"><h4>Campaign ROI</h4><div class="icp-chart-card-line" data-chart="marketing"></div></div>
+					<div class="icp-finance-kpis"><article><span>MQL Growth</span><strong>28%</strong><small>Up 9.6% vs Prior Period</small></article><article><span>ROAS</span><strong>4.3X</strong><small>Up 13.2% vs Prior Period</small></article></div>
+				</div>
+				<div class="icp-use-panel" data-icp-use-panel="hr">
+					<div class="icp-finance-copy">
+						<span class="icp-use-icon"><svg><use href="#icp-i-users"></use></svg></span>
+						<h3>HR</h3>
+						<p>Analyze workforce trends, hiring velocity, and retention drivers.</p>
+						<ul><li>Hiring funnel and time-to-fill</li><li>Attrition and engagement signals</li><li>Workforce planning and skills gaps</li></ul>
+					</div>
+					<div class="icp-finance-chart"><h4>Hiring Velocity</h4><div class="icp-chart-card-line" data-chart="hr"></div></div>
+					<div class="icp-finance-kpis"><article><span>Time to Fill</span><strong>22%</strong><small>Faster than prior period</small></article><article><span>Retention</span><strong>91.8%</strong><small>Up 3.4% vs Prior Period</small></article></div>
 				</div>
 			</div>
 		</div>
