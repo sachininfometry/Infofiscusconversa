@@ -173,14 +173,23 @@ $personas = array(
 				<h2 id="icp-capabilities-title">Platform Capabilities</h2>
 				<p>Everything you need to turn questions into business outcomes.</p>
 			</div>
-			<div class="icp-card-grid icp-capability-grid">
-				<?php foreach ( $capabilities as $capability ) : ?>
-					<article class="icp-feature-card">
-						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $capability['icon'] ); ?>"></use></svg></span>
-						<h3><?php echo esc_html( $capability['title'] ); ?></h3>
-						<p><?php echo esc_html( $capability['copy'] ); ?></p>
-					</article>
-				<?php endforeach; ?>
+			<div class="icp-capability-carousel" aria-label="Platform capabilities carousel">
+				<div class="icp-card-grid icp-capability-grid">
+					<?php foreach ( $capabilities as $capability ) : ?>
+						<article class="icp-feature-card">
+							<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $capability['icon'] ); ?>"></use></svg></span>
+							<h3><?php echo esc_html( $capability['title'] ); ?></h3>
+							<p><?php echo esc_html( $capability['copy'] ); ?></p>
+						</article>
+					<?php endforeach; ?>
+					<?php foreach ( $capabilities as $capability ) : ?>
+						<article class="icp-feature-card" aria-hidden="true">
+							<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $capability['icon'] ); ?>"></use></svg></span>
+							<h3><?php echo esc_html( $capability['title'] ); ?></h3>
+							<p><?php echo esc_html( $capability['copy'] ); ?></p>
+						</article>
+					<?php endforeach; ?>
+				</div>
 			</div>
 		</div>
 	</section>

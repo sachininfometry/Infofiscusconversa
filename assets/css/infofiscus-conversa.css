@@ -707,11 +707,35 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 }
 
 .icp-capability-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: icpCapabilityLoop 34s linear infinite;
+  will-change: transform;
+}
+
+.icp-capabilities .icp-shell {
+  width: min(100% - 56px, 1480px);
+}
+
+.icp-capability-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 0 18px;
+  margin-inline: calc((100% - min(100% - 56px, 1480px)) / -2);
+  mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+}
+
+.icp-capability-carousel:hover .icp-capability-grid {
+  animation-play-state: paused;
+}
+
+@keyframes icpCapabilityLoop {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 9px)); }
 }
 
 .icp-soft-card,
-.icp-feature-card,
 .icp-outcome-card,
 .icp-persona-card {
   min-width: 0;
@@ -720,6 +744,80 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 10px 28px rgba(16, 24, 40, .04);
+}
+
+.icp-feature-card {
+  position: relative;
+  flex: 0 0 clamp(270px, 22vw, 310px);
+  min-height: 300px;
+  padding: 30px 24px 26px;
+  border: 1px solid rgba(24, 129, 199, .22);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
+    linear-gradient(135deg, rgba(235, 248, 255, .95), rgba(255, 255, 255, 1));
+  box-shadow: 0 16px 34px rgba(14, 45, 82, .08);
+  overflow: hidden;
+}
+
+.icp-feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #0b5b8f, #24c3f4);
+}
+
+.icp-feature-card:nth-child(8n+1),
+.icp-feature-card:nth-child(8n+6) {
+  border-color: rgba(13, 92, 142, .22);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
+    linear-gradient(135deg, #eef9ff 0%, #ffffff 74%);
+}
+
+.icp-feature-card:nth-child(8n+1)::before,
+.icp-feature-card:nth-child(8n+6)::before {
+  background: linear-gradient(90deg, #0c517d, #28c8f4);
+}
+
+.icp-feature-card:nth-child(8n+2),
+.icp-feature-card:nth-child(8n+4) {
+  border-color: rgba(32, 174, 217, .28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .98)),
+    linear-gradient(135deg, #eafaff 0%, #ffffff 72%);
+}
+
+.icp-feature-card:nth-child(8n+2)::before,
+.icp-feature-card:nth-child(8n+4)::before {
+  background: linear-gradient(90deg, #1cb1df, #73d8ee);
+}
+
+.icp-feature-card:nth-child(8n+3),
+.icp-feature-card:nth-child(8n+7) {
+  border-color: rgba(27, 103, 156, .26);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
+    linear-gradient(135deg, #f0f9ff 0%, #ffffff 75%);
+}
+
+.icp-feature-card:nth-child(8n+3)::before,
+.icp-feature-card:nth-child(8n+7)::before {
+  background: linear-gradient(90deg, #1d679d, #75c9e8);
+}
+
+.icp-feature-card:nth-child(8n+5),
+.icp-feature-card:nth-child(8n+8) {
+  border-color: rgba(255, 97, 70, .24);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
+    linear-gradient(135deg, #fff3ef 0%, #ffffff 76%);
+}
+
+.icp-feature-card:nth-child(8n+5)::before,
+.icp-feature-card:nth-child(8n+8)::before {
+  background: linear-gradient(90deg, #ff6247, #ff9475);
 }
 
 .icp-icon,
@@ -737,17 +835,36 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 }
 
 .icp-soft-card:nth-child(2n) .icp-icon,
-.icp-feature-card:nth-child(3n) .icp-icon,
 .icp-persona-card:nth-child(2n) .icp-icon {
   color: #0d8fdf;
   background: #e9f5ff;
 }
 
 .icp-soft-card:nth-child(4n) .icp-icon,
-.icp-feature-card:nth-child(4n) .icp-icon,
 .icp-outcome-card:nth-child(4n) .icp-icon {
   color: #139b87;
   background: #e9fbf7;
+}
+
+.icp-feature-card .icp-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 22px;
+  border: 1px solid rgba(14, 76, 128, .08);
+  border-radius: 999px;
+  color: #168dcc;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(8, 38, 78, .12);
+}
+
+.icp-feature-card:nth-child(8n+5) .icp-icon,
+.icp-feature-card:nth-child(8n+8) .icp-icon {
+  color: #ff563f;
+}
+
+.icp-feature-card:nth-child(8n+2) .icp-icon,
+.icp-feature-card:nth-child(8n+4) .icp-icon {
+  color: #23b7df;
 }
 
 .icp-soft-card h3,
@@ -759,12 +876,37 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   font-weight: 800;
 }
 
+.icp-feature-card h3 {
+  max-width: 230px;
+  margin: 0 auto 14px;
+  color: #071331;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center;
+}
+
 .icp-soft-card p,
 .icp-feature-card p,
 .icp-persona-card p {
   margin: 0;
   color: #475467;
   font-size: 13px;
+}
+
+.icp-feature-card p {
+  max-width: 250px;
+  margin-inline: auto;
+  color: #2f3f5d;
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icp-capability-grid {
+    animation: none;
+    transform: none;
+  }
 }
 
 .icp-workflow {
@@ -1332,6 +1474,21 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
   .icp-hero-icons {
     gap: 12px;
+  }
+
+  .icp-capabilities .icp-shell {
+    width: 100%;
+  }
+
+  .icp-capability-carousel {
+    margin-inline: 0;
+    padding-inline: 12px;
+    mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+
+  .icp-feature-card {
+    flex-basis: min(82vw, 310px);
+    min-height: 280px;
   }
 
   .icp-hero-proof,
