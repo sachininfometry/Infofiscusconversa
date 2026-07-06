@@ -93,7 +93,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 }
 
 .icp-shell {
-  width: min(100% - 72px, 1180px);
+  width: min(100% - 64px, 1400px);
   margin-inline: auto;
 }
 
@@ -205,10 +205,10 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(300px, .74fr) minmax(540px, 1.26fr);
-  gap: 70px;
+  grid-template-columns: minmax(520px, .82fr) minmax(660px, 1.18fr);
+  gap: 72px;
   align-items: center;
-  padding: 54px 0 118px;
+  padding: 126px 0 118px;
 }
 
 .icp-hero-copy,
@@ -240,7 +240,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 }
 
 .icp-hero h1 {
-  max-width: 560px;
+  max-width: 640px;
   color: #fff;
   font-size: clamp(48px, 4.7vw, 66px);
 }
@@ -1176,7 +1176,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   font-size: 13px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .icp-hero-grid,
   .icp-intro-grid,
   .icp-finance-layout,
@@ -1208,7 +1208,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   .icp-hero-grid {
     grid-template-columns: 1fr;
     gap: 34px;
-    padding: 38px 0 76px;
+    padding: 118px 0 76px;
   }
 
   .icp-hero h1 {

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Infometry Product Templates
  * Description: Adds isolated product page templates for Infometry product experiences.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: Infometry
  * Text Domain: infometry-product-templates
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'INFOMETRY_PT_VERSION', '1.0.5' );
+define( 'INFOMETRY_PT_VERSION', '1.0.6' );
 define( 'INFOMETRY_PT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INFOMETRY_PT_URL', plugin_dir_url( __FILE__ ) );
 define( 'INFOMETRY_PT_CONVERSA_TEMPLATE', 'templates/page-infofiscus-conversa.php' );
@@ -141,6 +141,31 @@ function infometry_pt_print_conversa_critical_css() {
 			height: auto !important;
 			min-height: 0 !important;
 			overflow: hidden;
+		}
+		body.infometry-conversa-product-page .infometry-conversa-product .icp-shell {
+			width: min(100% - 64px, 1400px);
+		}
+		body.infometry-conversa-product-page .infometry-conversa-product .icp-hero-grid {
+			grid-template-columns: minmax(520px, .82fr) minmax(660px, 1.18fr);
+			gap: 72px;
+			padding-top: 126px;
+		}
+		body.infometry-conversa-product-page .infometry-conversa-product .icp-hero h1 {
+			max-width: 640px;
+		}
+		@media (max-width: 1280px) {
+			body.infometry-conversa-product-page .infometry-conversa-product .icp-hero-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+		@media (max-width: 860px) {
+			body.infometry-conversa-product-page .infometry-conversa-product .icp-shell {
+				width: min(100% - 32px, 1180px);
+			}
+			body.infometry-conversa-product-page .infometry-conversa-product .icp-hero-grid {
+				gap: 34px;
+				padding-top: 118px;
+			}
 		}
 	</style>
 	<?php
