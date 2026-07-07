@@ -1107,12 +1107,10 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   flex: 0 0 clamp(270px, 22vw, 310px);
   min-height: 300px;
   padding: 30px 24px 26px;
-  border: 1px solid rgba(24, 129, 199, .22);
+  border: 1px solid rgba(24, 129, 199, .28);
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
-    linear-gradient(135deg, rgba(235, 248, 255, .95), rgba(255, 255, 255, 1));
-  box-shadow: 0 16px 34px rgba(14, 45, 82, .08);
+  background: linear-gradient(135deg, #e4f6ff 0%, #ffffff 52%, #eef8ff 100%);
+  box-shadow: 0 18px 40px rgba(14, 45, 82, .10);
   overflow: hidden;
 }
 
@@ -1126,10 +1124,8 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-feature-card:nth-child(8n+1),
 .icp-feature-card:nth-child(8n+6) {
-  border-color: rgba(13, 92, 142, .22);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
-    linear-gradient(135deg, #eef9ff 0%, #ffffff 74%);
+  border-color: rgba(13, 92, 142, .28);
+  background: linear-gradient(135deg, #dff4ff 0%, #ffffff 50%, #eefaff 100%);
 }
 
 .icp-feature-card:nth-child(8n+1)::before,
@@ -1139,10 +1135,8 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-feature-card:nth-child(8n+2),
 .icp-feature-card:nth-child(8n+4) {
-  border-color: rgba(32, 174, 217, .28);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .98)),
-    linear-gradient(135deg, #eafaff 0%, #ffffff 72%);
+  border-color: rgba(32, 174, 217, .34);
+  background: linear-gradient(135deg, #defaff 0%, #ffffff 50%, #edf2ff 100%);
 }
 
 .icp-feature-card:nth-child(8n+2)::before,
@@ -1152,10 +1146,8 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-feature-card:nth-child(8n+3),
 .icp-feature-card:nth-child(8n+7) {
-  border-color: rgba(27, 103, 156, .26);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
-    linear-gradient(135deg, #f0f9ff 0%, #ffffff 75%);
+  border-color: rgba(27, 103, 156, .32);
+  background: linear-gradient(135deg, #e9f5ff 0%, #ffffff 50%, #f2f8ff 100%);
 }
 
 .icp-feature-card:nth-child(8n+3)::before,
@@ -1165,10 +1157,8 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-feature-card:nth-child(8n+5),
 .icp-feature-card:nth-child(8n+8) {
-  border-color: rgba(255, 97, 70, .24);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 255, 255, .98)),
-    linear-gradient(135deg, #fff3ef 0%, #ffffff 76%);
+  border-color: rgba(255, 97, 70, .32);
+  background: linear-gradient(135deg, #fff0ea 0%, #ffffff 50%, #eaf7ff 100%);
 }
 
 .icp-feature-card:nth-child(8n+5)::before,
