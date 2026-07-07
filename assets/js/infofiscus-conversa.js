@@ -78,6 +78,132 @@
     });
   });
 
+  var demoForm = root.querySelector('#icp-demo-request-form');
+  var demoDateInput = root.querySelector('[data-icp-demo-date]');
+  var demoCalendar = root.querySelector('[data-icp-demo-calendar]');
+  var monthLabel = root.querySelector('[data-icp-calendar-label]');
+  var daysGrid = root.querySelector('[data-icp-calendar-days]');
+  var selectedDateText = root.querySelector('[data-icp-selected-date]');
+  var monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+
+  function padDatePart(value) {
+    return String(value).padStart(2, '0');
+  }
+
+  function toDateValue(date) {
+    return date.getFullYear() + '-' + padDatePart(date.getMonth() + 1) + '-' + padDatePart(date.getDate());
+  }
+
+  function formatDemoDate(date) {
+    return monthNames[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+  }
+
+  function focusDemoForm() {
+    if (!demoForm) {
+      return;
+    }
+
+    demoForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    var firstField = demoForm.querySelector('input:not([type="hidden"]), button');
+    if (firstField) {
+      window.setTimeout(function () {
+        firstField.focus({ preventScroll: true });
+      }, 350);
+    }
+  }
+
+  if (demoCalendar && monthLabel && daysGrid) {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var shownMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    var selectedDemoDate = new Date(today.getTime());
+
+    function syncDemoDate(date) {
+      selectedDemoDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+      if (demoDateInput) {
+        demoDateInput.value = toDateValue(selectedDemoDate);
+      }
+
+      if (selectedDateText) {
+        selectedDateText.textContent = 'Selected: ' + formatDemoDate(selectedDemoDate);
+      }
+    }
+
+    function renderDemoCalendar() {
+      var year = shownMonth.getFullYear();
+      var month = shownMonth.getMonth();
+      var firstDayIndex = new Date(year, month, 1).getDay();
+      var daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      monthLabel.textContent = monthNames[month] + ' ' + year;
+      daysGrid.innerHTML = '';
+
+      for (var blank = 0; blank < firstDayIndex; blank += 1) {
+        var spacer = document.createElement('span');
+        spacer.setAttribute('aria-hidden', 'true');
+        daysGrid.appendChild(spacer);
+      }
+
+      for (var day = 1; day <= daysInMonth; day += 1) {
+        var date = new Date(year, month, day);
+        var button = document.createElement('button');
+        var dateValue = toDateValue(date);
+
+        button.type = 'button';
+        button.textContent = String(day);
+        button.setAttribute('aria-label', 'Schedule demo on ' + formatDemoDate(date));
+        button.setAttribute('aria-pressed', toDateValue(selectedDemoDate) === dateValue ? 'true' : 'false');
+        button.dataset.demoDate = dateValue;
+
+        if (toDateValue(today) === dateValue) {
+          button.classList.add('is-today');
+        }
+
+        if (toDateValue(selectedDemoDate) === dateValue) {
+          button.classList.add('is-selected');
+        }
+
+        button.addEventListener('click', function () {
+          var parts = this.dataset.demoDate.split('-').map(Number);
+          syncDemoDate(new Date(parts[0], parts[1] - 1, parts[2]));
+          renderDemoCalendar();
+          focusDemoForm();
+        });
+
+        daysGrid.appendChild(button);
+      }
+    }
+
+    syncDemoDate(selectedDemoDate);
+    renderDemoCalendar();
+
+    var previousMonth = root.querySelector('[data-icp-calendar-prev]');
+    var nextMonth = root.querySelector('[data-icp-calendar-next]');
+
+    if (previousMonth) {
+      previousMonth.addEventListener('click', function () {
+        shownMonth = new Date(shownMonth.getFullYear(), shownMonth.getMonth() - 1, 1);
+        renderDemoCalendar();
+      });
+    }
+
+    if (nextMonth) {
+      nextMonth.addEventListener('click', function () {
+        shownMonth = new Date(shownMonth.getFullYear(), shownMonth.getMonth() + 1, 1);
+        renderDemoCalendar();
+      });
+    }
+  }
+
+  root.querySelectorAll('[data-icp-demo-trigger]').forEach(function (button) {
+    button.addEventListener('click', focusDemoForm);
+  });
+
   function animateCounter(el) {
     if (el.dataset.icpCountDone === 'true') {
       return;

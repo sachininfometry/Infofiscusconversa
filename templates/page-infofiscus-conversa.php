@@ -96,7 +96,17 @@ $pricing_plans = array(
 	),
 );
 
-$customer_logos = array( 'Sanofi', 'Belk', 'IBM', 'Informatica', 'Michaels', 'SanDisk', 'Fusion.io', 'Adaptive Insights', 'Asana', 'AMD' );
+$customer_logos = array(
+	array( 'name' => 'Sanofi', 'file' => 'customer-sanofi-logo.png' ),
+	array( 'name' => 'Belk', 'file' => 'customer-belk-logo.png' ),
+	array( 'name' => 'IBM', 'file' => 'customer-ibm-logo.png' ),
+	array( 'name' => 'Informatica', 'file' => 'customer-informatica-logo.png' ),
+	array( 'name' => 'Michaels', 'file' => 'customer-michaels-logo.png' ),
+	array( 'name' => 'SanDisk', 'file' => 'customer-sandisk-logo.png' ),
+	array( 'name' => 'Fusion.io', 'file' => 'customer-fusionio-logo.png' ),
+	array( 'name' => 'Adaptive Insights', 'file' => 'customer-adaptive-insights-logo.png' ),
+	array( 'name' => 'Asana', 'file' => 'customer-asana-logo.png' ),
+);
 
 $faqs = array(
 	array( 'question' => 'What is a conversational analytics platform?', 'answer' => 'It is an AI-driven analytics system that lets users ask data questions in everyday language and immediately get governed answers without dashboards or manual SQL.' ),
@@ -501,18 +511,26 @@ $other_products = array(
 				<p>Book a demo or request a trial of INFOFISCUS Conversa today, and see how AI-powered conversation can transform decision-making in your enterprise.</p>
 			</div>
 			<div class="icp-demo-form-grid">
-				<div class="icp-demo-visual" aria-hidden="true">
+				<div class="icp-demo-visual">
 					<div class="icp-demo-card">
 						<span>See How We Can Work for You</span>
-						<strong>Schedule Your Demo</strong>
-						<div class="icp-demo-calendar">
-							<i>Sun</i><i>Mon</i><i>Tue</i><i>Wed</i><i>Thu</i><i>Fri</i><i>Sat</i>
-							<b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b>
-							<b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b class="is-selected">15</b><b>16</b>
+						<button class="icp-demo-schedule-trigger" type="button" data-icp-demo-trigger>Schedule Your Demo</button>
+						<div class="icp-demo-calendar" data-icp-demo-calendar>
+							<div class="icp-demo-calendar-head">
+								<button class="icp-demo-calendar-nav" type="button" data-icp-calendar-prev aria-label="Previous month">&lt;</button>
+								<strong data-icp-calendar-label>Choose a Date</strong>
+								<button class="icp-demo-calendar-nav" type="button" data-icp-calendar-next aria-label="Next month">&gt;</button>
+							</div>
+							<div class="icp-demo-weekdays" aria-hidden="true">
+								<i>Sun</i><i>Mon</i><i>Tue</i><i>Wed</i><i>Thu</i><i>Fri</i><i>Sat</i>
+							</div>
+							<div class="icp-demo-days" data-icp-calendar-days></div>
+							<p class="icp-demo-selected-date" data-icp-selected-date aria-live="polite"></p>
 						</div>
 					</div>
 				</div>
-				<form class="icp-demo-form" action="<?php echo esc_url( $demo_url ); ?>" method="post">
+				<form class="icp-demo-form" id="icp-demo-request-form" action="<?php echo esc_url( $demo_url ); ?>" method="post">
+					<input type="hidden" name="selected_demo_date" data-icp-demo-date value="">
 					<div class="icp-form-row">
 						<label>First Name <span>*</span><input type="text" name="first_name" autocomplete="given-name" required></label>
 						<label>Last Name <span>*</span><input type="text" name="last_name" autocomplete="family-name" required></label>
@@ -531,10 +549,16 @@ $other_products = array(
 			<div class="icp-section-heading icp-center">
 				<h2 id="icp-customers-title">Infometry Trusted by 150+ Customers Worldwide</h2>
 			</div>
-			<div class="icp-logo-cloud" aria-label="Customer logos">
-				<?php foreach ( $customer_logos as $customer ) : ?>
-					<span><?php echo esc_html( $customer ); ?></span>
-				<?php endforeach; ?>
+			<div class="icp-logo-slider" aria-label="Customer logos">
+				<div class="icp-logo-track">
+					<?php for ( $i = 0; $i < 2; $i++ ) : ?>
+						<?php foreach ( $customer_logos as $customer ) : ?>
+							<span class="icp-logo-slide">
+								<img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/' . $customer['file'] ); ?>" alt="<?php echo esc_attr( $customer['name'] ); ?> logo">
+							</span>
+						<?php endforeach; ?>
+					<?php endfor; ?>
+				</div>
 			</div>
 		</div>
 	</section>

@@ -1014,6 +1014,39 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   background: var(--soft);
 }
 
+.icp-problem {
+  position: relative;
+  color: #fff;
+  background:
+    radial-gradient(circle at 86% 14%, rgba(36, 92, 255, .22), transparent 32%),
+    radial-gradient(circle at 10% 90%, rgba(24, 200, 255, .14), transparent 30%),
+    linear-gradient(135deg, #06122d 0%, #071f46 55%, #04102b 100%);
+  overflow: hidden;
+}
+
+.icp-problem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .09;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, .36) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+  pointer-events: none;
+}
+
+.icp-problem .icp-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.icp-problem .icp-section-heading h2 {
+  color: #fff;
+}
+
+.icp-problem .icp-section-heading p {
+  color: rgba(232, 239, 255, .78);
+}
+
 .icp-center {
   max-width: 720px;
   margin: 0 auto 28px;
@@ -1143,6 +1176,13 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   background: linear-gradient(90deg, #ff6247, #ff9475);
 }
 
+.icp-problem .icp-soft-card {
+  border-color: rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .07);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .18);
+  backdrop-filter: blur(10px);
+}
+
 .icp-icon,
 .icp-use-icon,
 .icp-rocket {
@@ -1214,6 +1254,14 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   margin: 0;
   color: #475467;
   font-size: 13px;
+}
+
+.icp-problem .icp-soft-card h3 {
+  color: #fff;
+}
+
+.icp-problem .icp-soft-card p {
+  color: rgba(232, 239, 255, .76);
 }
 
 .icp-feature-card p {
@@ -1857,9 +1905,9 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   place-items: center;
   padding: 30px;
   background:
-    radial-gradient(circle at 18% 22%, rgba(24, 200, 255, .14), transparent 28%),
-    radial-gradient(circle at 82% 80%, rgba(255, 91, 26, .12), transparent 26%),
-    #fff;
+    radial-gradient(circle at 18% 20%, rgba(24, 200, 255, .22), transparent 30%),
+    radial-gradient(circle at 82% 80%, rgba(36, 92, 255, .18), transparent 28%),
+    linear-gradient(135deg, #06122d 0%, #071f46 58%, #04102b 100%);
 }
 
 .icp-demo-card {
@@ -1868,7 +1916,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   border-radius: 14px;
   color: #071f46;
   background: linear-gradient(180deg, #fff, #f7f9fe);
-  box-shadow: 0 18px 48px rgba(16, 24, 40, .12);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .22);
 }
 
 .icp-demo-card span {
@@ -1880,47 +1928,116 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   line-height: 1.1;
 }
 
-.icp-demo-card strong {
+.icp-demo-schedule-trigger {
   display: inline-flex;
   margin-top: 22px;
   padding: 10px 14px;
+  border: 0;
   border-radius: 8px;
   color: #fff;
   background: #071f46;
+  font: inherit;
   font-size: 12px;
+  font-weight: 900;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .icp-demo-calendar {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 8px;
   margin-top: 18px;
-  padding: 18px;
+  padding: 16px;
   border-radius: 12px;
   background: #edf4ff;
 }
 
-.icp-demo-calendar i,
-.icp-demo-calendar b {
+.icp-demo-calendar-head,
+.icp-demo-weekdays,
+.icp-demo-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.icp-demo-calendar-head {
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.icp-demo-calendar-head strong {
+  min-width: 0;
+  color: #071f46;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.icp-demo-weekdays {
+  margin-bottom: 8px;
+}
+
+.icp-demo-weekdays i,
+.icp-demo-days button,
+.icp-demo-days span,
+.icp-demo-calendar-nav {
   display: inline-flex;
   min-height: 28px;
   align-items: center;
   justify-content: center;
+  border: 0;
   border-radius: 7px;
   color: #1f4d78;
+  background: transparent;
+  font: inherit;
   font-size: 11px;
   font-style: normal;
   font-weight: 800;
 }
 
-.icp-demo-calendar b {
+.icp-demo-calendar-nav {
+  min-height: 34px;
+  border-radius: 50%;
+  color: #071f46;
   background: #fff;
+  box-shadow: 0 6px 14px rgba(7, 31, 70, .08);
+  cursor: pointer;
 }
 
-.icp-demo-calendar .is-selected {
+.icp-demo-days button {
+  aspect-ratio: 1;
+  background: #fff;
+  cursor: pointer;
+}
+
+.icp-demo-days .is-today {
+  box-shadow: inset 0 0 0 2px rgba(36, 92, 255, .22);
+}
+
+.icp-demo-calendar .is-selected,
+.icp-demo-days button:hover,
+.icp-demo-days button:focus-visible,
+.icp-demo-calendar-nav:hover,
+.icp-demo-calendar-nav:focus-visible,
+.icp-demo-schedule-trigger:hover,
+.icp-demo-schedule-trigger:focus-visible {
   color: #fff;
   background: #245cff;
+}
+
+.icp-demo-days button:focus-visible,
+.icp-demo-calendar-nav:focus-visible,
+.icp-demo-schedule-trigger:focus-visible {
+  outline: 3px solid rgba(36, 92, 255, .24);
+  outline-offset: 2px;
+}
+
+.icp-demo-selected-date {
+  margin: 12px 0 0;
+  color: #1f4d78;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .icp-demo-form {
@@ -1968,26 +2085,48 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   border: 0;
 }
 
-.icp-logo-cloud {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+.icp-logo-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
 }
 
-.icp-logo-cloud span {
+.icp-logo-track {
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  animation: icpLogoSlide 34s linear infinite;
+}
+
+.icp-logo-slider:hover .icp-logo-track {
+  animation-play-state: paused;
+}
+
+.icp-logo-slide {
   display: inline-flex;
-  min-height: 82px;
+  width: 268px;
+  min-width: 268px;
+  height: 96px;
   align-items: center;
   justify-content: center;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  color: #344054;
-  background: #fff;
-  font-size: 18px;
-  font-weight: 900;
-  text-align: center;
-  box-shadow: 0 10px 28px rgba(16, 24, 40, .04);
+  padding: 18px 28px;
+}
+
+.icp-logo-slide img {
+  width: auto;
+  max-width: 100%;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+@keyframes icpLogoSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 7px));
+  }
 }
 
 .icp-faq-list {
@@ -2293,7 +2432,6 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   .icp-capability-grid,
   .icp-persona-grid,
   .icp-pricing-grid,
-  .icp-logo-cloud,
   .icp-other-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2540,12 +2678,27 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   .icp-capability-grid,
   .icp-persona-grid,
   .icp-pricing-grid,
-  .icp-logo-cloud,
   .icp-other-grid,
   .icp-form-row,
   .icp-workflow-row,
   .icp-tabs {
     grid-template-columns: 1fr;
+  }
+
+  .icp-logo-track {
+    gap: 12px;
+    animation-duration: 28s;
+  }
+
+  .icp-logo-slide {
+    width: 210px;
+    min-width: 210px;
+    height: 82px;
+    padding: 16px 22px;
+  }
+
+  .icp-logo-slide img {
+    max-height: 46px;
   }
 
   .icp-comparison-table {
@@ -2564,10 +2717,6 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
   .icp-demo-card span {
     font-size: 24px;
-  }
-
-  .icp-logo-cloud span {
-    min-height: 70px;
   }
 
   .icp-hero-stats {
