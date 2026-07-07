@@ -54,6 +54,66 @@ $personas = array(
 	array( 'icon' => 'finance', 'title' => 'Finance Teams', 'copy' => 'Analyze performance and forecast with speed.' ),
 	array( 'icon' => 'it', 'title' => 'IT & Data Teams', 'copy' => 'Ensure governance, security, and reliability.' ),
 );
+
+$comparison_rows = array(
+	array( 'capability' => 'Natural Language Query', 'conversa' => 'yes', 'tableau' => 'partial', 'powerbi' => 'partial', 'ai' => 'yes' ),
+	array( 'capability' => 'Ad-hoc Exploration', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'yes' ),
+	array( 'capability' => 'Dashboarding', 'conversa' => 'partial', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'no' ),
+	array( 'capability' => 'Automated Insights', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
+	array( 'capability' => 'Root Cause Analysis', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'yes' ),
+	array( 'capability' => 'Predictive Analytics', 'conversa' => 'partial', 'tableau' => 'partial', 'powerbi' => 'no', 'ai' => 'yes' ),
+	array( 'capability' => 'Semantic Layer', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'partial', 'ai' => 'no' ),
+	array( 'capability' => 'SQL Transparency', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
+	array( 'capability' => 'Multi Data Sources', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'partial' ),
+	array( 'capability' => 'Real-Time Queries', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'yes' ),
+	array( 'capability' => 'Unstructured Data', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
+	array( 'capability' => 'Narrative Summaries', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'partial', 'ai' => 'partial' ),
+	array( 'capability' => 'Governance', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'partial' ),
+	array( 'capability' => 'Custom UI', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'no' ),
+);
+
+$pricing_plans = array(
+	array(
+		'name'     => 'Advanced',
+		'price'    => '$60,000',
+		'period'   => '/ year',
+		'featured' => false,
+		'features' => array( '5 Users', 'Annual Subscription', 'Conversational Analytics', 'Semantic Model Framework', 'Limited Multi-LLM Support', '2 Data Sources', 'Standard Support' ),
+	),
+	array(
+		'name'     => 'Professional',
+		'price'    => '$100,000',
+		'period'   => '/ year',
+		'featured' => true,
+		'features' => array( '10 Users', 'Annual Subscription', 'Conversational Analytics', 'Semantic Model Framework', 'Expanded Multi-LLM Support', '5 Data Sources', 'Priority Support' ),
+	),
+	array(
+		'name'     => 'Enterprise',
+		'price'    => 'Talk To Sales',
+		'period'   => '',
+		'featured' => false,
+		'features' => array( '10+ Users', 'Annual Subscription', 'Conversational Analytics', 'Semantic Model Framework', 'Expanded Multi-LLM Support', 'Custom Data Sources', 'Dedicated Support' ),
+	),
+);
+
+$customer_logos = array( 'Sanofi', 'Belk', 'IBM', 'Informatica', 'Michaels', 'SanDisk', 'Fusion.io', 'Adaptive Insights', 'Asana', 'AMD' );
+
+$faqs = array(
+	array( 'question' => 'What is a conversational analytics platform?', 'answer' => 'It is an AI-driven analytics system that lets users ask data questions in everyday language and immediately get governed answers without dashboards or manual SQL.' ),
+	array( 'question' => 'How does a conversational analytics platform work?', 'answer' => 'It understands intent with natural language processing, maps the question to a governed semantic model, runs optimized queries on connected data, and returns charts, numbers, and plain-English summaries.' ),
+	array( 'question' => 'Is Conversa secure?', 'answer' => 'Yes. Conversa is designed for enterprise security with role-based access, governed definitions, auditability, and query execution against approved enterprise data sources.' ),
+	array( 'question' => 'What data sources does Conversa support?', 'answer' => 'Conversa can connect to modern cloud and hybrid data platforms including Snowflake, BigQuery, Redshift, Azure Synapse, Oracle, PostgreSQL, SQL Server, and similar structured data stores.' ),
+	array( 'question' => 'Can conversational analytics handle complex business questions?', 'answer' => 'Yes. It can support multi-step, business-specific questions and follow-up analysis grounded in live enterprise data and semantic definitions.' ),
+	array( 'question' => 'Does conversational analytics respect role-based access?', 'answer' => 'Yes. Users only see the data they are authorized to access, with permissions aligned to enterprise security policies.' ),
+	array( 'question' => 'Can conversational analytics replace dashboards?', 'answer' => 'It complements dashboards. Dashboards remain useful for recurring monitoring, while Conversa helps users investigate new questions and explore data faster.' ),
+	array( 'question' => 'What makes INFOFISCUS Conversa different?', 'answer' => 'Conversa combines natural language queries, direct warehouse access, semantic governance, SQL transparency, document intelligence, and business-friendly answers in one enterprise platform.' ),
+);
+
+$other_products = array(
+	array( 'icon' => 'nodes', 'title' => 'Informatica Connectors', 'copy' => 'Pre-built, no-code connectors for fast, secure, and scalable data movement across enterprise systems.' ),
+	array( 'icon' => 'database', 'title' => 'INFOFISCUS Snowflake Native Apps', 'copy' => 'Native Snowflake applications that accelerate analytics, integration, and operational reporting.' ),
+	array( 'icon' => 'chart', 'title' => 'Pre-Built Analytics Apps', 'copy' => 'Ready-to-use analytics solutions for IDMC and Matillion that reduce implementation time.' ),
+);
 ?>
 
 <main class="infometry-conversa-product" id="infometry-conversa-product">
@@ -362,6 +422,151 @@ $personas = array(
 						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $persona['icon'] ); ?>"></use></svg></span>
 						<h3><?php echo esc_html( $persona['title'] ); ?></h3>
 						<p><?php echo esc_html( $persona['copy'] ); ?></p>
+					</article>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-comparison" id="icp-comparison" aria-labelledby="icp-comparison-title">
+		<div class="icp-shell">
+			<div class="icp-section-heading icp-center">
+				<h2 id="icp-comparison-title">INFOFISCUS Conversa vs Other Conversational Analytics Platforms</h2>
+				<p>See how enterprise conversational analytics compares across the capabilities teams ask for most.</p>
+			</div>
+			<div class="icp-comparison-table-wrap">
+				<table class="icp-comparison-table">
+					<thead>
+						<tr>
+							<th scope="col">Capabilities</th>
+							<th scope="col"><span><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/infofiscus-conversa-logo.png' ); ?>" alt="INFOFISCUS Conversa"></span></th>
+							<th scope="col">Tableau</th>
+							<th scope="col">Power BI</th>
+							<th scope="col">Modern AI Tools</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ( $comparison_rows as $row ) : ?>
+							<tr>
+								<th scope="row"><?php echo esc_html( $row['capability'] ); ?></th>
+								<?php foreach ( array( 'conversa', 'tableau', 'powerbi', 'ai' ) as $column ) : ?>
+									<?php
+									$status       = $row[ $column ];
+									$status_label = 'yes' === $status ? 'Included' : ( 'partial' === $status ? 'Partial' : 'Not included' );
+									$status_text  = 'yes' === $status ? 'Yes' : ( 'partial' === $status ? 'Some' : 'No' );
+									?>
+									<td><span class="icp-status icp-status-<?php echo esc_attr( $status ); ?>" aria-label="<?php echo esc_attr( $status_label ); ?>"><?php echo esc_html( $status_text ); ?></span></td>
+								<?php endforeach; ?>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+			</div>
+			<div class="icp-section-action">
+				<a class="icp-button icp-button-primary" href="<?php echo esc_url( $demo_url ); ?>">Book a Demo</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-pricing" id="icp-pricing" aria-labelledby="icp-pricing-title">
+		<div class="icp-shell">
+			<div class="icp-section-heading icp-center">
+				<h2 id="icp-pricing-title">INFOFISCUS Conversa Plans &amp; Pricing</h2>
+				<p>Choose the package that fits your analytics rollout.</p>
+			</div>
+			<div class="icp-pricing-grid">
+				<?php foreach ( $pricing_plans as $plan ) : ?>
+					<article class="icp-pricing-card<?php echo $plan['featured'] ? ' is-featured' : ''; ?>">
+						<div class="icp-pricing-head">
+							<h3><?php echo esc_html( $plan['name'] ); ?></h3>
+							<p><strong><?php echo esc_html( $plan['price'] ); ?></strong><?php echo esc_html( $plan['period'] ); ?></p>
+						</div>
+						<ul>
+							<?php foreach ( $plan['features'] as $feature ) : ?>
+								<li><span class="icp-price-check">Yes</span><?php echo esc_html( $feature ); ?></li>
+							<?php endforeach; ?>
+						</ul>
+						<a class="icp-button <?php echo $plan['featured'] ? 'icp-button-primary' : 'icp-button-secondary'; ?>" href="<?php echo esc_url( $demo_url ); ?>"><?php echo 'Enterprise' === $plan['name'] ? 'Talk To Sales' : 'Book a Demo'; ?></a>
+					</article>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-demo-form-section" id="icp-demo-form" aria-labelledby="icp-demo-form-title">
+		<div class="icp-shell">
+			<div class="icp-section-heading icp-center">
+				<h2 id="icp-demo-form-title">Get Started with INFOFISCUS Conversa Conversational Analytics Platform</h2>
+				<p><strong>Ready to unlock instant data insights?</strong></p>
+				<p>Book a demo or request a trial of INFOFISCUS Conversa today, and see how AI-powered conversation can transform decision-making in your enterprise.</p>
+			</div>
+			<div class="icp-demo-form-grid">
+				<div class="icp-demo-visual" aria-hidden="true">
+					<div class="icp-demo-card">
+						<span>See How We Can Work for You</span>
+						<strong>Schedule Your Demo</strong>
+						<div class="icp-demo-calendar">
+							<i>Sun</i><i>Mon</i><i>Tue</i><i>Wed</i><i>Thu</i><i>Fri</i><i>Sat</i>
+							<b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b>
+							<b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b class="is-selected">15</b><b>16</b>
+						</div>
+					</div>
+				</div>
+				<form class="icp-demo-form" action="<?php echo esc_url( $demo_url ); ?>" method="post">
+					<div class="icp-form-row">
+						<label>First Name <span>*</span><input type="text" name="first_name" autocomplete="given-name" required></label>
+						<label>Last Name <span>*</span><input type="text" name="last_name" autocomplete="family-name" required></label>
+					</div>
+					<label>Company Email <span>*</span><input type="email" name="company_email" autocomplete="email" required></label>
+					<label>Contact Number <span>*</span><input type="tel" name="contact_number" autocomplete="tel" required></label>
+					<label>Company<input type="text" name="company" autocomplete="organization"></label>
+					<button class="icp-button icp-button-primary" type="submit">Book a Demo</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-customers" aria-labelledby="icp-customers-title">
+		<div class="icp-shell">
+			<div class="icp-section-heading icp-center">
+				<h2 id="icp-customers-title">Infometry Trusted by 150+ Customers Worldwide</h2>
+			</div>
+			<div class="icp-logo-cloud" aria-label="Customer logos">
+				<?php foreach ( $customer_logos as $customer ) : ?>
+					<span><?php echo esc_html( $customer ); ?></span>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-faq" id="icp-faq" aria-labelledby="icp-faq-title">
+		<div class="icp-shell">
+			<div class="icp-section-heading icp-center">
+				<h2 id="icp-faq-title">Frequently Asked Questions</h2>
+			</div>
+			<div class="icp-faq-list">
+				<?php foreach ( $faqs as $index => $faq ) : ?>
+					<details <?php echo 0 === $index ? 'open' : ''; ?>>
+						<summary><?php echo esc_html( $faq['question'] ); ?></summary>
+						<p><?php echo esc_html( $faq['answer'] ); ?></p>
+					</details>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-other-products" aria-labelledby="icp-other-products-title">
+		<div class="icp-shell">
+			<div class="icp-section-heading icp-center">
+				<h2 id="icp-other-products-title">Other Products</h2>
+			</div>
+			<div class="icp-card-grid icp-other-grid">
+				<?php foreach ( $other_products as $product ) : ?>
+					<article class="icp-feature-card">
+						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $product['icon'] ); ?>"></use></svg></span>
+						<h3><?php echo esc_html( $product['title'] ); ?></h3>
+						<p><?php echo esc_html( $product['copy'] ); ?></p>
+						<a class="icp-text-link" href="<?php echo esc_url( $contact_url ); ?>">Read More</a>
 					</article>
 				<?php endforeach; ?>
 			</div>

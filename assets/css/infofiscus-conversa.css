@@ -1641,6 +1641,422 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.icp-comparison,
+.icp-pricing,
+.icp-demo-form-section,
+.icp-customers,
+.icp-faq,
+.icp-other-products {
+  padding: 72px 0;
+  background: var(--soft);
+}
+
+.icp-pricing,
+.icp-customers,
+.icp-other-products {
+  background: #fff;
+}
+
+.icp-comparison-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(16, 24, 40, .05);
+}
+
+.icp-comparison-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.icp-comparison-table th,
+.icp-comparison-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #e8eef7;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icp-comparison-table thead th {
+  color: #fff;
+  background: #071f46;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.icp-comparison-table thead th:first-child,
+.icp-comparison-table tbody th {
+  text-align: left;
+}
+
+.icp-comparison-table tbody th {
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.icp-comparison-table tbody tr:last-child th,
+.icp-comparison-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.icp-comparison-table thead img {
+  width: 150px;
+  max-height: 34px;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.icp-status {
+  display: inline-flex;
+  min-width: 54px;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.icp-status-yes {
+  color: #027a48;
+  background: #dcfae6;
+}
+
+.icp-status-partial {
+  color: #b54708;
+  background: #fef0c7;
+}
+
+.icp-status-no {
+  color: #b42318;
+  background: #fee4e2;
+}
+
+.icp-section-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.icp-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.icp-pricing-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(16, 24, 40, .05);
+}
+
+.icp-pricing-card.is-featured {
+  border-color: rgba(255, 91, 26, .45);
+  box-shadow: 0 22px 54px rgba(255, 91, 26, .14);
+}
+
+.icp-pricing-head {
+  padding: 24px;
+  color: #fff;
+  background: linear-gradient(135deg, #071f46, #0d356c);
+}
+
+.icp-pricing-card.is-featured .icp-pricing-head {
+  background: linear-gradient(135deg, #071f46, #28146f);
+}
+
+.icp-pricing-head h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.icp-pricing-head p {
+  margin: 0;
+  color: rgba(255, 255, 255, .84);
+  font-weight: 800;
+}
+
+.icp-pricing-head strong {
+  color: #fff;
+  font-size: 24px;
+}
+
+.icp-pricing-card ul {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+  padding: 24px;
+  list-style: none;
+}
+
+.icp-pricing-card li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.icp-price-check {
+  display: inline-flex;
+  width: 28px;
+  min-width: 28px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #027a48;
+  background: #dcfae6;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.icp-pricing-card .icp-button {
+  width: calc(100% - 48px);
+  margin: auto 24px 24px;
+}
+
+.icp-pricing-card .icp-button-secondary {
+  color: #071f46 !important;
+  border-color: #c8d5e6;
+  background: #fff;
+}
+
+.icp-demo-form-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, .95fr) minmax(320px, 1.05fr);
+  gap: 34px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+
+.icp-demo-visual,
+.icp-demo-form {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(16, 24, 40, .05);
+}
+
+.icp-demo-visual {
+  display: grid;
+  min-height: 430px;
+  place-items: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(24, 200, 255, .14), transparent 28%),
+    radial-gradient(circle at 82% 80%, rgba(255, 91, 26, .12), transparent 26%),
+    #fff;
+}
+
+.icp-demo-card {
+  width: min(100%, 430px);
+  padding: 28px;
+  border-radius: 14px;
+  color: #071f46;
+  background: linear-gradient(180deg, #fff, #f7f9fe);
+  box-shadow: 0 18px 48px rgba(16, 24, 40, .12);
+}
+
+.icp-demo-card span {
+  display: block;
+  max-width: 260px;
+  color: #071f46;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.icp-demo-card strong {
+  display: inline-flex;
+  margin-top: 22px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fff;
+  background: #071f46;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.icp-demo-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #edf4ff;
+}
+
+.icp-demo-calendar i,
+.icp-demo-calendar b {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  color: #1f4d78;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.icp-demo-calendar b {
+  background: #fff;
+}
+
+.icp-demo-calendar .is-selected {
+  color: #fff;
+  background: #245cff;
+}
+
+.icp-demo-form {
+  display: grid;
+  gap: 16px;
+  padding: 30px;
+}
+
+.icp-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.icp-demo-form label {
+  display: grid;
+  gap: 8px;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.icp-demo-form label span {
+  color: #ff430f;
+}
+
+.icp-demo-form input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #cfd8e5;
+  border-radius: 7px;
+  padding: 0 13px;
+  color: #111827;
+  background: #fff;
+  font: inherit;
+}
+
+.icp-demo-form input:focus {
+  outline: 2px solid rgba(36, 92, 255, .22);
+  border-color: #245cff;
+}
+
+.icp-demo-form button {
+  justify-self: start;
+  border: 0;
+}
+
+.icp-logo-cloud {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.icp-logo-cloud span {
+  display: inline-flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: #344054;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, .04);
+}
+
+.icp-faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.icp-faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, .04);
+}
+
+.icp-faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  color: #071f46;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.icp-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.icp-faq-list summary::after {
+  content: "+";
+  display: inline-flex;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #fff;
+  background: #245cff;
+  font-weight: 900;
+}
+
+.icp-faq-list details[open] summary::after {
+  content: "-";
+  background: #ff5b1a;
+}
+
+.icp-faq-list p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: #344054;
+}
+
+.icp-other-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.icp-text-link {
+  display: inline-flex;
+  margin-top: auto;
+  color: #245cff !important;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none !important;
+}
+
 .icp-final-cta {
   padding: 54px 0;
   background: var(--soft);
@@ -1863,6 +2279,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   .icp-hero-grid,
   .icp-intro-grid,
   .icp-use-panel.is-active,
+  .icp-demo-form-grid,
   .icp-final-panel,
   .icp-footer-grid {
     grid-template-columns: 1fr;
@@ -1874,7 +2291,10 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
   .icp-four,
   .icp-capability-grid,
-  .icp-persona-grid {
+  .icp-persona-grid,
+  .icp-pricing-grid,
+  .icp-logo-cloud,
+  .icp-other-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1979,8 +2399,23 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   .icp-capabilities,
   .icp-outcomes,
   .icp-use-cases,
-  .icp-personas {
+  .icp-personas,
+  .icp-comparison,
+  .icp-pricing,
+  .icp-demo-form-section,
+  .icp-customers,
+  .icp-faq,
+  .icp-other-products {
     padding: 54px 0;
+  }
+
+  .icp-comparison-table th,
+  .icp-comparison-table td {
+    padding: 12px 14px;
+  }
+
+  .icp-demo-visual {
+    min-height: 360px;
   }
 }
 
@@ -2104,9 +2539,35 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   .icp-four,
   .icp-capability-grid,
   .icp-persona-grid,
+  .icp-pricing-grid,
+  .icp-logo-cloud,
+  .icp-other-grid,
+  .icp-form-row,
   .icp-workflow-row,
   .icp-tabs {
     grid-template-columns: 1fr;
+  }
+
+  .icp-comparison-table {
+    min-width: 760px;
+  }
+
+  .icp-pricing-card .icp-button,
+  .icp-demo-form button {
+    width: 100%;
+  }
+
+  .icp-demo-form,
+  .icp-demo-card {
+    padding: 20px;
+  }
+
+  .icp-demo-card span {
+    font-size: 24px;
+  }
+
+  .icp-logo-cloud span {
+    min-height: 70px;
   }
 
   .icp-hero-stats {
