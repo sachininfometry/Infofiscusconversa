@@ -14,6 +14,7 @@ get_header();
 
 $demo_url    = apply_filters( 'infometry_conversa_demo_url', home_url( '/infofiscus-analytics-sign-up-for-demo/' ) );
 $contact_url = apply_filters( 'infometry_conversa_contact_url', home_url( '/contact-us/' ) );
+$intro_video = apply_filters( 'infometry_conversa_intro_video_url', 'https://wordpress-1633295-6507153.cloudwaysapps.com/wp-content/uploads/2026/04/Copy-of-Infometry-32.mp4' );
 
 $problems = array(
 	array( 'icon' => 'gauge', 'title' => 'Too many dashboards', 'copy' => 'Teams struggle to find the right view or build the right report.' ),
@@ -259,7 +260,9 @@ $other_products = array(
 	<section class="icp-intro" id="icp-intro" aria-labelledby="icp-intro-title">
 		<div class="icp-shell icp-intro-grid">
 			<div class="icp-intro-visual">
-				<img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-ai-hero-original.png' ); ?>" alt="Original INFOFISCUS Conversa AI analytics concept">
+				<video autoplay muted loop playsinline preload="metadata" poster="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-ai-hero-original.png' ); ?>" aria-label="INFOFISCUS Conversa product tour animation">
+					<source src="<?php echo esc_url( $intro_video ); ?>" type="video/mp4">
+				</video>
 			</div>
 			<div class="icp-intro-copy">
 				<p class="icp-kicker">Meet</p>

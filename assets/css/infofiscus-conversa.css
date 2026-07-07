@@ -955,15 +955,39 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 }
 
 .icp-intro-visual {
+  position: relative;
   border-radius: 24px;
   background: linear-gradient(135deg, #eef3ff, #fff);
   overflow: hidden;
 }
 
+.icp-intro-visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  background: #f8fbff;
+  pointer-events: none;
+}
+
 .icp-intro-visual img {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.icp-intro-visual video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #f8fbff;
+  object-fit: contain;
+  transform: scale(1.018);
+  transform-origin: center;
 }
 
 .icp-kicker {
