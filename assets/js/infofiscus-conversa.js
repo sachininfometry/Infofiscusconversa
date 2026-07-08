@@ -80,6 +80,7 @@
 
   var demoForm = root.querySelector('#icp-demo-request-form');
   var demoDateInput = root.querySelector('[data-icp-demo-date]');
+  var demoDateDisplayInput = root.querySelector('[data-icp-demo-date-display]');
   var demoCalendar = root.querySelector('[data-icp-demo-calendar]');
   var monthLabel = root.querySelector('[data-icp-calendar-label]');
   var daysGrid = root.querySelector('[data-icp-calendar-days]');
@@ -127,6 +128,10 @@
 
       if (demoDateInput) {
         demoDateInput.value = toDateValue(selectedDemoDate);
+      }
+
+      if (demoDateDisplayInput) {
+        demoDateDisplayInput.value = formatDemoDate(selectedDemoDate);
       }
 
       if (selectedDateText) {
