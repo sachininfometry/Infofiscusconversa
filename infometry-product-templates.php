@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Infometry Product Templates
  * Description: Adds isolated product page templates for Infometry product experiences.
- * Version: 1.0.32
+ * Version: 1.0.33
  * Author: Infometry
  * Text Domain: infometry-product-templates
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'INFOMETRY_PT_VERSION', '1.0.32' );
+define( 'INFOMETRY_PT_VERSION', '1.0.33' );
 define( 'INFOMETRY_PT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INFOMETRY_PT_URL', plugin_dir_url( __FILE__ ) );
 define( 'INFOMETRY_PT_CONVERSA_TEMPLATE', 'templates/page-infofiscus-conversa.php' );
@@ -67,6 +67,18 @@ function infometry_pt_get_current_page_id() {
  */
 function infometry_pt_should_use_conversa_template() {
 	$page_id = infometry_pt_get_current_page_id();
+
+	return infometry_pt_is_conversa_page_id( $page_id );
+}
+
+/**
+ * Check a specific page ID for the Conversa template.
+ *
+ * @param int $page_id Page ID.
+ * @return bool
+ */
+function infometry_pt_is_conversa_page_id( $page_id ) {
+	$page_id = absint( $page_id );
 
 	if ( ! $page_id || 'page' !== get_post_type( $page_id ) ) {
 		return false;
@@ -201,3 +213,90 @@ function infometry_pt_enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'infometry_pt_enqueue_assets', 20 );
+
+/**
+ * Format the selected demo date submitted by the Conversa page form.
+ *
+ * @param string $date_value Date in YYYY-MM-DD format.
+ * @return string
+ */
+function infometry_pt_format_conversa_demo_date( $date_value ) {
+	$date_value = sanitize_text_field( wp_unslash( $date_value ) );
+
+	if ( ! preg_match( '/^\d{4}-\d{2}-\d{2}$/', $date_value ) ) {
+		return '';
+	}
+
+	$date = DateTimeImmutable::createFromFormat( '!Y-m-d', $date_value );
+	if ( ! $date || $date->format( 'Y-m-d' ) !== $date_value ) {
+		return '';
+	}
+
+	return wp_date( 'F j, Y', $date->getTimestamp() );
+}
+
+/**
+ * Handle only the INFOFISCUS Conversa page demo form submission.
+ */
+function infometry_pt_handle_conversa_demo_request() {
+	$referer = wp_get_referer();
+	$redirect_url = $referer ? remove_query_arg( 'conversa_demo', $referer ) : home_url( '/' );
+
+	if (
+		! isset( $_POST['infometry_conversa_demo_nonce'] ) ||
+		! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['infometry_conversa_demo_nonce'] ) ), 'infometry_conversa_demo_request' )
+	) {
+		wp_safe_redirect( add_query_arg( 'conversa_demo', 'invalid', $redirect_url ) );
+		exit;
+	}
+
+	$page_id = isset( $_POST['conversa_page_id'] ) ? absint( wp_unslash( $_POST['conversa_page_id'] ) ) : 0;
+	if ( ! infometry_pt_is_conversa_page_id( $page_id ) ) {
+		wp_safe_redirect( add_query_arg( 'conversa_demo', 'invalid', $redirect_url ) );
+		exit;
+	}
+
+	$first_name     = isset( $_POST['first_name'] ) ? sanitize_text_field( wp_unslash( $_POST['first_name'] ) ) : '';
+	$last_name      = isset( $_POST['last_name'] ) ? sanitize_text_field( wp_unslash( $_POST['last_name'] ) ) : '';
+	$company_email  = isset( $_POST['company_email'] ) ? sanitize_email( wp_unslash( $_POST['company_email'] ) ) : '';
+	$contact_number = isset( $_POST['contact_number'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_number'] ) ) : '';
+	$company        = isset( $_POST['company'] ) ? sanitize_text_field( wp_unslash( $_POST['company'] ) ) : '';
+	$demo_date      = isset( $_POST['selected_demo_date'] ) ? infometry_pt_format_conversa_demo_date( $_POST['selected_demo_date'] ) : '';
+
+	if ( ! $first_name || ! $last_name || ! is_email( $company_email ) || ! $contact_number || ! $demo_date ) {
+		wp_safe_redirect( add_query_arg( 'conversa_demo', 'missing', $redirect_url ) );
+		exit;
+	}
+
+	$recipient = apply_filters( 'infometry_conversa_demo_recipient', get_option( 'admin_email' ) );
+	$subject   = sprintf(
+		/* translators: %s: sender name. */
+		__( 'INFOFISCUS Conversa demo request from %s', 'infometry-product-templates' ),
+		trim( $first_name . ' ' . $last_name )
+	);
+	$message   = implode(
+		"\n",
+		array(
+			'New INFOFISCUS Conversa demo request',
+			'',
+			'First name: ' . $first_name,
+			'Last name: ' . $last_name,
+			'Company email: ' . $company_email,
+			'Contact number: ' . $contact_number,
+			'Company: ' . ( $company ? $company : 'Not provided' ),
+			'Selected demo date: ' . $demo_date,
+			'Source page: ' . get_permalink( $page_id ),
+		)
+	);
+	$headers   = array(
+		'Content-Type: text/plain; charset=UTF-8',
+		'Reply-To: ' . trim( $first_name . ' ' . $last_name ) . ' <' . $company_email . '>',
+	);
+
+	$sent = wp_mail( $recipient, $subject, $message, $headers );
+
+	wp_safe_redirect( add_query_arg( 'conversa_demo', $sent ? 'success' : 'mail_failed', $redirect_url ) );
+	exit;
+}
+add_action( 'admin_post_infometry_conversa_demo_request', 'infometry_pt_handle_conversa_demo_request' );
+add_action( 'admin_post_nopriv_infometry_conversa_demo_request', 'infometry_pt_handle_conversa_demo_request' );

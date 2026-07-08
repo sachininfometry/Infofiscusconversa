@@ -2358,6 +2358,25 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   padding: 30px;
 }
 
+.icp-form-notice {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.icp-form-notice-success {
+  color: #027a48;
+  background: #dcfae6;
+}
+
+.icp-form-notice-error {
+  color: #b42318;
+  background: #fee4e2;
+}
+
 .icp-form-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

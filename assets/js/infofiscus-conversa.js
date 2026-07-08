@@ -198,6 +198,14 @@
         renderDemoCalendar();
       });
     }
+
+    if (demoForm && demoDateInput) {
+      demoForm.addEventListener('submit', function () {
+        if (!demoDateInput.value) {
+          syncDemoDate(selectedDemoDate);
+        }
+      });
+    }
   }
 
   root.querySelectorAll('[data-icp-demo-trigger]').forEach(function (button) {

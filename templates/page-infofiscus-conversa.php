@@ -15,6 +15,7 @@ get_header();
 $demo_url    = apply_filters( 'infometry_conversa_demo_url', home_url( '/infofiscus-analytics-sign-up-for-demo/' ) );
 $contact_url = apply_filters( 'infometry_conversa_contact_url', home_url( '/contact-us/' ) );
 $intro_video = apply_filters( 'infometry_conversa_intro_video_url', 'https://wordpress-1633295-6507153.cloudwaysapps.com/wp-content/uploads/2026/04/Copy-of-Infometry-32.mp4' );
+$demo_status = isset( $_GET['conversa_demo'] ) ? sanitize_key( wp_unslash( $_GET['conversa_demo'] ) ) : '';
 
 $problems = array(
 	array( 'icon' => 'gauge', 'title' => 'Too many dashboards', 'copy' => 'Teams struggle to find the right view or build the right report.' ),
@@ -532,8 +533,16 @@ $other_products = array(
 						</div>
 					</div>
 				</div>
-				<form class="icp-demo-form" id="icp-demo-request-form" action="<?php echo esc_url( $demo_url ); ?>" method="post">
+				<form class="icp-demo-form" id="icp-demo-request-form" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
+					<?php wp_nonce_field( 'infometry_conversa_demo_request', 'infometry_conversa_demo_nonce' ); ?>
+					<input type="hidden" name="action" value="infometry_conversa_demo_request">
+					<input type="hidden" name="conversa_page_id" value="<?php echo esc_attr( get_the_ID() ); ?>">
 					<input type="hidden" name="selected_demo_date" data-icp-demo-date value="">
+					<?php if ( 'success' === $demo_status ) : ?>
+						<p class="icp-form-notice icp-form-notice-success">Thank you. Your demo request has been sent with the selected date.</p>
+					<?php elseif ( in_array( $demo_status, array( 'missing', 'mail_failed', 'invalid' ), true ) ) : ?>
+						<p class="icp-form-notice icp-form-notice-error">Please check the form and try again.</p>
+					<?php endif; ?>
 					<div class="icp-form-row">
 						<label>First Name <span>*</span><input type="text" name="first_name" autocomplete="given-name" required></label>
 						<label>Last Name <span>*</span><input type="text" name="last_name" autocomplete="family-name" required></label>
