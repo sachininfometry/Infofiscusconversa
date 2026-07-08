@@ -2400,14 +2400,14 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 .icp-logo-slider {
   position: relative;
   overflow: hidden;
-  padding: 14px 0;
+  padding: 6px 0;
   mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
 }
 
 .icp-logo-track {
   display: flex;
   width: max-content;
-  gap: 18px;
+  gap: 8px;
   align-items: center;
   animation: icpLogoSlide 34s linear infinite;
 }
@@ -2418,61 +2418,66 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-logo-slide {
   display: inline-flex;
-  width: 244px;
-  min-width: 244px;
-  height: 112px;
+  width: 190px;
+  min-width: 190px;
+  height: 76px;
   align-items: center;
   justify-content: center;
-  padding: 22px 30px;
-  border: 1px solid rgba(216, 228, 242, .72);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, .82);
-  box-shadow: 0 14px 34px rgba(15, 42, 82, .06);
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .icp-logo-slide img {
   width: auto;
-  max-width: 156px;
-  max-height: 52px;
+  max-width: 130px;
+  max-height: 42px;
   object-fit: contain;
   transform: translateZ(0);
 }
 
 .icp-logo-slide img[src*="customer-ibm-logo"] {
-  max-width: 128px;
-  max-height: 50px;
+  max-width: 116px;
+  max-height: 38px;
 }
 
 .icp-logo-slide img[src*="customer-informatica-logo"] {
-  max-width: 170px;
-  max-height: 46px;
+  max-width: 136px;
+  max-height: 34px;
 }
 
 .icp-logo-slide img[src*="customer-michaels-logo"] {
-  max-width: 148px;
-  max-height: 52px;
-}
-
-.icp-logo-slide img[src*="customer-sandisk-logo"] {
-  max-width: 168px;
+  max-width: 130px;
   max-height: 42px;
 }
 
+.icp-logo-slide img[src*="customer-sandisk-logo"] {
+  max-width: 136px;
+  max-height: 34px;
+}
+
 .icp-logo-slide img[src*="customer-sanofi-logo"] {
-  max-width: 100px;
-  max-height: 58px;
+  max-width: 86px;
+  max-height: 44px;
 }
 
 .icp-logo-slide img[src*="customer-belk-logo"],
 .icp-logo-slide img[src*="customer-fusionio-logo"] {
-  max-width: 132px;
-  max-height: 56px;
+  max-width: 116px;
+  max-height: 42px;
+}
+
+.icp-logo-slide img[src*="customer-fusionio-logo"] {
+  max-width: 126px;
+  max-height: 46px;
 }
 
 .icp-logo-slide img[src*="customer-adaptive-insights-logo"],
 .icp-logo-slide img[src*="customer-asana-logo"] {
-  max-width: 152px;
-  max-height: 48px;
+  max-width: 128px;
+  max-height: 38px;
 }
 
 @keyframes icpLogoSlide {
@@ -3057,20 +3062,20 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   }
 
   .icp-logo-track {
-    gap: 12px;
+    gap: 6px;
     animation-duration: 28s;
   }
 
   .icp-logo-slide {
-    width: 190px;
-    min-width: 190px;
-    height: 90px;
-    padding: 18px 22px;
+    width: 150px;
+    min-width: 150px;
+    height: 64px;
+    padding: 6px 12px;
   }
 
   .icp-logo-slide img {
-    max-width: 128px;
-    max-height: 40px;
+    max-width: 112px;
+    max-height: 34px;
   }
 
   .icp-comparison-table {
