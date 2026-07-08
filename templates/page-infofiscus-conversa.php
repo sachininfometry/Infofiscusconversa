@@ -557,7 +557,11 @@ $other_products = array(
 					<?php for ( $i = 0; $i < 2; $i++ ) : ?>
 						<?php foreach ( $customer_logos as $customer ) : ?>
 							<span class="icp-logo-slide">
-								<img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/' . $customer['file'] ); ?>" alt="<?php echo esc_attr( $customer['name'] ); ?> logo">
+								<?php
+								$customer_logo_path = INFOMETRY_PT_PATH . 'assets/images/' . $customer['file'];
+								$customer_logo_ver  = is_readable( $customer_logo_path ) ? (string) filemtime( $customer_logo_path ) : INFOMETRY_PT_VERSION;
+								?>
+								<img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/' . $customer['file'] . '?v=' . $customer_logo_ver ); ?>" alt="<?php echo esc_attr( $customer['name'] ); ?> logo">
 							</span>
 						<?php endforeach; ?>
 					<?php endfor; ?>
