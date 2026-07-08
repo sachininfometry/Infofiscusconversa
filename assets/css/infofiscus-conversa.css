@@ -1817,15 +1817,21 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   z-index: 1;
 }
 
+.icp-comparison .icp-section-heading {
+  max-width: 100%;
+}
+
 .icp-comparison .icp-section-heading h2 {
-  max-width: 760px;
+  max-width: none;
   margin-inline: auto;
   color: var(--ink);
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.12;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.08;
 }
 
 .icp-comparison .icp-section-heading p {
+  max-width: 980px;
+  margin-inline: auto;
   color: #516079;
 }
 
@@ -2180,7 +2186,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-demo-form-section .icp-section-heading h2 {
   max-width: none;
-  font-size: clamp(34px, 3.7vw, 50px);
+  font-size: clamp(28px, 3.2vw, 42px);
   line-height: 1.08;
 }
 
