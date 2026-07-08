@@ -452,7 +452,7 @@ $other_products = array(
 					<thead>
 						<tr>
 							<th scope="col">Capabilities</th>
-							<th scope="col"><span><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/infofiscus-conversa-logo.png' ); ?>" alt="INFOFISCUS Conversa"></span></th>
+							<th scope="col"><span><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/infofiscus-conversa-table-logo.png' ); ?>" alt="INFOFISCUS Conversa"></span></th>
 							<th scope="col">Tableau</th>
 							<th scope="col">Power BI</th>
 							<th scope="col">Modern AI Tools</th>

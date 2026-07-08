@@ -1071,6 +1071,40 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   color: rgba(232, 239, 255, .78);
 }
 
+.icp-personas {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(100deg, #04102c 0%, #04112f 52%, #051232 100%);
+}
+
+.icp-personas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .025), rgba(255, 255, 255, 0));
+  opacity: 1;
+  pointer-events: none;
+}
+
+.icp-personas .icp-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.icp-personas .icp-section-heading h2 {
+  color: #fff;
+}
+
+.icp-personas .icp-section-heading p {
+  color: rgba(232, 241, 255, .82);
+}
+
+.icp-personas .icp-persona-card {
+  border-color: rgba(255, 255, 255, .18);
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(0, 16, 48, .22);
+}
+
 .icp-center {
   max-width: 720px;
   margin: 0 auto 28px;
@@ -1720,33 +1754,93 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   background: #fff;
 }
 
+.icp-comparison {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(72, 214, 255, .16), transparent 28%),
+    linear-gradient(180deg, #f7faff 0%, #eef5ff 100%);
+}
+
+.icp-comparison::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .72), transparent);
+  opacity: .58;
+  pointer-events: none;
+}
+
+.icp-comparison .icp-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.icp-comparison .icp-section-heading h2 {
+  max-width: 760px;
+  margin-inline: auto;
+  color: var(--ink);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.12;
+}
+
+.icp-comparison .icp-section-heading p {
+  color: #516079;
+}
+
 .icp-comparison-table-wrap {
   overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 16px 40px rgba(16, 24, 40, .05);
+  max-width: 1040px;
+  padding: 10px;
+  margin-inline: auto;
+  border: 1px solid rgba(126, 181, 255, .38);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .96) 0%, rgba(235, 247, 255, .95) 54%, rgba(247, 251, 255, .98) 100%);
+  box-shadow: 0 26px 70px rgba(20, 61, 118, .16), 0 0 0 1px rgba(255, 255, 255, .82) inset;
 }
 
 .icp-comparison-table {
   width: 100%;
-  min-width: 860px;
-  border-collapse: collapse;
+  min-width: 760px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid rgba(216, 228, 242, .9);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(15, 42, 82, .08);
 }
 
 .icp-comparison-table th,
 .icp-comparison-table td {
-  padding: 15px 18px;
+  padding: 13px 12px;
   border-bottom: 1px solid #e8eef7;
+  border-right: 1px solid #edf2f8;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
   text-align: center;
   vertical-align: middle;
+  transition: background .18s ease, box-shadow .18s ease, color .18s ease, transform .18s ease;
+}
+
+.icp-comparison-table th:last-child,
+.icp-comparison-table td:last-child {
+  border-right: 0;
 }
 
 .icp-comparison-table thead th {
   color: #fff;
-  background: #071f46;
+  border-color: rgba(255, 255, 255, .16);
+  background: #092654;
   font-size: 15px;
   font-weight: 900;
+}
+
+.icp-comparison-table thead th:nth-child(2) {
+  color: var(--ink);
+  background: #f8fcff;
+  box-shadow: inset 0 4px 0 #4cd3ff;
 }
 
 .icp-comparison-table thead th:first-child,
@@ -1756,8 +1850,56 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 
 .icp-comparison-table tbody th {
   color: #344054;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   font-size: 14px;
   font-weight: 700;
+}
+
+.icp-comparison-table tbody tr:nth-child(even) th,
+.icp-comparison-table tbody tr:nth-child(even) td {
+  background: linear-gradient(180deg, #f8fbff 0%, #f2f8ff 100%);
+}
+
+.icp-comparison-table tbody tr:hover th,
+.icp-comparison-table tbody tr:hover td {
+  background: linear-gradient(180deg, #e3f2ff 0%, #d7ecff 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .92), inset 0 -1px 0 rgba(80, 154, 240, .16);
+}
+
+.icp-comparison-table tbody tr:hover th {
+  color: #0b2a5a;
+  box-shadow: inset 5px 0 0 #35c7ff, inset 0 1px 0 rgba(255, 255, 255, .92), inset 0 -1px 0 rgba(80, 154, 240, .16);
+}
+
+.icp-comparison-table tbody td:hover {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, #d3f3ff 0%, #c3eaff 100%) !important;
+  box-shadow: inset 0 0 0 2px #27bfff, 0 0 0 1px rgba(39, 191, 255, .32), 0 12px 28px rgba(21, 119, 210, .18);
+}
+
+.icp-comparison-table tbody td:hover .icp-status {
+  transform: translateY(-1px) scale(1.04);
+}
+
+.icp-comparison-table thead th:first-child,
+.icp-comparison-table tbody th {
+  width: 28%;
+}
+
+.icp-comparison-table thead th:not(:first-child),
+.icp-comparison-table tbody td {
+  width: 18%;
+}
+
+.icp-comparison-table tbody td:nth-child(2) {
+  background: linear-gradient(180deg, #f5fcff 0%, #eaf8ff 100%);
+  box-shadow: inset 3px 0 0 rgba(76, 211, 255, .42), inset -3px 0 0 rgba(76, 211, 255, .16);
+}
+
+.icp-comparison-table tbody tr:nth-child(even) td:nth-child(2),
+.icp-comparison-table tbody tr:hover td:nth-child(2) {
+  background: linear-gradient(180deg, #edf9ff 0%, #e3f5ff 100%);
 }
 
 .icp-comparison-table tbody tr:last-child th,
@@ -1766,23 +1908,26 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
 }
 
 .icp-comparison-table thead img {
-  width: 150px;
-  max-height: 34px;
+  width: 142px;
+  max-height: 42px;
   margin-inline: auto;
   object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(15, 42, 82, .18));
 }
 
 .icp-status {
   display: inline-flex;
-  min-width: 54px;
-  min-height: 28px;
+  min-width: 58px;
+  min-height: 30px;
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 900;
   line-height: 1;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .7), 0 8px 18px rgba(16, 24, 40, .08);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .icp-status-yes {
@@ -2717,7 +2862,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   }
 
   .icp-comparison-table {
-    min-width: 760px;
+    min-width: 700px;
   }
 
   .icp-pricing-card .icp-button,
