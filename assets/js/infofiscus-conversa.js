@@ -218,10 +218,9 @@
   });
 
   function animateCounter(el) {
-    if (el.dataset.icpCountDone === 'true') {
-      return;
+    if (el.icpCounterFrame) {
+      window.cancelAnimationFrame(el.icpCounterFrame);
     }
-    el.dataset.icpCountDone = 'true';
 
     var target = parseFloat(el.getAttribute('data-icp-count') || '0');
     var suffix = el.getAttribute('data-icp-suffix') || '';
@@ -229,6 +228,7 @@
     var decimals = String(target).indexOf('.') > -1 ? 1 : 0;
     var startTime = null;
     var duration = 1150;
+    el.textContent = prefix + (0).toFixed(decimals) + suffix;
 
     function frame(time) {
       if (!startTime) {
@@ -239,13 +239,14 @@
       var value = target * eased;
       el.textContent = prefix + value.toFixed(decimals) + suffix;
       if (progress < 1) {
-        window.requestAnimationFrame(frame);
+        el.icpCounterFrame = window.requestAnimationFrame(frame);
       } else {
         el.textContent = prefix + target.toFixed(decimals) + suffix;
+        el.icpCounterFrame = null;
       }
     }
 
-    window.requestAnimationFrame(frame);
+    el.icpCounterFrame = window.requestAnimationFrame(frame);
   }
 
   var counters = Array.prototype.slice.call(root.querySelectorAll('[data-icp-count]'));
@@ -254,7 +255,6 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           animateCounter(entry.target);
-          counterObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.35 });
