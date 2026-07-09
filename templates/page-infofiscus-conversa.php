@@ -268,12 +268,6 @@ $other_products = array(
 				<p class="icp-kicker">Meet</p>
 				<h2 id="icp-intro-title">INFOFISCUS Conversa</h2>
 				<p>A next-generation conversational analytics platform that lets your teams explore, analyze, and act on data using natural language. Built for the enterprise. Governed for trust. Designed for outcomes.</p>
-				<div class="icp-mini-stats">
-					<span><strong data-icp-count="3" data-icp-suffix="X">3X</strong>Faster Insights</span>
-					<span><strong data-icp-count="70" data-icp-suffix="%+">70%+</strong>Self-Service Adoption</span>
-					<span><strong data-icp-count="2" data-icp-suffix="X">2X</strong>Productivity Gain</span>
-					<span><strong data-icp-count="92" data-icp-suffix="%+">92%+</strong>Trusted Accuracy</span>
-				</div>
 			</div>
 		</div>
 	</section>

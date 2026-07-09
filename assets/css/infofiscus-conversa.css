@@ -948,17 +948,57 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   background: #fff;
 }
 
+.icp-intro {
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid #e8efff;
+  background:
+    linear-gradient(120deg, rgba(82, 117, 255, .08), transparent 34%),
+    linear-gradient(180deg, #f8fbff 0%, #fff 52%, #f3f7ff 100%);
+}
+
+.icp-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(67, 97, 238, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 97, 238, .08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%);
+  opacity: .62;
+  pointer-events: none;
+}
+
+.icp-intro::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(61, 90, 254, .36), transparent);
+  pointer-events: none;
+}
+
+.icp-intro .icp-shell {
+  position: relative;
+  z-index: 1;
+}
+
 .icp-intro-grid {
   display: grid;
-  grid-template-columns: minmax(300px, .9fr) minmax(0, 1.1fr);
-  gap: 70px;
+  grid-template-columns: minmax(480px, 1.15fr) minmax(360px, .85fr);
+  gap: 48px;
   align-items: center;
 }
 
 .icp-intro-visual {
   position: relative;
+  border: 1px solid rgba(97, 121, 180, .18);
   border-radius: 24px;
-  background: linear-gradient(135deg, #eef3ff, #fff);
+  background: #fff;
+  box-shadow: 0 30px 70px rgba(29, 60, 128, .16), 0 10px 26px rgba(15, 23, 42, .08);
   overflow: hidden;
 }
 
@@ -970,6 +1010,7 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   bottom: 0;
   width: 8px;
   background: #f8fbff;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -991,6 +1032,24 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   transform-origin: center;
 }
 
+.icp-intro-copy {
+  max-width: 510px;
+  position: relative;
+  padding: 28px 0 28px 30px;
+}
+
+.icp-intro-copy::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  bottom: 26px;
+  left: 0;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #4c3fff, #00a7d7);
+  box-shadow: 0 10px 24px rgba(76, 63, 255, .26);
+}
+
 .icp-kicker {
   color: #3b54d9;
 }
@@ -1006,31 +1065,6 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   margin: 12px 0 0;
   color: #24334f;
   font-size: 18px;
-}
-
-.icp-mini-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.icp-mini-stats span {
-  min-width: 0;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  color: #344054;
-  background: #fff;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.icp-mini-stats strong {
-  display: block;
-  margin-bottom: 7px;
-  color: #4c3fff;
-  font-size: 26px;
 }
 
 .icp-problem,
@@ -3219,7 +3253,6 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   }
 
   .icp-hero-proof,
-  .icp-mini-stats,
   .icp-workflow-row,
   .icp-tabs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3420,7 +3453,6 @@ body.infometry-conversa-product-page [id^="rev_slider_"][id$="_forcefullwidth"] 
   }
 
   .icp-hero-proof,
-  .icp-mini-stats,
   .icp-four,
   .icp-capability-grid,
   .icp-persona-grid,
