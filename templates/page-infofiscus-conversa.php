@@ -56,6 +56,15 @@ $personas = array(
 	array( 'icon' => 'it', 'title' => 'IT & Data Teams', 'copy' => 'Ensure governance, security, and reliability.' ),
 );
 
+$supported_llms = array(
+	array( 'name' => 'OpenAI', 'file' => 'llm-openai.png' ),
+	array( 'name' => 'Llama', 'file' => 'llm-llama.png' ),
+	array( 'name' => 'Vertex AI', 'file' => 'llm-vertex-ai.png' ),
+	array( 'name' => 'Gemini', 'file' => 'llm-gemini.png' ),
+	array( 'name' => 'Claude', 'file' => 'llm-claude.png' ),
+	array( 'name' => 'Mistral AI', 'file' => 'llm-mistral-ai.png' ),
+);
+
 $comparison_rows = array(
 	array( 'capability' => 'Natural Language Query', 'conversa' => 'yes', 'tableau' => 'partial', 'powerbi' => 'partial', 'ai' => 'yes' ),
 	array( 'capability' => 'Ad-hoc Exploration', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'yes' ),
@@ -254,6 +263,20 @@ $other_products = array(
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="icp-hero-strip" aria-label="Enterprise outcomes and supported LLMs">
+		<div class="icp-shell icp-hero-strip-inner">
+			<div class="icp-strip-stats" aria-label="Enterprise outcomes">
+				<?php foreach ( $outcomes as $outcome ) : ?>
+					<div class="icp-strip-stat"><strong data-icp-count="<?php echo esc_attr( preg_replace( '/[^0-9.]/', '', $outcome['stat'] ) ); ?>" data-icp-suffix="<?php echo esc_attr( preg_replace( '/[0-9.]/', '', $outcome['stat'] ) ); ?>"><?php echo esc_html( $outcome['stat'] ); ?></strong><span><?php echo esc_html( $outcome['copy'] ); ?></span></div>
+				<?php endforeach; ?>
+			</div>
+			<div class="icp-llm-panel"><span class="icp-strip-heading">LLMs Supported</span><div class="icp-llm-list" aria-label="Supported large language models">
+				<?php foreach ( $supported_llms as $llm ) : ?><span><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/' . $llm['file'] ); ?>" alt="<?php echo esc_attr( $llm['name'] ); ?> logo"></span><?php endforeach; ?>
+				<?php foreach ( $supported_llms as $llm ) : ?><span aria-hidden="true"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/' . $llm['file'] ); ?>" alt=""></span><?php endforeach; ?>
+			</div></div>
 		</div>
 	</section>
 
