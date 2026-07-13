@@ -249,6 +249,26 @@
     el.icpCounterFrame = window.requestAnimationFrame(frame);
   }
 
+  root.querySelectorAll('[data-icp-hero-slider]').forEach(function (slider) {
+    var slides = Array.prototype.slice.call(slider.querySelectorAll('.icp-hero-slide'));
+    var dots = Array.prototype.slice.call(slider.querySelectorAll('.icp-hero-slider-dots span'));
+    var activeSlide = 0;
+    if (slides.length < 2) {
+      return;
+    }
+    window.setInterval(function () {
+      slides[activeSlide].classList.remove('is-active');
+      if (dots[activeSlide]) {
+        dots[activeSlide].classList.remove('is-active');
+      }
+      activeSlide = (activeSlide + 1) % slides.length;
+      slides[activeSlide].classList.add('is-active');
+      if (dots[activeSlide]) {
+        dots[activeSlide].classList.add('is-active');
+      }
+    }, 4200);
+  });
+
   var counters = Array.prototype.slice.call(root.querySelectorAll('[data-icp-count]'));
   if ('IntersectionObserver' in window) {
     var counterObserver = new IntersectionObserver(function (entries) {

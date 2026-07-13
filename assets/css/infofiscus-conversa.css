@@ -3742,3 +3742,20 @@ body .icp-problem .icp-soft-card p {
 /* Semantic color locks: carousel position can never change a card's palette. */
 .icp-capabilities .icp-feature-card.is-natural-language{--card-accent:#1e78a5;--card-accent-2:#36b9d9;--card-tint:#edf9fb}.icp-capabilities .icp-feature-card.is-ai-insights{--card-accent:#00a1df;--card-accent-2:#45c7f2;--card-tint:#eaf9ff}.icp-capabilities .icp-feature-card.is-connectivity{--card-accent:#084f83;--card-accent-2:#ff6b2c;--card-tint:#edf6fb}.icp-capabilities .icp-feature-card.is-governance{--card-accent:#087cff;--card-accent-2:#42b5ff;--card-tint:#eaf4ff}.icp-capabilities .icp-feature-card.is-visuals{--card-accent:#f05a3d;--card-accent-2:#ff8a65;--card-tint:#fff3ef}.icp-capabilities .icp-feature-card.is-sql{--card-accent:#1b5f92;--card-accent-2:#5cb7d8;--card-tint:#edf7fb}.icp-capabilities .icp-feature-card.is-monitoring{--card-accent:#26a9df;--card-accent-2:#70d2ed;--card-tint:#eaf9ff}.icp-capabilities .icp-feature-card.is-automation{--card-accent:#ff694b;--card-accent-2:#ff9b79;--card-tint:#fff4ef}
 .icp-personas .icp-persona-card.is-executive{--role-accent:#087cff;--role-accent-2:#42b5ff;--role-tint:#eaf4ff}.icp-personas .icp-persona-card.is-business-user{--role-accent:#00a779;--role-accent-2:#45d2a8;--role-tint:#ecfaf5}.icp-personas .icp-persona-card.is-data-analyst{--role-accent:#315a91;--role-accent-2:#7fa4cf;--role-tint:#eef3f8}.icp-personas .icp-persona-card.is-finance-team{--role-accent:#f28a20;--role-accent-2:#ffc15e;--role-tint:#fff5e9}.icp-personas .icp-persona-card.is-it-data{--role-accent:#0ba58f;--role-accent-2:#55d6bd;--role-tint:#eaf9f6}
+
+/* Homepage-style product image carousel for the Conversa hero. */
+.icp-dashboard-legacy{display:none!important}
+.icp-hero .icp-hero-grid{grid-template-columns:minmax(380px,.88fr) minmax(540px,1.22fr);gap:clamp(42px,5vw,84px);align-items:center}
+.icp-hero-copy{max-width:620px}
+.icp-hero-copy h1{font-size:clamp(48px,4.7vw,72px);line-height:1.02;letter-spacing:-.045em}
+.icp-hero-copy .icp-hero-text{max-width:590px;margin-top:26px;font-size:17px;line-height:1.68;color:rgba(255,255,255,.78)}
+.icp-hero-slider{position:relative;width:100%;aspect-ratio:1.58/1;min-height:430px;filter:drop-shadow(0 28px 46px rgba(0,8,42,.42))}
+.icp-hero-slider::before{content:"";position:absolute;inset:7% -4% -7%;border-radius:50%;background:radial-gradient(circle,rgba(69,92,255,.3),transparent 68%);filter:blur(20px);pointer-events:none}
+.icp-hero-slide{position:absolute;inset:0;display:flex;margin:0;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translate3d(32px,0,0) scale(.985);transition:opacity .7s ease,transform .7s ease,visibility .7s}
+.icp-hero-slide.is-active{opacity:1;visibility:visible;transform:translate3d(0,0,0) scale(1);z-index:2}
+.icp-hero-slide img{display:block;width:100%;height:auto;max-height:100%;object-fit:contain;border-radius:18px}
+.icp-hero-slider-dots{position:absolute;z-index:4;left:50%;bottom:-4px;display:flex;gap:8px;transform:translateX(-50%)}
+.icp-hero-slider-dots span{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.35);transition:width .3s ease,background .3s ease}
+.icp-hero-slider-dots span.is-active{width:24px;background:#6c5cff}
+@media(max-width:1100px){.icp-hero .icp-hero-grid{grid-template-columns:1fr}.icp-hero-copy{max-width:760px}.icp-hero-slider{min-height:0;max-width:820px;margin:10px auto 0}}
+@media(max-width:700px){.icp-hero-copy h1{font-size:clamp(42px,12vw,58px)}.icp-hero-slider{aspect-ratio:1.5/1}.icp-hero-copy .icp-hero-text{font-size:15px}}

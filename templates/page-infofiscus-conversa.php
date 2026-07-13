@@ -167,23 +167,29 @@ $other_products = array(
 		<div class="icp-shell">
 			<div class="icp-hero-grid">
 				<div class="icp-hero-copy">
-					<p class="icp-eyebrow">INFOFISCUS Conversa</p>
-					<h1 id="icp-hero-title">Conversational <span>Analytics</span></h1>
-					<p class="icp-hero-lede">Ask questions in plain English.<br>Get trusted insights, instantly.</p>
-					<p class="icp-hero-text">INFOFISCUS Conversa is an enterprise-grade conversational analytics platform.<br>It turns data into decisions with natural language, AI intelligence, and governed insights.</p>
+					<p class="icp-eyebrow">Enterprise Conversational Analytics</p>
+					<h1 id="icp-hero-title">Ask Anything.<br>Get Trusted Insights.<br><span>Drive Results.</span></h1>
+					<p class="icp-hero-text">INFOFISCUS Conversa gives every team instant, governed answers from enterprise data—no SQL, no dashboard bottlenecks.</p>
 					<div class="icp-actions">
-						<a class="icp-button icp-button-primary" href="<?php echo esc_url( $demo_url ); ?>">Request a Live Demo</a>
+						<a class="icp-button icp-button-primary" href="<?php echo esc_url( $demo_url ); ?>">Request a Demo <span aria-hidden="true">→</span></a>
 						<a class="icp-button icp-button-secondary" href="#icp-intro"><span class="icp-play-dot">▶</span> Watch Product Tour</a>
 					</div>
 					<div class="icp-hero-icons" aria-label="Conversa platform strengths">
+						<span><svg aria-hidden="true"><use href="#icp-i-chat"></use></svg>Natural Language</span>
+						<span><svg aria-hidden="true"><use href="#icp-i-spark"></use></svg>Instant Insights</span>
 						<span><svg aria-hidden="true"><use href="#icp-i-shield"></use></svg>Enterprise Secure</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-lock"></use></svg>Governed AI</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-trust"></use></svg>Trusted Answers</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-chart"></use></svg>Actionable Insights</span>
+						<span><svg aria-hidden="true"><use href="#icp-i-target"></use></svg>Recommended Actions</span>
 					</div>
 				</div>
 
-				<div class="icp-dashboard" aria-label="INFOFISCUS Conversa dashboard mockup">
+				<div class="icp-hero-slider" data-icp-hero-slider aria-label="INFOFISCUS Conversa product preview carousel">
+					<figure class="icp-hero-slide is-active"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-home-1.png' ); ?>" alt="INFOFISCUS Conversa home dashboard"></figure>
+					<figure class="icp-hero-slide"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-storybooks-1.png' ); ?>" alt="INFOFISCUS Conversa storybooks dashboard"></figure>
+					<figure class="icp-hero-slide"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-connections-1.png' ); ?>" alt="INFOFISCUS Conversa connections dashboard"></figure>
+					<div class="icp-hero-slider-dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+				</div>
+
+				<div class="icp-dashboard icp-dashboard-legacy" aria-hidden="true">
 					<aside class="icp-dashboard-rail" aria-hidden="true">
 						<span class="icp-rail-menu"></span>
 						<span class="is-active"><svg><use href="#icp-i-analyst"></use></svg></span>
