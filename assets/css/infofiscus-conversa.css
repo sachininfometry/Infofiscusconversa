@@ -1368,42 +1368,28 @@ body .icp-problem .icp-soft-card > * {
   z-index: 1;
 }
 
-.icp-personas .icp-persona-card:nth-child(2),
 body .icp-problem .icp-soft-card:nth-child(2) {
   background: radial-gradient(circle at 18% 14%, rgba(0, 166, 214, .22), transparent 36%), linear-gradient(135deg, #ffffff 0%, #f6fcff 46%, #e8f8ff 100%);
 }
 
-.icp-personas .icp-persona-card:nth-child(2)::before,
 body .icp-problem .icp-soft-card:nth-child(2)::before {
   background: linear-gradient(90deg, #0284c7, #22d3ee);
 }
 
-.icp-personas .icp-persona-card:nth-child(3),
 body .icp-problem .icp-soft-card:nth-child(3) {
   background: radial-gradient(circle at 18% 14%, rgba(124, 58, 237, .2), transparent 36%), linear-gradient(135deg, #ffffff 0%, #fbf9ff 46%, #f1edff 100%);
 }
 
-.icp-personas .icp-persona-card:nth-child(3)::before,
 body .icp-problem .icp-soft-card:nth-child(3)::before {
   background: linear-gradient(90deg, #6d5dfc, #b389ff);
 }
 
-.icp-personas .icp-persona-card:nth-child(4),
 body .icp-problem .icp-soft-card:nth-child(4) {
   background: radial-gradient(circle at 18% 14%, rgba(20, 184, 166, .2), transparent 36%), linear-gradient(135deg, #ffffff 0%, #f6fffd 46%, #e8f9ff 100%);
 }
 
-.icp-personas .icp-persona-card:nth-child(4)::before,
 body .icp-problem .icp-soft-card:nth-child(4)::before {
   background: linear-gradient(90deg, #0f9f9a, #38bdf8);
-}
-
-.icp-personas .icp-persona-card:nth-child(5) {
-  background: radial-gradient(circle at 18% 14%, rgba(37, 99, 235, .2), transparent 36%), linear-gradient(135deg, #ffffff 0%, #f8fbff 46%, #eaf5ff 100%);
-}
-
-.icp-personas .icp-persona-card:nth-child(5)::before {
-  background: linear-gradient(90deg, #2563eb, #7c3aed);
 }
 
 .icp-personas .icp-persona-card h3,
