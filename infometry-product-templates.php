@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Infometry Product Templates
  * Description: Adds isolated product page templates for Infometry product experiences.
- * Version: 1.0.40
+ * Version: 1.0.41
  * Author: Infometry
  * Text Domain: infometry-product-templates
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'INFOMETRY_PT_VERSION', '1.0.40' );
+define( 'INFOMETRY_PT_VERSION', '1.0.41' );
 define( 'INFOMETRY_PT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INFOMETRY_PT_URL', plugin_dir_url( __FILE__ ) );
 define( 'INFOMETRY_PT_CONVERSA_TEMPLATE', 'templates/page-infofiscus-conversa.php' );
@@ -194,8 +194,8 @@ function infometry_pt_enqueue_assets() {
 
 	$css_path    = INFOMETRY_PT_PATH . 'assets/css/infofiscus-conversa.css';
 	$js_path     = INFOMETRY_PT_PATH . 'assets/js/infofiscus-conversa.js';
-	$css_version = is_readable( $css_path ) ? (string) filemtime( $css_path ) : INFOMETRY_PT_VERSION;
-	$js_version  = is_readable( $js_path ) ? (string) filemtime( $js_path ) : INFOMETRY_PT_VERSION;
+	$css_version = INFOMETRY_PT_VERSION . ( is_readable( $css_path ) ? '-' . (string) filemtime( $css_path ) : '' );
+	$js_version  = INFOMETRY_PT_VERSION . ( is_readable( $js_path ) ? '-' . (string) filemtime( $js_path ) : '' );
 
 	wp_enqueue_style(
 		'infometry-infofiscus-conversa',
