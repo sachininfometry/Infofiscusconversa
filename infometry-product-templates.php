@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Infometry Product Templates
  * Description: Adds isolated product page templates for Infometry product experiences.
- * Version: 1.0.38
+ * Version: 1.0.39
  * Author: Infometry
  * Text Domain: infometry-product-templates
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'INFOMETRY_PT_VERSION', '1.0.38' );
+define( 'INFOMETRY_PT_VERSION', '1.0.39' );
 define( 'INFOMETRY_PT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INFOMETRY_PT_URL', plugin_dir_url( __FILE__ ) );
 define( 'INFOMETRY_PT_CONVERSA_TEMPLATE', 'templates/page-infofiscus-conversa.php' );

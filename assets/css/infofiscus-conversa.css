@@ -3747,8 +3747,3 @@ body .icp-problem .icp-soft-card p {
 @media(max-width:900px){.icp-hero-strip .icp-shell{width:min(100% - 48px,1300px)}.icp-llm-list{width:400%}}
 @media(max-width:700px){.icp-personas .icp-shell{width:min(100% - 32px,1320px)}.icp-personas .icp-persona-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.icp-hero-strip .icp-shell{width:min(100% - 28px,1300px)}.icp-strip-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.icp-llm-list{width:600%}}
-
-/* Use the same full-width content canvas as the homepage. */
-.infometry-conversa-product .icp-shell,.icp-capabilities .icp-shell,.icp-hero-strip .icp-shell,.icp-personas .icp-shell{width:min(100% - 48px,1440px);max-width:none}.icp-capability-carousel{margin-inline:calc((100% - min(100% - 48px,1440px)) / -2)}.icp-personas .icp-persona-grid{gap:16px}
-@media(max-width:860px){.infometry-conversa-product .icp-shell,.icp-capabilities .icp-shell,.icp-hero-strip .icp-shell,.icp-personas .icp-shell{width:min(100% - 32px,1440px)}}
-@media(max-width:560px){.infometry-conversa-product .icp-shell,.icp-capabilities .icp-shell,.icp-hero-strip .icp-shell,.icp-personas .icp-shell{width:100%;padding-inline:12px}}
