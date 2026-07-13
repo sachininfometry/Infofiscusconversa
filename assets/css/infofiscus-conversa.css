@@ -3774,13 +3774,13 @@ body .icp-problem .icp-soft-card p {
 @media(max-width:600px){.icp-hero>.icp-shell{width:calc(100% - 32px)}.icp-hero .icp-hero-grid{padding:58px 0 64px;gap:34px}.icp-hero-copy h1{font-size:clamp(40px,12vw,52px)}.icp-hero .icp-hero-icons{grid-template-columns:repeat(2,minmax(0,1fr))}.icp-hero-slider{min-height:0}}
 
 /* Light, high-clarity problem cards aligned with the homepage visual system. */
-.icp-problem{position:relative;padding:88px 0 96px;background:radial-gradient(circle at 8% 12%,rgba(41,151,255,.1),transparent 28%),linear-gradient(180deg,#fff 0%,#f6f9ff 100%);color:#111a48;overflow:hidden}
+.icp-problem{position:relative;padding:88px 0 96px;background:radial-gradient(circle at 10% 18%,rgba(0,153,255,.16),transparent 30%),radial-gradient(circle at 88% 82%,rgba(80,65,255,.18),transparent 34%),linear-gradient(118deg,#031033 0%,#06184d 58%,#071d63 100%)!important;color:#fff;overflow:hidden}
 .icp-problem::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(32,82,170,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(32,82,170,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,transparent,#000 22%,#000 78%,transparent);pointer-events:none}
 .icp-problem .icp-shell{position:relative;z-index:1;width:min(calc(100% - 96px),1380px)}
 .icp-problem .icp-section-heading{margin-bottom:42px}
 .icp-problem .icp-section-heading::before{content:"THE CHALLENGE";display:block;margin-bottom:9px;color:#087cff;font-size:12px;font-weight:900;letter-spacing:.16em}
-.icp-problem .icp-section-heading h2{color:#111a48;font-size:clamp(36px,3.2vw,48px);letter-spacing:-.025em}
-.icp-problem .icp-section-heading p{margin-top:10px;color:#60708b;font-size:18px}
+.icp-problem .icp-section-heading h2{color:#fff!important;font-size:clamp(36px,3.2vw,48px);letter-spacing:-.025em}
+.icp-problem .icp-section-heading p{margin-top:10px;color:rgba(232,239,255,.78)!important;font-size:18px}
 .icp-problem .icp-card-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 body .icp-problem .icp-soft-card{--problem-accent:#087cff;--problem-accent-2:#42b5ff;--problem-tint:#eaf4ff;position:relative;display:flex;min-height:270px;padding:28px 24px 25px;overflow:hidden;flex-direction:column;align-items:center;justify-content:center;border:1px solid color-mix(in srgb,var(--problem-accent) 22%,#dfe7f2)!important;border-radius:16px;background:radial-gradient(circle at 88% 4%,color-mix(in srgb,var(--problem-accent) 15%,transparent),transparent 34%),linear-gradient(155deg,var(--problem-tint),#fff 58%)!important;box-shadow:0 14px 34px rgba(19,45,98,.08)!important;color:#111a48!important;text-align:center;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
 body .icp-problem .icp-soft-card::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--problem-accent),var(--problem-accent-2))}
