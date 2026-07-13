@@ -24,14 +24,14 @@ $problems = array(
 );
 
 $capabilities = array(
-	array( 'icon' => 'chat', 'kicker' => 'Conversational Analytics', 'title' => 'Natural Language Analytics', 'copy' => 'Ask complex business questions in plain English and receive accurate, governed answers instantly.', 'tags' => array( 'Natural Language', 'Instant Answers' ) ),
-	array( 'icon' => 'brain', 'kicker' => 'AI Intelligence', 'title' => 'AI-Powered Insights', 'copy' => 'Summarize performance, explain key drivers, and automatically surface the insights that matter most.', 'tags' => array( 'Smart Summary', 'Root Cause' ) ),
-	array( 'icon' => 'nodes', 'kicker' => 'Unified Data', 'title' => 'Enterprise Data Connectivity', 'copy' => 'Connect securely to warehouses, data lakes, databases, and business applications across your ecosystem.', 'tags' => array( 'Multi-Source', 'Live Data' ) ),
-	array( 'icon' => 'lock', 'kicker' => 'Trusted Governance', 'title' => 'Semantic Layer & Governance', 'copy' => 'Standardize business definitions, permissions, and metrics so every team works from trusted answers.', 'tags' => array( 'Governed Metrics', 'Role Access' ) ),
-	array( 'icon' => 'spark', 'kicker' => 'Visual Exploration', 'title' => 'Interactive Visualizations', 'copy' => 'Turn every answer into clear charts, trends, and drill-down views built for faster business exploration.', 'tags' => array( 'Dynamic Charts', 'Drill Down' ) ),
-	array( 'icon' => 'eye', 'kicker' => 'Explainable Analytics', 'title' => 'SQL Transparency', 'copy' => 'Inspect the generated SQL behind every answer for complete visibility, validation, and enterprise control.', 'tags' => array( 'Visible SQL', 'Audit Ready' ) ),
-	array( 'icon' => 'monitor', 'kicker' => 'Proactive Intelligence', 'title' => 'Alerts & Monitoring', 'copy' => 'Monitor critical KPIs, detect meaningful changes, and notify teams before business issues escalate.', 'tags' => array( 'Smart Alerts', 'KPI Watch' ) ),
-	array( 'icon' => 'api', 'kicker' => 'Embedded Analytics', 'title' => 'APIs & Automation', 'copy' => 'Embed governed intelligence into applications and automate repeatable decisions across business workflows.', 'tags' => array( 'Secure APIs', 'Workflows' ) ),
+	array( 'icon' => 'chat', 'class' => 'is-natural-language', 'kicker' => 'Conversational Analytics', 'title' => 'Natural Language Analytics', 'copy' => 'Ask complex business questions in plain English and receive accurate, governed answers instantly.', 'tags' => array( 'Natural Language', 'Instant Answers' ) ),
+	array( 'icon' => 'brain', 'class' => 'is-ai-insights', 'kicker' => 'AI Intelligence', 'title' => 'AI-Powered Insights', 'copy' => 'Summarize performance, explain key drivers, and automatically surface the insights that matter most.', 'tags' => array( 'Smart Summary', 'Root Cause' ) ),
+	array( 'icon' => 'nodes', 'class' => 'is-connectivity', 'kicker' => 'Unified Data', 'title' => 'Enterprise Data Connectivity', 'copy' => 'Connect securely to warehouses, data lakes, databases, and business applications across your ecosystem.', 'tags' => array( 'Multi-Source', 'Live Data' ) ),
+	array( 'icon' => 'lock', 'class' => 'is-governance', 'kicker' => 'Trusted Governance', 'title' => 'Semantic Layer & Governance', 'copy' => 'Standardize business definitions, permissions, and metrics so every team works from trusted answers.', 'tags' => array( 'Governed Metrics', 'Role Access' ) ),
+	array( 'icon' => 'spark', 'class' => 'is-visuals', 'kicker' => 'Visual Exploration', 'title' => 'Interactive Visualizations', 'copy' => 'Turn every answer into clear charts, trends, and drill-down views built for faster business exploration.', 'tags' => array( 'Dynamic Charts', 'Drill Down' ) ),
+	array( 'icon' => 'eye', 'class' => 'is-sql', 'kicker' => 'Explainable Analytics', 'title' => 'SQL Transparency', 'copy' => 'Inspect the generated SQL behind every answer for complete visibility, validation, and enterprise control.', 'tags' => array( 'Visible SQL', 'Audit Ready' ) ),
+	array( 'icon' => 'monitor', 'class' => 'is-monitoring', 'kicker' => 'Proactive Intelligence', 'title' => 'Alerts & Monitoring', 'copy' => 'Monitor critical KPIs, detect meaningful changes, and notify teams before business issues escalate.', 'tags' => array( 'Smart Alerts', 'KPI Watch' ) ),
+	array( 'icon' => 'api', 'class' => 'is-automation', 'kicker' => 'Embedded Analytics', 'title' => 'APIs & Automation', 'copy' => 'Embed governed intelligence into applications and automate repeatable decisions across business workflows.', 'tags' => array( 'Secure APIs', 'Workflows' ) ),
 );
 
 $steps = array(
@@ -49,11 +49,11 @@ $outcomes = array(
 );
 
 $personas = array(
-	array( 'icon' => 'executive', 'title' => 'Executives', 'copy' => 'Track business performance, uncover critical drivers, and make confident strategic decisions in real time.', 'tags' => array( 'Executive KPIs', 'Decision Intelligence' ) ),
-	array( 'icon' => 'users', 'title' => 'Business Users', 'copy' => 'Explore trusted enterprise data in everyday language without waiting for dashboards or technical support.', 'tags' => array( 'Self-Service', 'Instant Answers' ) ),
-	array( 'icon' => 'analyst', 'title' => 'Data Analysts', 'copy' => 'Move from questions to deeper analysis with transparent SQL, interactive visuals, and explainable insights.', 'tags' => array( 'Deep Analysis', 'SQL Visibility' ) ),
-	array( 'icon' => 'finance', 'title' => 'Finance Teams', 'copy' => 'Analyze performance, explain variance, monitor cash flow, and forecast business outcomes with speed.', 'tags' => array( 'Variance Analysis', 'Forecasting' ) ),
-	array( 'icon' => 'it', 'title' => 'IT & Data Teams', 'copy' => 'Deliver secure, governed analytics while maintaining permissions, metric consistency, and platform reliability.', 'tags' => array( 'Data Governance', 'Enterprise Security' ) ),
+	array( 'icon' => 'executive', 'class' => 'is-executive', 'title' => 'Executives', 'copy' => 'Track business performance, uncover critical drivers, and make confident strategic decisions in real time.', 'tags' => array( 'Executive KPIs', 'Decision Intelligence' ) ),
+	array( 'icon' => 'users', 'class' => 'is-business-user', 'title' => 'Business Users', 'copy' => 'Explore trusted enterprise data in everyday language without waiting for dashboards or technical support.', 'tags' => array( 'Self-Service', 'Instant Answers' ) ),
+	array( 'icon' => 'analyst', 'class' => 'is-data-analyst', 'title' => 'Data Analysts', 'copy' => 'Move from questions to deeper analysis with transparent SQL, interactive visuals, and explainable insights.', 'tags' => array( 'Deep Analysis', 'SQL Visibility' ) ),
+	array( 'icon' => 'finance', 'class' => 'is-finance-team', 'title' => 'Finance Teams', 'copy' => 'Analyze performance, explain variance, monitor cash flow, and forecast business outcomes with speed.', 'tags' => array( 'Variance Analysis', 'Forecasting' ) ),
+	array( 'icon' => 'it', 'class' => 'is-it-data', 'title' => 'IT & Data Teams', 'copy' => 'Deliver secure, governed analytics while maintaining permissions, metric consistency, and platform reliability.', 'tags' => array( 'Data Governance', 'Enterprise Security' ) ),
 );
 
 $supported_llms = array(
@@ -322,7 +322,7 @@ $other_products = array(
 			<div class="icp-capability-carousel" aria-label="Platform capabilities carousel">
 				<div class="icp-card-grid icp-capability-grid">
 					<?php foreach ( $capabilities as $capability ) : ?>
-						<article class="icp-feature-card">
+						<article class="icp-feature-card <?php echo esc_attr( $capability['class'] ); ?>">
 							<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $capability['icon'] ); ?>"></use></svg></span>
 							<span class="icp-feature-kicker"><?php echo esc_html( $capability['kicker'] ); ?></span>
 							<h3><?php echo esc_html( $capability['title'] ); ?></h3>
@@ -331,7 +331,7 @@ $other_products = array(
 						</article>
 					<?php endforeach; ?>
 					<?php foreach ( $capabilities as $capability ) : ?>
-						<article class="icp-feature-card" aria-hidden="true">
+						<article class="icp-feature-card <?php echo esc_attr( $capability['class'] ); ?>" aria-hidden="true">
 							<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $capability['icon'] ); ?>"></use></svg></span>
 							<span class="icp-feature-kicker"><?php echo esc_html( $capability['kicker'] ); ?></span>
 							<h3><?php echo esc_html( $capability['title'] ); ?></h3>
@@ -453,7 +453,7 @@ $other_products = array(
 			</div>
 			<div class="icp-card-grid icp-persona-grid">
 				<?php foreach ( $personas as $persona ) : ?>
-					<article class="icp-persona-card">
+					<article class="icp-persona-card <?php echo esc_attr( $persona['class'] ); ?>">
 						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $persona['icon'] ); ?>"></use></svg></span>
 						<h3><?php echo esc_html( $persona['title'] ); ?></h3>
 						<p><?php echo esc_html( $persona['copy'] ); ?></p>
