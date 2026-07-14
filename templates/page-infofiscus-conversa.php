@@ -24,14 +24,14 @@ $problems = array(
 );
 
 $capabilities = array(
-	array( 'icon' => 'chat', 'class' => 'is-natural-language', 'kicker' => 'Conversational Analytics', 'title' => 'Natural Language Analytics', 'copy' => 'Ask complex business questions in plain English and receive accurate, governed answers instantly.', 'tags' => array( 'Natural Language', 'Instant Answers' ) ),
-	array( 'icon' => 'brain', 'class' => 'is-ai-insights', 'kicker' => 'AI Intelligence', 'title' => 'AI-Powered Insights', 'copy' => 'Summarize performance, explain key drivers, and automatically surface the insights that matter most.', 'tags' => array( 'Smart Summary', 'Root Cause' ) ),
-	array( 'icon' => 'nodes', 'class' => 'is-connectivity', 'kicker' => 'Unified Data', 'title' => 'Enterprise Data Connectivity', 'copy' => 'Connect securely to warehouses, data lakes, databases, and business applications across your ecosystem.', 'tags' => array( 'Multi-Source', 'Live Data' ) ),
-	array( 'icon' => 'lock', 'class' => 'is-governance', 'kicker' => 'Trusted Governance', 'title' => 'Semantic Layer & Governance', 'copy' => 'Standardize business definitions, permissions, and metrics so every team works from trusted answers.', 'tags' => array( 'Governed Metrics', 'Role Access' ) ),
-	array( 'icon' => 'spark', 'class' => 'is-visuals', 'kicker' => 'Visual Exploration', 'title' => 'Interactive Visualizations', 'copy' => 'Turn every answer into clear charts, trends, and drill-down views built for faster business exploration.', 'tags' => array( 'Dynamic Charts', 'Drill Down' ) ),
-	array( 'icon' => 'eye', 'class' => 'is-sql', 'kicker' => 'Explainable Analytics', 'title' => 'SQL Transparency', 'copy' => 'Inspect the generated SQL behind every answer for complete visibility, validation, and enterprise control.', 'tags' => array( 'Visible SQL', 'Audit Ready' ) ),
-	array( 'icon' => 'monitor', 'class' => 'is-monitoring', 'kicker' => 'Proactive Intelligence', 'title' => 'Alerts & Monitoring', 'copy' => 'Monitor critical KPIs, detect meaningful changes, and notify teams before business issues escalate.', 'tags' => array( 'Smart Alerts', 'KPI Watch' ) ),
-	array( 'icon' => 'api', 'class' => 'is-automation', 'kicker' => 'Embedded Analytics', 'title' => 'APIs & Automation', 'copy' => 'Embed governed intelligence into applications and automate repeatable decisions across business workflows.', 'tags' => array( 'Secure APIs', 'Workflows' ) ),
+	array( 'icon' => 'chat', 'class' => 'is-natural-language', 'kicker' => 'Conversational Analytics', 'title' => 'Natural Language Analytics', 'copy' => 'Ask complex business questions in plain English and receive accurate, governed answers instantly.', 'benefits' => array( 'Understand business intent', 'Answer follow-up questions', 'Deliver governed responses' ), 'tags' => array( 'Natural Language', 'Instant Answers' ) ),
+	array( 'icon' => 'brain', 'class' => 'is-ai-insights', 'kicker' => 'AI Intelligence', 'title' => 'AI-Powered Insights', 'copy' => 'Summarize performance, explain key drivers, and automatically surface the insights that matter most.', 'benefits' => array( 'Summarize key changes', 'Explain root causes', 'Recommend next actions' ), 'tags' => array( 'Smart Summary', 'Root Cause' ) ),
+	array( 'icon' => 'nodes', 'class' => 'is-connectivity', 'kicker' => 'Unified Data', 'title' => 'Enterprise Data Connectivity', 'copy' => 'Connect securely to warehouses, data lakes, databases, and business applications across your ecosystem.', 'benefits' => array( 'Connect multiple sources', 'Query live enterprise data', 'Scale across platforms' ), 'tags' => array( 'Multi-Source', 'Live Data' ) ),
+	array( 'icon' => 'lock', 'class' => 'is-governance', 'kicker' => 'Trusted Governance', 'title' => 'Semantic Layer & Governance', 'copy' => 'Standardize business definitions, permissions, and metrics so every team works from trusted answers.', 'benefits' => array( 'Standardize business metrics', 'Apply role-based access', 'Maintain trusted definitions' ), 'tags' => array( 'Governed Metrics', 'Role Access' ) ),
+	array( 'icon' => 'spark', 'class' => 'is-visuals', 'kicker' => 'Visual Exploration', 'title' => 'Interactive Visualizations', 'copy' => 'Turn every answer into clear charts, trends, and drill-down views built for faster business exploration.', 'benefits' => array( 'Generate clear visuals', 'Explore trends interactively', 'Drill into business drivers' ), 'tags' => array( 'Dynamic Charts', 'Drill Down' ) ),
+	array( 'icon' => 'eye', 'class' => 'is-sql', 'kicker' => 'Explainable Analytics', 'title' => 'SQL Transparency', 'copy' => 'Inspect the generated SQL behind every answer for complete visibility, validation, and enterprise control.', 'benefits' => array( 'Inspect generated SQL', 'Validate every answer', 'Support audit readiness' ), 'tags' => array( 'Visible SQL', 'Audit Ready' ) ),
+	array( 'icon' => 'monitor', 'class' => 'is-monitoring', 'kicker' => 'Proactive Intelligence', 'title' => 'Alerts & Monitoring', 'copy' => 'Monitor critical KPIs, detect meaningful changes, and notify teams before business issues escalate.', 'benefits' => array( 'Track critical KPIs', 'Detect meaningful changes', 'Notify teams proactively' ), 'tags' => array( 'Smart Alerts', 'KPI Watch' ) ),
+	array( 'icon' => 'api', 'class' => 'is-automation', 'kicker' => 'Embedded Analytics', 'title' => 'APIs & Automation', 'copy' => 'Embed governed intelligence into applications and automate repeatable decisions across business workflows.', 'benefits' => array( 'Embed secure analytics', 'Automate repeatable actions', 'Integrate business workflows' ), 'tags' => array( 'Secure APIs', 'Workflows' ) ),
 );
 
 $steps = array(
@@ -49,11 +49,11 @@ $outcomes = array(
 );
 
 $personas = array(
-	array( 'icon' => 'executive', 'class' => 'is-executive', 'title' => 'Executives', 'copy' => 'Track business performance, uncover critical drivers, and make confident strategic decisions in real time.', 'tags' => array( 'Executive KPIs', 'Decision Intelligence' ) ),
-	array( 'icon' => 'users', 'class' => 'is-business-user', 'title' => 'Business Users', 'copy' => 'Explore trusted enterprise data in everyday language without waiting for dashboards or technical support.', 'tags' => array( 'Self-Service', 'Instant Answers' ) ),
-	array( 'icon' => 'analyst', 'class' => 'is-data-analyst', 'title' => 'Data Analysts', 'copy' => 'Move from questions to deeper analysis with transparent SQL, interactive visuals, and explainable insights.', 'tags' => array( 'Deep Analysis', 'SQL Visibility' ) ),
-	array( 'icon' => 'finance', 'class' => 'is-finance-team', 'title' => 'Finance Teams', 'copy' => 'Analyze performance, explain variance, monitor cash flow, and forecast business outcomes with speed.', 'tags' => array( 'Variance Analysis', 'Forecasting' ) ),
-	array( 'icon' => 'it', 'class' => 'is-it-data', 'title' => 'IT & Data Teams', 'copy' => 'Deliver secure, governed analytics while maintaining permissions, metric consistency, and platform reliability.', 'tags' => array( 'Data Governance', 'Enterprise Security' ) ),
+	array( 'icon' => 'executive', 'class' => 'is-executive', 'title' => 'Executives', 'copy' => 'Track business performance, uncover critical drivers, and make confident strategic decisions in real time.', 'benefits' => array( 'Monitor enterprise KPIs', 'Explain performance changes', 'Act on trusted recommendations' ), 'tags' => array( 'Executive KPIs', 'Decision Intelligence' ) ),
+	array( 'icon' => 'users', 'class' => 'is-business-user', 'title' => 'Business Users', 'copy' => 'Explore trusted enterprise data in everyday language without waiting for dashboards or technical support.', 'benefits' => array( 'Ask questions naturally', 'Get instant governed answers', 'Share insight-rich storybooks' ), 'tags' => array( 'Self-Service', 'Instant Answers' ) ),
+	array( 'icon' => 'analyst', 'class' => 'is-data-analyst', 'title' => 'Data Analysts', 'copy' => 'Move from questions to deeper analysis with transparent SQL, interactive visuals, and explainable insights.', 'benefits' => array( 'Inspect generated SQL', 'Explore trends and anomalies', 'Build reusable analysis flows' ), 'tags' => array( 'Deep Analysis', 'SQL Visibility' ) ),
+	array( 'icon' => 'finance', 'class' => 'is-finance-team', 'title' => 'Finance Teams', 'copy' => 'Analyze performance, explain variance, monitor cash flow, and forecast business outcomes with speed.', 'benefits' => array( 'Analyze budget variance', 'Track financial performance', 'Accelerate planning cycles' ), 'tags' => array( 'Variance Analysis', 'Forecasting' ) ),
+	array( 'icon' => 'it', 'class' => 'is-it-data', 'title' => 'IT & Data Teams', 'copy' => 'Deliver secure, governed analytics while maintaining permissions, metric consistency, and platform reliability.', 'benefits' => array( 'Enforce data permissions', 'Govern metrics and models', 'Monitor secure AI access' ), 'tags' => array( 'Data Governance', 'Enterprise Security' ) ),
 );
 
 $supported_llms = array(
@@ -333,6 +333,7 @@ $other_products = array(
 							<span class="icp-feature-kicker"><?php echo esc_html( $capability['kicker'] ); ?></span>
 							<h3><?php echo esc_html( $capability['title'] ); ?></h3>
 							<p><?php echo esc_html( $capability['copy'] ); ?></p>
+							<ul class="icp-feature-benefits"><?php foreach ( $capability['benefits'] as $benefit ) : ?><li><?php echo esc_html( $benefit ); ?></li><?php endforeach; ?></ul>
 							<div class="icp-feature-tags"><?php foreach ( $capability['tags'] as $tag ) : ?><span><?php echo esc_html( $tag ); ?></span><?php endforeach; ?></div>
 						</article>
 					<?php endforeach; ?>
@@ -342,6 +343,7 @@ $other_products = array(
 							<span class="icp-feature-kicker"><?php echo esc_html( $capability['kicker'] ); ?></span>
 							<h3><?php echo esc_html( $capability['title'] ); ?></h3>
 							<p><?php echo esc_html( $capability['copy'] ); ?></p>
+							<ul class="icp-feature-benefits"><?php foreach ( $capability['benefits'] as $benefit ) : ?><li><?php echo esc_html( $benefit ); ?></li><?php endforeach; ?></ul>
 							<div class="icp-feature-tags"><?php foreach ( $capability['tags'] as $tag ) : ?><span><?php echo esc_html( $tag ); ?></span><?php endforeach; ?></div>
 						</article>
 					<?php endforeach; ?>
@@ -379,6 +381,21 @@ $other_products = array(
 						<p><?php echo esc_html( $outcome['copy'] ); ?></p>
 					</article>
 				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="icp-outcome-journey" aria-labelledby="icp-outcome-journey-title">
+		<div class="icp-shell">
+			<div class="icp-journey-heading">
+				<span>Enterprise transformation</span>
+				<h2 id="icp-outcome-journey-title">The shift Conversa creates.</h2>
+				<p>See how everyday analytics changes when trusted intelligence becomes accessible to every team.</p>
+			</div>
+			<div class="icp-outcome-compare">
+				<div class="icp-compare-panel icp-compare-before"><div class="icp-compare-title"><span>Before</span><h3>Analytics creates friction</h3></div><ul><li><span><svg><use href="#icp-i-monitor"></use></svg></span><div><strong>Dashboard dependency</strong><p>Teams wait for the right report or view.</p></div></li><li><span><svg><use href="#icp-i-path"></use></svg></span><div><strong>Disconnected context</strong><p>Definitions and answers vary across teams.</p></div></li><li><span><svg><use href="#icp-i-database"></use></svg></span><div><strong>Technical bottlenecks</strong><p>Every new question returns to the data team.</p></div></li><li><span><svg><use href="#icp-i-gauge"></use></svg></span><div><strong>Decision uncertainty</strong><p>Slow answers weaken confidence and action.</p></div></li></ul></div>
+				<div class="icp-compare-arrow" aria-hidden="true"><span><svg><use href="#icp-i-spark"></use></svg></span><i>Conversa</i></div>
+				<div class="icp-compare-panel icp-compare-after"><div class="icp-compare-title"><span>With Conversa</span><h3>Intelligence drives momentum</h3></div><ul><li><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Questions become accessible</strong><p>Anyone can explore governed data naturally.</p></div></li><li><span><svg><use href="#icp-i-eye"></use></svg></span><div><strong>Answers arrive with context</strong><p>Every insight is clear, explainable, and useful.</p></div></li><li><span><svg><use href="#icp-i-users"></use></svg></span><div><strong>Teams align around truth</strong><p>Shared metrics keep decisions consistent.</p></div></li><li><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Action moves with confidence</strong><p>Trusted intelligence supports the next best step.</p></div></li></ul></div>
 			</div>
 		</div>
 	</section>
@@ -463,6 +480,7 @@ $other_products = array(
 						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $persona['icon'] ); ?>"></use></svg></span>
 						<h3><?php echo esc_html( $persona['title'] ); ?></h3>
 						<p><?php echo esc_html( $persona['copy'] ); ?></p>
+						<ul class="icp-persona-benefits"><?php foreach ( $persona['benefits'] as $benefit ) : ?><li><?php echo esc_html( $benefit ); ?></li><?php endforeach; ?></ul>
 						<div class="icp-persona-tags"><?php foreach ( $persona['tags'] as $tag ) : ?><span><?php echo esc_html( $tag ); ?></span><?php endforeach; ?></div>
 					</article>
 				<?php endforeach; ?>
