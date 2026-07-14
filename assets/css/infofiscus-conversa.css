@@ -4049,3 +4049,7 @@ body .infometry-conversa-product .icp-problem .icp-soft-card:nth-child(4){--prob
 .icp-outcome-journey .icp-compare-panel li>span svg{color:var(--compare-accent)!important;stroke:currentColor!important}
 .icp-outcome-journey .icp-compare-panel li::after{background:color-mix(in srgb,var(--compare-accent) 9%,transparent)!important}
 @media(hover:hover) and (pointer:fine){.icp-outcome-journey .icp-compare-panel li:hover{border-color:color-mix(in srgb,var(--compare-accent) 52%,#dfe7f1)!important;box-shadow:0 16px 34px color-mix(in srgb,var(--compare-accent) 15%,rgba(24,58,108,.08))!important}}
+
+/* Full-width page sections while preserving each section's inner spacing. */
+body .infometry-conversa-product>section>.icp-shell{width:100%!important;max-width:none!important;margin-right:0!important;margin-left:0!important}
+body .infometry-conversa-product>section>.icp-shell.icp-center{width:100%!important;max-width:none!important}
