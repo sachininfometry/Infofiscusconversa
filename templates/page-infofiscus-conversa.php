@@ -167,8 +167,8 @@ $other_products = array(
 		<div class="icp-shell">
 			<div class="icp-hero-grid">
 				<div class="icp-hero-copy">
-					<p class="icp-eyebrow">Enterprise Conversational Analytics</p>
-					<h1 id="icp-hero-title">Ask Anything.<br>Get Trusted Insights.<br><span>Drive Results.</span></h1>
+					<p class="icp-eyebrow">Conversation Analytics Platform for Enterprise</p>
+					<h1 id="icp-hero-title">Ask Anything.<br>Get Insights.<br><span>Drive Results.</span></h1>
 					<p class="icp-hero-text">INFOFISCUS Conversa gives every team instant, governed answers from enterprise data—no SQL, no dashboard bottlenecks.</p>
 					<div class="icp-actions">
 						<a class="icp-button icp-button-primary" href="<?php echo esc_url( $demo_url ); ?>">Request a Demo <span aria-hidden="true">→</span></a>
@@ -177,8 +177,8 @@ $other_products = array(
 					<div class="icp-hero-icons" aria-label="Conversa platform strengths">
 						<span><svg aria-hidden="true"><use href="#icp-i-chat"></use></svg>Natural Language</span>
 						<span><svg aria-hidden="true"><use href="#icp-i-spark"></use></svg>Instant Insights</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-shield"></use></svg>Enterprise Secure</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-target"></use></svg>Recommended Actions</span>
+						<span><svg aria-hidden="true"><use href="#icp-i-shield"></use></svg>Enterprise-Grade Security</span>
+						<span><svg aria-hidden="true"><use href="#icp-i-target"></use></svg>Actionable Recommendations</span>
 					</div>
 				</div>
 
@@ -288,9 +288,9 @@ $other_products = array(
 
 	<section class="icp-intro" id="icp-intro" aria-labelledby="icp-intro-title">
 		<div class="icp-shell icp-intro-grid">
-			<div class="icp-intro-showcase-head"><p class="icp-kicker">Meet INFOFISCUS Conversa</p><h2 id="icp-intro-title">See the answer. Understand the why. Act with confidence.</h2><p>Watch how a natural-language question becomes a clear, governed business insight in seconds.</p></div>
+			<div class="icp-intro-showcase-head"><p class="icp-kicker">Meet INFOFISCUS Conversa</p><h2 id="icp-intro-title">See the answer. Understand the why. Act with confidence.</h2><p>Ask questions in everyday language and turn complex enterprise data into clear, governed insights your teams can trust and act on.</p></div>
 			<div class="icp-intro-video-frame"><div class="icp-intro-video-bar"><span><i></i><i></i><i></i></span><strong>Conversa Product Experience</strong><small>Interactive analytics</small></div><video autoplay muted loop playsinline preload="metadata" poster="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-ai-hero-original.png' ); ?>" aria-label="INFOFISCUS Conversa product tour animation"><source src="<?php echo esc_url( $intro_video ); ?>" type="video/mp4"></video><div class="icp-intro-video-badge"><svg><use href="#icp-i-spark"></use></svg><span><small>From question to insight</small><strong>Powered by governed enterprise data</strong></span></div></div>
-			<div class="icp-intro-value-row"><article><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Ask naturally</strong><small>No SQL or dashboard dependency</small></div></article><article><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Get governed answers</strong><small>Consistent metrics and permissions</small></div></article><article><span><svg><use href="#icp-i-trend"></use></svg></span><div><strong>Move to action</strong><small>Context, drivers, and next steps</small></div></article></div>
+			<div class="icp-intro-value-row"><article><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Ask naturally</strong><small>Explore data naturally—no SQL, complex reports, or dashboards.</small></div></article><article><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Get governed answers</strong><small>Trusted answers with consistent metrics and secure permissions.</small></div></article><article><span><svg><use href="#icp-i-trend"></use></svg></span><div><strong>Move to action</strong><small>See key drivers and turn insights into confident next steps.</small></div></article></div>
 		</div>
 	</section>
 
