@@ -288,16 +288,9 @@ $other_products = array(
 
 	<section class="icp-intro" id="icp-intro" aria-labelledby="icp-intro-title">
 		<div class="icp-shell icp-intro-grid">
-			<div class="icp-intro-visual">
-				<video autoplay muted loop playsinline preload="metadata" poster="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-ai-hero-original.png' ); ?>" aria-label="INFOFISCUS Conversa product tour animation">
-					<source src="<?php echo esc_url( $intro_video ); ?>" type="video/mp4">
-				</video>
-			</div>
-			<div class="icp-intro-copy">
-				<p class="icp-kicker">Meet</p>
-				<h2 id="icp-intro-title">INFOFISCUS Conversa</h2>
-				<p>A next-generation conversational analytics platform that lets your teams explore, analyze, and act on data using natural language. Built for the enterprise. Governed for trust. Designed for outcomes.</p>
-			</div>
+			<div class="icp-intro-showcase-head"><p class="icp-kicker">Meet INFOFISCUS Conversa</p><h2 id="icp-intro-title">See the answer. Understand the why. Act with confidence.</h2><p>Watch how a natural-language question becomes a clear, governed business insight in seconds.</p></div>
+			<div class="icp-intro-video-frame"><div class="icp-intro-video-bar"><span><i></i><i></i><i></i></span><strong>Conversa Product Experience</strong><small>Interactive analytics</small></div><video autoplay muted loop playsinline preload="metadata" poster="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-ai-hero-original.png' ); ?>" aria-label="INFOFISCUS Conversa product tour animation"><source src="<?php echo esc_url( $intro_video ); ?>" type="video/mp4"></video><div class="icp-intro-video-badge"><svg><use href="#icp-i-spark"></use></svg><span><small>From question to insight</small><strong>Powered by governed enterprise data</strong></span></div></div>
+			<div class="icp-intro-value-row"><article><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Ask naturally</strong><small>No SQL or dashboard dependency</small></div></article><article><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Get governed answers</strong><small>Consistent metrics and permissions</small></div></article><article><span><svg><use href="#icp-i-trend"></use></svg></span><div><strong>Move to action</strong><small>Context, drivers, and next steps</small></div></article></div>
 		</div>
 	</section>
 
