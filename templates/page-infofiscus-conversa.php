@@ -172,10 +172,10 @@ $other_products = array(
 						<a class="icp-button icp-button-secondary" href="#icp-intro"><span class="icp-play-dot">▶</span> Watch Product Tour</a>
 					</div>
 					<div class="icp-hero-icons" aria-label="Conversa platform strengths">
-						<span><svg aria-hidden="true"><use href="#icp-i-chat"></use></svg>Natural Language</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-spark"></use></svg>Instant Insights</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-shield"></use></svg>Enterprise-Grade Security</span>
-						<span><svg aria-hidden="true"><use href="#icp-i-target"></use></svg>Actionable Recommendations</span>
+						<span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H9l-5 3.5z"></path><circle cx="9" cy="10.8" r=".8"></circle><circle cx="12" cy="10.8" r=".8"></circle><circle cx="15" cy="10.8" r=".8"></circle></svg><b>Natural<br>Language</b></span>
+						<span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"></path><circle cx="12" cy="12" r="3.5"></circle></svg><b>Instant<br>Insights</b></span>
+						<span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 19 6v5.2c0 4.5-2.8 8-7 10-4.2-2-7-5.5-7-10V6z"></path><path d="m8.7 11.7 2.1 2.1 4.5-4.6"></path></svg><b>Enterprise-Grade<br>Security</b></span>
+						<span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="13" r="7"></circle><circle cx="11" cy="13" r="3"></circle><path d="m15.8 8.2 4.7-4.7M16.5 3.5h4v4"></path></svg><b>Actionable<br>Recommendations</b></span>
 					</div>
 				</div>
 
