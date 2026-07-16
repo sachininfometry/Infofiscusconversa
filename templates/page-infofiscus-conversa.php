@@ -67,15 +67,12 @@ $supported_llms = array(
 
 $comparison_rows = array(
 	array( 'capability' => 'Natural Language Query', 'conversa' => 'yes', 'tableau' => 'partial', 'powerbi' => 'partial', 'ai' => 'yes' ),
-	array( 'capability' => 'Ad-hoc Exploration', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'yes' ),
-	array( 'capability' => 'Dashboarding', 'conversa' => 'partial', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'no' ),
 	array( 'capability' => 'Automated Insights', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
 	array( 'capability' => 'Root Cause Analysis', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'yes' ),
 	array( 'capability' => 'Predictive Analytics', 'conversa' => 'partial', 'tableau' => 'partial', 'powerbi' => 'no', 'ai' => 'yes' ),
 	array( 'capability' => 'Semantic Layer', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'partial', 'ai' => 'no' ),
 	array( 'capability' => 'SQL Transparency', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
 	array( 'capability' => 'Multi Data Sources', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'partial' ),
-	array( 'capability' => 'Real-Time Queries', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'yes' ),
 	array( 'capability' => 'Unstructured Data', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
 	array( 'capability' => 'Narrative Summaries', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'partial', 'ai' => 'partial' ),
 	array( 'capability' => 'Governance', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'partial' ),
@@ -186,7 +183,6 @@ $other_products = array(
 					<figure class="icp-hero-slide is-active"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-home-1.png' ); ?>" alt="INFOFISCUS Conversa home dashboard"></figure>
 					<figure class="icp-hero-slide"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-storybooks-1.png' ); ?>" alt="INFOFISCUS Conversa storybooks dashboard"></figure>
 					<figure class="icp-hero-slide"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-connections-1.png' ); ?>" alt="INFOFISCUS Conversa connections dashboard"></figure>
-					<div class="icp-hero-slider-dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
 				</div>
 
 				<div class="icp-dashboard icp-dashboard-legacy" aria-hidden="true">
@@ -385,10 +381,12 @@ $other_products = array(
 				<h2 id="icp-outcome-journey-title">The shift Conversa creates.</h2>
 				<p>See how everyday analytics changes when trusted intelligence becomes accessible to every team.</p>
 			</div>
-			<div class="icp-outcome-compare">
-				<div class="icp-compare-panel icp-compare-before"><div class="icp-compare-title"><span>Before</span><h3>Analytics creates friction</h3></div><ul><li><span><svg><use href="#icp-i-monitor"></use></svg></span><div><strong>Dashboard dependency</strong><p>Teams wait for the right report or view.</p></div></li><li><span><svg><use href="#icp-i-path"></use></svg></span><div><strong>Disconnected context</strong><p>Definitions and answers vary across teams.</p></div></li><li><span><svg><use href="#icp-i-database"></use></svg></span><div><strong>Technical bottlenecks</strong><p>Every new question returns to the data team.</p></div></li><li><span><svg><use href="#icp-i-gauge"></use></svg></span><div><strong>Decision uncertainty</strong><p>Slow answers weaken confidence and action.</p></div></li></ul></div>
-				<div class="icp-compare-arrow" aria-hidden="true"><span><svg><use href="#icp-i-spark"></use></svg></span><i>Conversa</i></div>
-				<div class="icp-compare-panel icp-compare-after"><div class="icp-compare-title"><span>With Conversa</span><h3>Intelligence drives momentum</h3></div><ul><li><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Questions become accessible</strong><p>Anyone can explore governed data naturally.</p></div></li><li><span><svg><use href="#icp-i-eye"></use></svg></span><div><strong>Answers arrive with context</strong><p>Every insight is clear, explainable, and useful.</p></div></li><li><span><svg><use href="#icp-i-users"></use></svg></span><div><strong>Teams align around truth</strong><p>Shared metrics keep decisions consistent.</p></div></li><li><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Action moves with confidence</strong><p>Trusted intelligence supports the next best step.</p></div></li></ul></div>
+			<div class="icp-shift-board">
+				<div class="icp-shift-labels"><span>Before Conversa</span><span>Transformation</span><span>With Conversa</span></div>
+				<div class="icp-shift-row"><article class="icp-shift-problem"><span><svg><use href="#icp-i-monitor"></use></svg></span><div><small>Manual analytics</small><h3>Dashboard dependency</h3><p>Teams wait for the right report or view.</p></div></article><div class="icp-shift-flow" aria-hidden="true"><i></i><b>→</b></div><article class="icp-shift-result"><span><svg><use href="#icp-i-chat"></use></svg></span><div><small>Natural exploration</small><h3>Questions become accessible</h3><p>Anyone can explore governed data naturally.</p></div></article></div>
+				<div class="icp-shift-row"><article class="icp-shift-problem"><span><svg><use href="#icp-i-path"></use></svg></span><div><small>Fragmented answers</small><h3>Disconnected context</h3><p>Definitions and answers vary across teams.</p></div></article><div class="icp-shift-flow" aria-hidden="true"><i></i><b>→</b></div><article class="icp-shift-result"><span><svg><use href="#icp-i-eye"></use></svg></span><div><small>Explainable intelligence</small><h3>Answers arrive with context</h3><p>Every insight is clear, explainable, and useful.</p></div></article></div>
+				<div class="icp-shift-row"><article class="icp-shift-problem"><span><svg><use href="#icp-i-database"></use></svg></span><div><small>Specialist dependent</small><h3>Technical bottlenecks</h3><p>Every new question returns to the data team.</p></div></article><div class="icp-shift-flow" aria-hidden="true"><i></i><b>→</b></div><article class="icp-shift-result"><span><svg><use href="#icp-i-users"></use></svg></span><div><small>Shared metrics</small><h3>Teams align around truth</h3><p>Governed definitions keep decisions consistent.</p></div></article></div>
+				<div class="icp-shift-row"><article class="icp-shift-problem"><span><svg><use href="#icp-i-gauge"></use></svg></span><div><small>Slow decisions</small><h3>Decision uncertainty</h3><p>Delayed answers weaken confidence and action.</p></div></article><div class="icp-shift-flow" aria-hidden="true"><i></i><b>→</b></div><article class="icp-shift-result"><span><svg><use href="#icp-i-trust"></use></svg></span><div><small>Trusted action</small><h3>Action moves with confidence</h3><p>Trusted intelligence supports the next best step.</p></div></article></div>
 			</div>
 		</div>
 	</section>
@@ -549,9 +547,9 @@ $other_products = array(
 	<section class="icp-demo-form-section" id="icp-demo-form" aria-labelledby="icp-demo-form-title">
 		<div class="icp-shell">
 			<div class="icp-section-heading icp-center">
-				<h2 id="icp-demo-form-title">Get Started with INFOFISCUS Conversa Conversational Analytics Platform</h2>
-				<p><strong>Ready to unlock instant data insights?</strong></p>
-				<p>Book a demo or request a trial of INFOFISCUS Conversa today, and see how AI-powered conversation can transform decision-making in your enterprise.</p>
+				<h2 id="icp-demo-form-title">Experience INFOFISCUS Conversa.</h2>
+				<p><strong>Turn every business question into a confident decision.</strong></p>
+				<p>Book a personalized demo and see governed conversational analytics working with your enterprise data.</p>
 			</div>
 			<div class="icp-demo-form-grid">
 				<div class="icp-demo-visual">

@@ -6,6 +6,15 @@
     return;
   }
 
+  var demoHeading = root.querySelector('.icp-demo-form-section .icp-section-heading');
+  if (demoHeading) {
+    var demoTitle = demoHeading.querySelector('h2');
+    var demoCopy = demoHeading.querySelectorAll('p');
+    if (demoTitle) demoTitle.textContent = 'Experience INFOFISCUS Conversa.';
+    if (demoCopy[0]) demoCopy[0].innerHTML = '<strong>Turn every business question into a confident decision.</strong>';
+    if (demoCopy[1]) demoCopy[1].textContent = 'Book a personalized demo and see governed conversational analytics working with your enterprise data.';
+  }
+
   var tabButtons = Array.prototype.slice.call(root.querySelectorAll('[data-icp-shot]'));
   var panels = Array.prototype.slice.call(root.querySelectorAll('[data-icp-shot-panel]'));
 
@@ -25,34 +34,81 @@
     });
   });
 
-  var chartPaths = {
-    finance: 'M10 112 L56 88 L102 96 L148 58 L194 68 L250 26 L300 44 L344 18',
-    sales: 'M10 118 L58 108 L104 74 L150 86 L198 48 L250 54 L300 32 L344 38',
-    operations: 'M10 84 L58 72 L104 78 L150 54 L198 48 L250 34 L300 36 L344 24',
-    marketing: 'M10 120 L58 82 L104 94 L150 60 L198 72 L250 44 L300 52 L344 20',
-    hr: 'M10 104 L58 92 L104 96 L150 76 L198 64 L250 58 L300 42 L344 32'
-  };
-
   function chartSvg(name) {
-    var path = chartPaths[name] || chartPaths.finance;
+    if (name === 'sales') {
+      return '<svg class="icp-chart-bars" viewBox="0 0 360 150" aria-hidden="true"><g class="icp-chart-grid"><path d="M16 34H346M16 72H346M16 110H346"/></g><g class="icp-bar-set"><rect x="32" y="88" width="30" height="46" rx="6"/><rect x="82" y="65" width="30" height="69" rx="6"/><rect x="132" y="77" width="30" height="57" rx="6"/><rect x="182" y="43" width="30" height="91" rx="6"/><rect x="232" y="54" width="30" height="80" rx="6"/><rect x="282" y="24" width="30" height="110" rx="6"/></g><path class="icp-chart-target" d="M22 70H330"/><g class="icp-chart-labels"><text x="37" y="146">JAN</text><text x="87" y="146">FEB</text><text x="137" y="146">MAR</text><text x="187" y="146">APR</text><text x="237" y="146">MAY</text><text x="287" y="146">JUN</text></g></svg>';
+    }
+
+    if (name === 'operations') {
+      return '<svg class="icp-chart-mixed" viewBox="0 0 360 150" aria-hidden="true"><g class="icp-chart-grid"><path d="M16 34H346M16 72H346M16 110H346"/></g><g class="icp-bar-set icp-bar-set-cyan"><rect x="30" y="78" width="34" height="56" rx="5"/><rect x="82" y="58" width="34" height="76" rx="5"/><rect x="134" y="68" width="34" height="66" rx="5"/><rect x="186" y="39" width="34" height="95" rx="5"/><rect x="238" y="48" width="34" height="86" rx="5"/><rect x="290" y="28" width="34" height="106" rx="5"/></g><path class="icp-chart-line icp-chart-line-gold" d="M47 91 L99 80 L151 88 L203 58 L255 65 L307 42"/><g class="icp-chart-points icp-chart-points-gold"><circle cx="47" cy="91" r="4"/><circle cx="99" cy="80" r="4"/><circle cx="151" cy="88" r="4"/><circle cx="203" cy="58" r="4"/><circle cx="255" cy="65" r="4"/><circle cx="307" cy="42" r="4"/></g></svg>';
+    }
+
+    if (name === 'marketing') {
+      return '<svg class="icp-chart-grouped" viewBox="0 0 360 150" aria-hidden="true"><g class="icp-chart-grid"><path d="M16 34H346M16 72H346M16 110H346"/></g><g class="icp-group-bars"><g><rect x="35" y="76" width="18" height="58" rx="5"/><rect class="alt" x="55" y="48" width="18" height="86" rx="5"/></g><g><rect x="105" y="64" width="18" height="70" rx="5"/><rect class="alt" x="125" y="35" width="18" height="99" rx="5"/></g><g><rect x="175" y="83" width="18" height="51" rx="5"/><rect class="alt" x="195" y="54" width="18" height="80" rx="5"/></g><g><rect x="245" y="52" width="18" height="82" rx="5"/><rect class="alt" x="265" y="20" width="18" height="114" rx="5"/></g></g><g class="icp-chart-labels"><text x="35" y="146">SOCIAL</text><text x="105" y="146">EMAIL</text><text x="175" y="146">SEARCH</text><text x="245" y="146">EVENTS</text></g></svg>';
+    }
+
+    if (name === 'hr') {
+      return '<svg class="icp-chart-radial" viewBox="0 0 360 150" aria-hidden="true"><g transform="translate(95 75) rotate(-90)"><circle class="icp-ring-base" r="51"/><circle class="icp-ring-value" r="51"/></g><text class="icp-ring-number" x="95" y="72">91.8%</text><text class="icp-ring-caption" x="95" y="91">RETENTION</text><g class="icp-radial-stats"><rect x="182" y="28" width="150" height="38" rx="10"/><rect x="182" y="82" width="150" height="38" rx="10"/><text x="198" y="45">ENGAGEMENT</text><text class="value" x="310" y="51">84%</text><text x="198" y="99">TIME TO FILL</text><text class="value" x="295" y="105">-22%</text></g></svg>';
+    }
+
+    var path = 'M10 112 L56 88 L102 96 L148 58 L194 68 L250 26 L300 44 L344 18';
     var area = path + ' L344 134 L10 134 Z';
     var points = path.match(/\d+\s+\d+/g) || [];
-    return [
-      '<svg viewBox="0 0 360 150" aria-hidden="true" focusable="false">',
-      '<path class="icp-chart-area" d="' + area + '"></path>',
-      '<path class="icp-chart-line" d="' + path + '"></path>',
-      '<g class="icp-chart-points">',
-      points.map(function (point) {
-        var xy = point.split(/\s+/);
-        return '<circle cx="' + xy[0] + '" cy="' + xy[1] + '" r="4"></circle>';
-      }).join(''),
-      '</g>',
-      '</svg>'
-    ].join('');
+    return '<svg viewBox="0 0 360 150" aria-hidden="true"><path class="icp-chart-area" d="' + area + '"></path><path class="icp-chart-line" d="' + path + '"></path><g class="icp-chart-points">' + points.map(function (point) { var xy = point.split(/\s+/); return '<circle cx="' + xy[0] + '" cy="' + xy[1] + '" r="4"></circle>'; }).join('') + '</g></svg>';
   }
 
   root.querySelectorAll('.icp-chart-card-line[data-chart]').forEach(function (chart) {
     chart.innerHTML = chartSvg(chart.getAttribute('data-chart'));
+  });
+
+  root.querySelectorAll('.icp-comparison-table-wrap').forEach(function (wrap) {
+    var table = wrap.querySelector('.icp-comparison-table');
+    if (!table || wrap.querySelector('.icp-comparison-board')) {
+      return;
+    }
+
+    var preferredCapabilities = [
+      'Natural Language Query',
+      'Automated Insights',
+      'Root Cause Analysis',
+      'Predictive Analytics',
+      'Semantic Layer',
+      'SQL Transparency',
+      'Multi Data Sources',
+      'Unstructured Data',
+      'Narrative Summaries',
+      'Governance',
+      'Custom UI'
+    ];
+    var allRows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
+    var rows = preferredCapabilities.map(function (capability) {
+      return allRows.find(function (row) {
+        return row.querySelector('th') && row.querySelector('th').textContent.trim() === capability;
+      });
+    }).filter(Boolean);
+    var providerNames = ['Conversa', 'Tableau', 'Power BI', 'Modern AI'];
+    var board = document.createElement('div');
+    board.className = 'icp-comparison-board';
+    board.innerHTML = '<div class="icp-comparison-board-head"><div class="icp-comparison-board-intro"><span>QUICK COMPARISON</span><strong>Compare essential analytics capabilities.</strong><small><i class="yes"></i>Yes <i class="partial"></i>Some <i class="no"></i>No</small></div><div class="icp-comparison-providers">' + providerNames.map(function (name, index) {
+      return '<div class="icp-provider-chip' + (index === 0 ? ' is-conversa' : '') + '"><i>' + (index === 0 ? 'RECOMMENDED' : 'PLATFORM') + '</i><b>' + name + '</b></div>';
+    }).join('') + '</div></div><div class="icp-capability-scroll"><div class="icp-capability-matrix"></div></div>';
+
+    var matrix = board.querySelector('.icp-capability-matrix');
+    rows.forEach(function (row, rowIndex) {
+      var cells = Array.prototype.slice.call(row.querySelectorAll('td'));
+      var card = document.createElement('article');
+      card.className = 'icp-capability-row-card';
+      card.innerHTML = '<div class="icp-capability-title"><span>0' + (rowIndex + 1) + '</span><strong>' + row.querySelector('th').textContent.trim() + '</strong></div><div class="icp-capability-values">' + cells.map(function (cell, index) {
+        var status = cell.querySelector('.icp-status');
+        var state = status ? status.textContent.trim() : '';
+        var stateClass = status && status.classList.contains('icp-status-yes') ? 'is-yes' : status && status.classList.contains('icp-status-no') ? 'is-no' : 'is-partial';
+        return '<div class="icp-mini-status ' + stateClass + (index === 0 ? ' is-conversa' : '') + '"><small>' + providerNames[index] + '</small><b><i></i>' + state + '</b></div>';
+      }).join('') + '</div>';
+      matrix.appendChild(card);
+    });
+
+    table.classList.add('icp-comparison-source-table');
+    wrap.appendChild(board);
   });
 
   root.querySelectorAll('[data-icp-use-cases]').forEach(function (wrap) {
@@ -67,7 +123,16 @@
       });
 
       usePanels.forEach(function (panel) {
-        panel.classList.toggle('is-active', panel.getAttribute('data-icp-use-panel') === name);
+        var panelActive = panel.getAttribute('data-icp-use-panel') === name;
+        panel.classList.toggle('is-active', panelActive);
+
+        if (panelActive) {
+          panel.querySelectorAll('.icp-chart-line, .icp-chart-points circle, .icp-bar-set rect, .icp-group-bars rect, .icp-ring-value').forEach(function (part) {
+            part.style.animation = 'none';
+            void part.getBoundingClientRect();
+            part.style.animation = '';
+          });
+        }
       });
     }
 
