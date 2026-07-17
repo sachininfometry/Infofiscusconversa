@@ -572,7 +572,10 @@ $other_products = array(
 				</div>
 				<form class="icp-demo-form" id="icp-demo-request-form" action="<?php echo esc_url( $demo_url ); ?>" method="post">
 					<input type="hidden" name="selected_demo_date" data-icp-demo-date value="">
-					<label>Preferred Demo Date<input type="text" name="preferred_demo_date" data-icp-demo-date-display readonly></label>
+					<div class="icp-form-row">
+						<label>Preferred Demo Date<input type="text" name="preferred_demo_date" data-icp-demo-date-display readonly></label>
+						<label>Preferred Demo Time<input type="time" name="preferred_demo_time" data-icp-demo-time required></label>
+					</div>
 					<div class="icp-form-row">
 						<label>First Name <span>*</span><input type="text" name="first_name" autocomplete="given-name" required></label>
 						<label>Last Name <span>*</span><input type="text" name="last_name" autocomplete="family-name" required></label>
@@ -662,13 +665,13 @@ $other_products = array(
 				<img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/infometry-logo-white.png' ); ?>" alt="Infometry Inc.">
 				<p>Turning enterprise data into trusted insights, intelligent decisions and measurable business outcomes.</p>
 				<div class="icp-social-row" aria-label="Infometry social links">
-					<a class="icp-social icp-social-facebook" href="#" aria-label="Facebook">f</a>
-					<a class="icp-social icp-social-x" href="#" aria-label="X">X</a>
-					<a class="icp-social icp-social-linkedin" href="#" aria-label="LinkedIn">in</a>
-					<a class="icp-social icp-social-youtube" href="#" aria-label="YouTube">▶</a>
-					<a class="icp-social icp-social-pinterest" href="#" aria-label="Pinterest">P</a>
-					<a class="icp-social icp-social-instagram" href="#" aria-label="Instagram">Ig</a>
-					<a class="icp-social icp-social-g2" href="#" aria-label="G2">G2</a>
+					<a class="icp-social" href="#" aria-label="Facebook"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-facebook.png' ); ?>" alt=""></a>
+					<a class="icp-social" href="#" aria-label="X"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-x.png' ); ?>" alt=""></a>
+					<a class="icp-social" href="#" aria-label="LinkedIn"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-linkedin.png' ); ?>" alt=""></a>
+					<a class="icp-social" href="#" aria-label="YouTube"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-youtube.png' ); ?>" alt=""></a>
+					<a class="icp-social" href="#" aria-label="Pinterest"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-pinterest.png' ); ?>" alt=""></a>
+					<a class="icp-social" href="#" aria-label="Instagram"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-instagram.png' ); ?>" alt=""></a>
+					<a class="icp-social" href="#" aria-label="G2"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/social-g2.png' ); ?>" alt=""></a>
 				</div>
 				<a class="icp-footer-contact" href="<?php echo esc_url( $contact_url ); ?>">Contact Us <span>→</span></a>
 			</div>

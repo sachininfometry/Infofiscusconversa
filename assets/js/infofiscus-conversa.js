@@ -146,6 +146,7 @@
   var demoForm = root.querySelector('#icp-demo-request-form');
   var demoDateInput = root.querySelector('[data-icp-demo-date]');
   var demoDateDisplayInput = root.querySelector('[data-icp-demo-date-display]');
+  var demoTimeInput = root.querySelector('[data-icp-demo-time]');
   var demoCalendar = root.querySelector('[data-icp-demo-calendar]');
   var monthLabel = root.querySelector('[data-icp-calendar-label]');
   var daysGrid = root.querySelector('[data-icp-calendar-days]');
@@ -192,7 +193,7 @@
       selectedDemoDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
       if (demoDateInput) {
-        demoDateInput.value = toDateValue(selectedDemoDate);
+        demoDateInput.value = toDateValue(selectedDemoDate) + (demoTimeInput && demoTimeInput.value ? 'T' + demoTimeInput.value : '');
       }
 
       if (demoDateDisplayInput) {
@@ -251,6 +252,14 @@
 
     syncDemoDate(selectedDemoDate);
     renderDemoCalendar();
+
+    if (demoTimeInput) {
+      demoTimeInput.value = demoTimeInput.value || '10:00';
+      demoTimeInput.addEventListener('change', function () {
+        syncDemoDate(selectedDemoDate);
+      });
+      syncDemoDate(selectedDemoDate);
+    }
 
     var previousMonth = root.querySelector('[data-icp-calendar-prev]');
     var nextMonth = root.querySelector('[data-icp-calendar-next]');
