@@ -5609,6 +5609,391 @@ body .infometry-conversa-product .icp-personas .icp-persona-tags {
   }
 }
 
+/* Readable, animated architecture presentation. */
+body .infometry-conversa-product .icp-architecture {
+  min-height: 590px;
+  padding: 36px 30px 38px;
+}
+
+body .infometry-conversa-product .icp-architecture-query {
+  min-height: 52px;
+  margin-bottom: 34px;
+  font-size: 14px;
+  font-weight: 800;
+  animation: icpArchitectureQueryGlow 4.8s ease-in-out infinite;
+}
+
+body .infometry-conversa-product .icp-architecture-grid {
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, .94fr) minmax(0, 1.12fr);
+  gap: 26px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > small {
+  margin-bottom: 5px;
+  color: #405986;
+  font-size: 10px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span {
+  min-height: 50px;
+  padding: 10px 9px;
+  gap: 7px;
+  overflow: hidden;
+  color: #263a61;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.25;
+  animation: icpArchitectureSourceFloat 5s ease-in-out infinite;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span::before {
+  position: static;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(2) { animation-delay: -.8s; }
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(3) { animation-delay: -1.6s; }
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(4) { animation-delay: -2.4s; }
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(5) { animation-delay: -3.2s; }
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(6) { animation-delay: -4s; }
+
+body .infometry-conversa-product .icp-architecture-sources::after,
+body .infometry-conversa-product .icp-architecture-engine::after {
+  height: 3px;
+  background-size: 200% 100%;
+  animation: icpArchitectureConnector 2.2s linear infinite;
+}
+
+body .infometry-conversa-product .icp-architecture-engine {
+  min-height: 300px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine::before {
+  top: 15px;
+  color: #65749d;
+  font-size: 8.5px;
+}
+
+body .infometry-conversa-product .icp-engine-orb {
+  width: 124px;
+  height: 124px;
+  animation: icpArchitectureEnginePulse 3.4s ease-in-out infinite;
+}
+
+body .infometry-conversa-product .icp-engine-orb::before {
+  animation: icpArchitectureSpark 3.4s ease-in-out infinite;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > strong {
+  max-width: 190px;
+  color: #183468;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > small {
+  max-width: 190px;
+  color: #566b95;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+body .infometry-conversa-product .icp-architecture-flow {
+  gap: 10px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article {
+  min-height: 58px;
+  padding: 10px 12px;
+  grid-template-columns: 32px minmax(0, 1fr);
+  animation: icpArchitectureStep 10s ease-in-out infinite;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article:nth-child(2) { animation-delay: -8s; }
+body .infometry-conversa-product .icp-architecture-flow article:nth-child(3) { animation-delay: -6s; }
+body .infometry-conversa-product .icp-architecture-flow article:nth-child(4) { animation-delay: -4s; }
+body .infometry-conversa-product .icp-architecture-flow article:nth-child(5) { animation-delay: -2s; }
+
+body .infometry-conversa-product .icp-architecture-flow b {
+  color: #5667ec;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+body .infometry-conversa-product .icp-architecture-flow span {
+  color: #21375f;
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer {
+  min-height: 102px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer i {
+  height: 38px;
+  animation: icpArchitectureBars 2.8s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes icpArchitectureQueryGlow {
+  0%, 100% { transform: translateY(0); box-shadow: 0 13px 30px rgba(77,71,195,.14), inset 0 1px #fff; }
+  50% { transform: translateY(-3px); box-shadow: 0 18px 38px rgba(77,71,195,.22), 0 0 0 5px rgba(105,91,255,.05), inset 0 1px #fff; }
+}
+
+@keyframes icpArchitectureSourceFloat {
+  0%, 100% { filter: brightness(1); box-shadow: 0 9px 20px rgba(45,72,132,.09), inset 0 1px #fff; }
+  50% { filter: brightness(1.04); box-shadow: 0 13px 25px rgba(52,101,192,.16), inset 0 1px #fff; }
+}
+
+@keyframes icpArchitectureConnector {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+@keyframes icpArchitectureEnginePulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 10px rgba(78,99,238,.07), 0 0 0 20px rgba(78,99,238,.035), 0 22px 42px rgba(57,69,207,.36); }
+  50% { transform: scale(1.06); box-shadow: 0 0 0 14px rgba(70,152,255,.1), 0 0 0 27px rgba(91,77,238,.05), 0 28px 52px rgba(57,69,207,.45); }
+}
+
+@keyframes icpArchitectureSpark {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: .9; }
+  50% { transform: rotate(90deg) scale(1.13); opacity: 1; }
+}
+
+@keyframes icpArchitectureStep {
+  0%, 16% { transform: translateX(4px); border-color: rgba(92,105,242,.58); background: linear-gradient(145deg,#fff,#eeefff); box-shadow: 0 14px 30px rgba(73,76,201,.2), inset 0 1px #fff; }
+  22%, 100% { transform: translateX(0); border-color: #d9e1f2; background: linear-gradient(145deg,#fff,#f8f9ff); box-shadow: 0 10px 22px rgba(47,62,119,.1), inset 0 1px #fff; }
+}
+
+@keyframes icpArchitectureBars {
+  0%, 100% { transform: scaleY(.72); filter: saturate(.9); }
+  50% { transform: scaleY(1); filter: saturate(1.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body .infometry-conversa-product .icp-architecture-query,
+  body .infometry-conversa-product .icp-architecture-sources > span,
+  body .infometry-conversa-product .icp-architecture-sources::after,
+  body .infometry-conversa-product .icp-architecture-engine::after,
+  body .infometry-conversa-product .icp-engine-orb,
+  body .infometry-conversa-product .icp-engine-orb::before,
+  body .infometry-conversa-product .icp-architecture-flow article,
+  body .infometry-conversa-product .icp-architecture-flow .is-answer i {
+    animation: none !important;
+  }
+}
+
+/* Premium visual hierarchy for the Conversa architecture. */
+body .infometry-conversa-product .icp-architecture {
+  min-height: 545px;
+  padding: 30px 30px 34px;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(75, 94, 255, .16), transparent 22%),
+    radial-gradient(circle at 95% 8%, rgba(137, 96, 255, .12), transparent 24%),
+    linear-gradient(rgba(91, 129, 225, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 129, 225, .05) 1px, transparent 1px),
+    linear-gradient(145deg, #fcfdff, #f2f6ff);
+  background-size: auto, auto, 52px 52px, 52px 52px, auto;
+}
+
+body .infometry-conversa-product .icp-architecture-query {
+  width: min(100%, 430px);
+  max-width: none;
+  min-height: 48px;
+  margin: 0 auto 30px;
+  padding: 11px 20px;
+  justify-content: center;
+  border-color: rgba(109, 91, 255, .3);
+  color: #5058cf;
+  background: linear-gradient(145deg, #fff, #f8f7ff);
+  box-shadow: 0 13px 30px rgba(77, 71, 195, .14), inset 0 1px #fff;
+  font-size: 13px;
+  text-align: center;
+}
+
+body .infometry-conversa-product .icp-architecture-query::before {
+  content: "Enterprise question";
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  color: #8290ad;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+body .infometry-conversa-product .icp-architecture-grid {
+  grid-template-columns: minmax(0, .95fr) minmax(0, .92fr) minmax(0, 1.13fr);
+  gap: 24px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources {
+  gap: 12px 10px;
+  padding: 14px 0;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > small {
+  margin-bottom: 2px;
+  color: #536a96;
+  font-size: 9px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span {
+  position: relative;
+  min-height: 46px;
+  padding: 9px 7px 9px 22px;
+  justify-content: flex-start;
+  border-color: #d5e1f5;
+  border-radius: 12px;
+  color: #2f4166;
+  background: linear-gradient(145deg, #fff, #f7faff);
+  box-shadow: 0 9px 20px rgba(45, 72, 132, .09), inset 0 1px #fff;
+  font-size: 8.5px;
+  text-align: left;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #27b9ff, #6755f5);
+  box-shadow: 0 0 8px rgba(52, 149, 255, .45);
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(2n) {
+  transform: translateY(7px);
+}
+
+body .infometry-conversa-product .icp-architecture-sources::after {
+  right: -27px;
+  width: 27px;
+  height: 2px;
+  background: linear-gradient(90deg, #72c9ff, #675cf4);
+  box-shadow: 0 0 9px rgba(89, 112, 255, .34);
+}
+
+body .infometry-conversa-product .icp-architecture-engine {
+  min-height: 270px;
+  padding: 24px 14px 22px;
+  border-color: rgba(104, 110, 238, .24);
+  border-radius: 28px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, .98), rgba(246, 247, 255, .95));
+  box-shadow: 0 24px 48px rgba(62, 74, 178, .16), inset 0 1px #fff;
+}
+
+body .infometry-conversa-product .icp-architecture-engine::before {
+  content: "AI reasoning core";
+  position: absolute;
+  top: 13px;
+  color: #7c85ad;
+  font-size: 7.5px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+body .infometry-conversa-product .icp-architecture-engine::after {
+  right: -27px;
+  width: 27px;
+  background: linear-gradient(90deg, #675cf4, #8d68f7);
+  box-shadow: 0 0 9px rgba(103, 92, 244, .34);
+}
+
+body .infometry-conversa-product .icp-engine-orb {
+  width: 112px;
+  height: 112px;
+  margin-top: 10px;
+  background:
+    radial-gradient(circle at 35% 28%, rgba(125, 235, 255, .95), transparent 25%),
+    radial-gradient(circle at 50% 45%, #247cf5, #4e4eea 55%, #6a37cc 82%);
+  box-shadow: 0 0 0 10px rgba(78, 99, 238, .07), 0 0 0 20px rgba(78, 99, 238, .035), 0 22px 42px rgba(57, 69, 207, .36);
+}
+
+body .infometry-conversa-product .icp-engine-orb::before {
+  font-size: 58px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > strong {
+  max-width: 180px;
+  margin-top: 22px;
+  color: #253b73;
+  font-size: 14px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > small {
+  max-width: 180px;
+  color: #7180a4;
+  font-size: 8.5px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow {
+  gap: 9px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article {
+  min-height: 52px;
+  padding: 9px 11px;
+  grid-template-columns: 30px minmax(0, 1fr);
+  border-color: #d9e1f2;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #fff, #f8f9ff);
+  box-shadow: 0 10px 22px rgba(47, 62, 119, .1), inset 0 1px #fff;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article::before {
+  content: "";
+  position: absolute;
+  inset: 8px auto 8px 0;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(#42bbff, #6c5bf4);
+}
+
+body .infometry-conversa-product .icp-architecture-flow article:not(:last-child)::after {
+  left: 26px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow b {
+  color: #6570ef;
+  font-size: 20px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow span {
+  color: #34415e;
+  font-size: 8.7px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer {
+  min-height: 92px;
+  border-color: rgba(103, 95, 239, .28);
+  background: linear-gradient(145deg, #fff, #f3f2ff);
+  box-shadow: 0 14px 28px rgba(74, 70, 195, .14), inset 0 1px #fff;
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer i {
+  height: 32px;
+  border-radius: 5px 5px 2px 2px;
+  background: linear-gradient(90deg, #3bc1ff 0 13%, transparent 13% 19%, #7164f5 19% 35%, transparent 35% 41%, #4c87f0 41% 59%, transparent 59% 65%, #9068ee 65% 82%, transparent 82%);
+}
+
+@media (max-width: 760px) {
+  body .infometry-conversa-product .icp-architecture-query {
+    width: min(100%, 430px);
+    max-width: 100%;
+  }
+}
+
 /* Keep equal title zones without leaving empty space below the words. */
 body .infometry-conversa-product .icp-capabilities .icp-feature-card h3 {
   min-height: 44px !important;
@@ -5891,4 +6276,780 @@ body .infometry-conversa-product .icp-footer-bottom p {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+/* Conversa governed-intelligence architecture replacing the intro video. */
+body .infometry-conversa-product .icp-intro-video-frame.icp-architecture-frame {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  border-color: #c9daf7 !important;
+  background: #f8fbff !important;
+  box-shadow: 0 24px 58px rgba(27, 64, 132, .16), 0 0 0 7px rgba(93, 145, 255, .06) !important;
+}
+
+body .infometry-conversa-product .icp-architecture-frame .icp-intro-video-bar {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+body .infometry-conversa-product .icp-architecture {
+  position: relative;
+  min-height: 500px;
+  padding: 26px 28px 30px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(91, 129, 225, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 129, 225, .055) 1px, transparent 1px),
+    radial-gradient(circle at 55% 52%, rgba(74, 102, 255, .13), transparent 23%),
+    radial-gradient(circle at 95% 15%, rgba(112, 79, 255, .12), transparent 25%),
+    linear-gradient(145deg, #fbfdff, #f3f7ff);
+  background-size: 52px 52px, 52px 52px, auto, auto, auto;
+}
+
+body .infometry-conversa-product .icp-architecture::before,
+body .infometry-conversa-product .icp-architecture::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+body .infometry-conversa-product .icp-architecture::before {
+  inset: 72px 34% 42px 31%;
+  border: 1px solid rgba(97, 119, 235, .13);
+  border-radius: 34px;
+  box-shadow: 0 0 0 34px rgba(100, 122, 238, .025), 0 0 0 68px rgba(100, 122, 238, .02);
+}
+
+body .infometry-conversa-product .icp-architecture::after {
+  right: -80px;
+  bottom: -110px;
+  width: 280px;
+  height: 280px;
+  border: 34px solid rgba(87, 77, 255, .045);
+  border-radius: 50%;
+}
+
+body .infometry-conversa-product .icp-architecture-query {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: fit-content;
+  max-width: 62%;
+  min-height: 42px;
+  margin: 0 0 18px auto;
+  padding: 9px 17px;
+  gap: 9px;
+  align-items: center;
+  border: 1px solid #d8d9ff;
+  border-radius: 999px;
+  color: #555fd9;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 10px 24px rgba(70, 72, 190, .12);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+body .infometry-conversa-product .icp-architecture-query svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  color: #625cff;
+}
+
+body .infometry-conversa-product .icp-architecture-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(190px, .85fr) minmax(220px, 1.08fr);
+  gap: 26px;
+  align-items: center;
+}
+
+body .infometry-conversa-product .icp-architecture-sources {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 10px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #aabdf4, #6f72ee);
+}
+
+body .infometry-conversa-product .icp-architecture-sources > small {
+  grid-column: 1 / -1;
+  color: #6f7fa3;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span {
+  display: flex;
+  min-height: 42px;
+  padding: 8px 9px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dce5f5;
+  border-radius: 10px;
+  color: #344363;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 7px 16px rgba(44, 70, 126, .08);
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1.3;
+  text-align: center;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(2n) {
+  transform: translateY(10px);
+}
+
+body .infometry-conversa-product .icp-architecture-engine {
+  position: relative;
+  display: flex;
+  min-height: 245px;
+  padding: 24px 14px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #e0e3f4;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 20px 42px rgba(53, 71, 160, .12);
+  text-align: center;
+}
+
+body .infometry-conversa-product .icp-architecture-engine::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -28px;
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, #6f72ee, #8c69ff);
+}
+
+body .infometry-conversa-product .icp-engine-orb {
+  display: grid;
+  width: 120px;
+  height: 120px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: radial-gradient(circle at 36% 25%, #79dfff, #2468f1 42%, #6642db 75%, #241e88);
+  box-shadow: 0 0 0 12px rgba(86, 102, 236, .08), 0 20px 38px rgba(63, 74, 213, .32);
+}
+
+body .infometry-conversa-product .icp-engine-orb svg {
+  width: 56px;
+  height: 56px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > strong {
+  margin-top: 20px;
+  color: #263b73;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > small {
+  max-width: 180px;
+  margin-top: 6px;
+  color: #7280a3;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+body .infometry-conversa-product .icp-architecture-flow {
+  display: grid;
+  gap: 9px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article {
+  position: relative;
+  display: grid;
+  min-height: 50px;
+  padding: 9px 13px;
+  grid-template-columns: 32px 1fr;
+  gap: 9px;
+  align-items: center;
+  border: 1px solid #e0e6f3;
+  border-radius: 11px;
+  color: #33415e;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 8px 18px rgba(43, 60, 109, .08);
+}
+
+body .infometry-conversa-product .icp-architecture-flow article:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: -10px;
+  width: 1px;
+  height: 10px;
+  background: #c2cbee;
+}
+
+body .infometry-conversa-product .icp-architecture-flow b {
+  color: #6c74f2;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+body .infometry-conversa-product .icp-architecture-flow span {
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer {
+  min-height: 88px;
+  align-items: start;
+  border-color: #cfd8ff;
+  background: linear-gradient(145deg, #fff, #f4f5ff);
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer i {
+  grid-column: 2;
+  display: block;
+  width: 88%;
+  height: 28px;
+  margin-top: -6px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #42b8ff 0 12%, transparent 12% 18%, #6b60ff 18% 34%, transparent 34% 40%, #447df4 40% 59%, transparent 59% 65%, #8a67f7 65% 82%, transparent 82%);
+  opacity: .85;
+}
+
+@media (max-width: 980px) {
+  body .infometry-conversa-product .icp-architecture-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  body .infometry-conversa-product .icp-architecture-sources {
+    grid-column: 1 / -1;
+  }
+  body .infometry-conversa-product .icp-architecture-sources::after,
+  body .infometry-conversa-product .icp-architecture-engine::after {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  body .infometry-conversa-product .icp-architecture {
+    padding: 20px 16px 24px;
+  }
+  body .infometry-conversa-product .icp-architecture-query {
+    max-width: 100%;
+    margin-inline: 0;
+  }
+  body .infometry-conversa-product .icp-architecture-grid {
+    grid-template-columns: 1fr;
+  }
+  body .infometry-conversa-product .icp-architecture-sources {
+    grid-column: auto;
+  }
+}
+
+/* Architecture refinement: open canvas, balanced columns, no blue title bar. */
+body .infometry-conversa-product .icp-architecture-frame .icp-intro-video-bar {
+  display: none !important;
+}
+
+body .infometry-conversa-product .icp-intro-video-frame.icp-architecture-frame {
+  border-color: #d7e3f7 !important;
+  border-radius: 24px !important;
+  background: #fff !important;
+}
+
+body .infometry-conversa-product .icp-architecture {
+  min-height: 520px;
+  padding: 30px 26px 32px;
+}
+
+body .infometry-conversa-product .icp-architecture-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: 18px;
+}
+
+body .infometry-conversa-product .icp-architecture-grid > * {
+  min-width: 0;
+}
+
+body .infometry-conversa-product .icp-architecture-query {
+  max-width: 58%;
+  margin-bottom: 22px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources {
+  gap: 12px 8px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources::after {
+  right: -21px;
+  width: 21px;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span {
+  min-height: 40px;
+  padding: 7px 6px;
+  font-size: 8px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine {
+  min-height: 238px;
+  padding: 22px 10px;
+  border-radius: 24px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine::after {
+  right: -20px;
+  width: 20px;
+}
+
+body .infometry-conversa-product .icp-engine-orb {
+  width: 104px;
+  height: 104px;
+}
+
+body .infometry-conversa-product .icp-engine-orb svg {
+  display: none;
+}
+
+body .infometry-conversa-product .icp-engine-orb::before {
+  content: "✦";
+  color: #fff;
+  font-size: 54px;
+  line-height: 1;
+  text-shadow: 0 0 24px rgba(255, 255, 255, .7);
+}
+
+body .infometry-conversa-product .icp-architecture-engine > strong {
+  max-width: 150px;
+  margin-top: 18px;
+  font-size: 12px;
+}
+
+body .infometry-conversa-product .icp-architecture-engine > small {
+  max-width: 150px;
+  font-size: 8px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow {
+  min-width: 0;
+  gap: 8px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article {
+  min-width: 0;
+  min-height: 48px;
+  padding: 8px 9px;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 7px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow b {
+  font-size: 18px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 8px;
+  line-height: 1.3;
+}
+
+body .infometry-conversa-product .icp-architecture-flow article:not(:last-child)::after {
+  left: 21px;
+  bottom: -9px;
+  height: 9px;
+}
+
+body .infometry-conversa-product .icp-architecture-flow .is-answer {
+  min-height: 82px;
+}
+
+@media (max-width: 760px) {
+  body .infometry-conversa-product .icp-architecture-query {
+    max-width: 76%;
+  }
+  body .infometry-conversa-product .icp-architecture-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  body .infometry-conversa-product .icp-architecture-sources {
+    grid-column: 1 / -1;
+  }
+  body .infometry-conversa-product .icp-architecture-sources::after,
+  body .infometry-conversa-product .icp-architecture-engine::after {
+    display: none;
+  }
+}
+
+/* Reference-aligned comparison matrix in the Conversa blue-violet theme. */
+body .infometry-conversa-product .icp-comparison-table-wrap:has(.icp-comparison-board) {
+  width: min(100%, 1280px);
+  max-width: 1280px;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(73, 190, 255, .46) !important;
+  border-radius: 28px !important;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(0, 164, 255, .25), transparent 29%),
+    radial-gradient(circle at 92% 18%, rgba(109, 62, 255, .28), transparent 31%),
+    linear-gradient(145deg, #04153d 0%, #082964 55%, #211267 100%) !important;
+  box-shadow: 0 34px 80px rgba(4, 24, 65, .27) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-board {
+  padding: 30px !important;
+}
+
+body .infometry-conversa-product .icp-comparison-board-head,
+body .infometry-conversa-product .icp-capability-row-card {
+  grid-template-columns: 250px minmax(620px, 1fr) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-board-head {
+  gap: 24px !important;
+  margin-bottom: 14px !important;
+}
+
+body .infometry-conversa-product .icp-comparison-board-intro {
+  min-height: 126px !important;
+  padding: 20px !important;
+  border-color: rgba(71, 214, 255, .62) !important;
+  background: linear-gradient(145deg, rgba(0, 129, 203, .7), rgba(67, 47, 190, .72)) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-providers {
+  grid-template-columns: repeat(4, minmax(130px, 1fr)) !important;
+  gap: 10px !important;
+}
+
+body .infometry-conversa-product .icp-provider-chip {
+  min-height: 126px !important;
+  border-color: rgba(143, 190, 255, .45) !important;
+  border-radius: 18px !important;
+}
+
+body .infometry-conversa-product .icp-provider-chip.is-conversa {
+  border-color: rgba(74, 224, 255, .85) !important;
+  background: linear-gradient(145deg, #0a94df, #5a43df) !important;
+  box-shadow: 0 16px 38px rgba(20, 134, 235, .34), inset 0 1px rgba(255, 255, 255, .25) !important;
+}
+
+body .infometry-conversa-product .icp-capability-scroll {
+  max-height: 460px !important;
+  padding-right: 10px !important;
+}
+
+body .infometry-conversa-product .icp-capability-matrix {
+  gap: 10px !important;
+}
+
+body .infometry-conversa-product .icp-capability-row-card {
+  min-height: 82px !important;
+  padding: 11px 18px !important;
+  gap: 24px !important;
+  border-radius: 15px !important;
+}
+
+body .infometry-conversa-product .icp-mini-status {
+  min-height: 54px !important;
+  border-radius: 11px !important;
+}
+
+@media (max-width: 1050px) {
+  body .infometry-conversa-product .icp-comparison-board-head,
+  body .infometry-conversa-product .icp-capability-row-card {
+    grid-template-columns: 210px minmax(540px, 1fr) !important;
+  }
+}
+
+@media (max-width: 820px) {
+  body .infometry-conversa-product .icp-comparison-board {
+    padding: 18px !important;
+  }
+  body .infometry-conversa-product .icp-comparison-board-head {
+    grid-template-columns: 1fr !important;
+  }
+  body .infometry-conversa-product .icp-capability-row-card {
+    grid-template-columns: 190px minmax(420px, 1fr) !important;
+  }
+  body .infometry-conversa-product .icp-comparison-providers {
+    grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body .infometry-conversa-product .icp-capability-row-card {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  body .infometry-conversa-product .icp-capability-values {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Minimal platform comparison inspired by the approved dark reference. */
+body .infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
+  width: min(100%, 1320px);
+  max-width: 1320px;
+  padding: 0 28px 26px !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  border: 1px solid rgba(80, 142, 255, .3) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at 38% 48%, rgba(43, 111, 255, .13), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(104, 65, 255, .12), transparent 26%),
+    linear-gradient(120deg, #050d25, #071535 56%, #0a1230) !important;
+  box-shadow: 0 28px 70px rgba(7, 25, 69, .2) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple::before {
+  display: none !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table {
+  display: table !important;
+  width: 100% !important;
+  min-width: 980px !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  table-layout: fixed !important;
+  color: #f5f8ff !important;
+  background: transparent !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table th,
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table td {
+  height: 68px !important;
+  padding: 15px 18px !important;
+  border: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid rgba(177, 199, 235, .16) !important;
+  color: #edf3ff !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  vertical-align: middle !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th {
+  height: 82px !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+  background: transparent !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child {
+  width: 29% !important;
+  color: #9eb3d4 !important;
+  font-size: 12px !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th {
+  width: 29% !important;
+  color: #b9c9e3 !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  line-height: 1.4 !important;
+  letter-spacing: .025em !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2),
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td:nth-child(2) {
+  border-right: 2px solid #3f8cff !important;
+  border-left: 2px solid #5a5cff !important;
+  background: linear-gradient(90deg, rgba(31, 81, 188, .12), rgba(95, 65, 255, .08)) !important;
+  box-shadow: 0 0 34px rgba(48, 105, 255, .12) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2) {
+  border-top: 2px solid #6d63ff !important;
+  border-radius: 16px 16px 0 0 !important;
+  text-align: center !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2) img {
+  width: auto !important;
+  max-width: 170px !important;
+  max-height: 42px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: brightness(0) invert(1) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:not(:first-child),
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td {
+  text-align: center !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr {
+  display: table-row !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child th,
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child td:nth-child(2) {
+  border-bottom: 2px solid #4c78ff !important;
+  border-radius: 0 0 16px 16px !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status {
+  display: inline-flex !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  gap: 8px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 0 !important;
+  color: #dce7f8 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: #f4aa38;
+  box-shadow: 0 0 9px rgba(244, 170, 56, .7);
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-yes {
+  color: #dffcf2 !important;
+}
+body .infometry-conversa-product .icp-comparison-simple .icp-status-yes::before {
+  background: #39dca5;
+  box-shadow: 0 0 9px rgba(57, 220, 165, .72);
+}
+body .infometry-conversa-product .icp-comparison-simple .icp-status-no {
+  color: #ffd8d6 !important;
+}
+body .infometry-conversa-product .icp-comparison-simple .icp-status-no::before {
+  background: #ff716b;
+  box-shadow: 0 0 9px rgba(255, 113, 107, .7);
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:hover th,
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:hover td {
+  background-color: rgba(62, 116, 225, .08) !important;
+}
+
+@media (max-width: 700px) {
+  body .infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
+    padding-inline: 16px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Final source-label guard: prevent decorative markers from clipping text. */
+body .infometry-conversa-product .icp-architecture-sources > span {
+  min-width: 0 !important;
+  padding: 10px 7px !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  font-size: 9.5px !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Give the governed-context side more visual weight without adding clutter. */
+body .infometry-conversa-product .icp-architecture-sources {
+  padding: 20px 14px 24px !important;
+  border: 1px solid rgba(88, 137, 238, .22);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(38, 181, 255, .13), transparent 28%),
+    radial-gradient(circle at 92% 88%, rgba(107, 83, 245, .12), transparent 32%),
+    linear-gradient(145deg, rgba(255,255,255,.92), rgba(244,248,255,.9));
+  box-shadow: 0 18px 38px rgba(43, 76, 146, .11), inset 0 1px #fff;
+}
+
+body .infometry-conversa-product .icp-architecture-sources::before {
+  content: "";
+  position: absolute;
+  inset: 54px 12px 15px;
+  z-index: 0;
+  border-radius: 16px;
+  background:
+    linear-gradient(90deg, transparent 49.5%, rgba(92, 121, 225, .13) 49.5% 50.5%, transparent 50.5%),
+    repeating-linear-gradient(0deg, transparent 0 50px, rgba(92, 121, 225, .11) 50px 51px);
+  pointer-events: none;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > small,
+body .infometry-conversa-product .icp-architecture-sources > span {
+  position: relative;
+  z-index: 1;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > small {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 auto 6px;
+  padding: 6px 10px;
+  border: 1px solid rgba(79, 137, 242, .22);
+  border-radius: 999px;
+  color: #3d5c95;
+  background: rgba(236, 245, 255, .9);
+  box-shadow: 0 6px 14px rgba(51, 99, 179, .08);
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span {
+  border-left: 3px solid #27b9f5 !important;
+  background: linear-gradient(145deg, #fff, #f1f8ff) !important;
+  box-shadow: 0 10px 22px rgba(42, 89, 171, .12), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(2),
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(5) {
+  border-left-color: #735cf3 !important;
+  background: linear-gradient(145deg, #fff, #f4f1ff) !important;
+}
+
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(3),
+body .infometry-conversa-product .icp-architecture-sources > span:nth-of-type(6) {
+  border-left-color: #22c8a4 !important;
+  background: linear-gradient(145deg, #fff, #effbf8) !important;
+}
+
+body .infometry-conversa-product .icp-architecture-sources::after {
+  right: -32px !important;
+  width: 32px !important;
+  height: 3px !important;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #25baf4, #675cf4, #25baf4) !important;
+  background-size: 200% 100% !important;
 }

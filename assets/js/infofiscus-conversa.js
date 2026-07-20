@@ -67,6 +67,9 @@
       return;
     }
 
+    wrap.classList.add('icp-comparison-simple');
+    return;
+
     var preferredCapabilities = [
       'Natural Language Query',
       'Automated Insights',

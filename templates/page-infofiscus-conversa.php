@@ -14,7 +14,6 @@ get_header();
 
 $demo_url    = apply_filters( 'infometry_conversa_demo_url', home_url( '/infofiscus-analytics-sign-up-for-demo/' ) );
 $contact_url = apply_filters( 'infometry_conversa_contact_url', home_url( '/contact-us/' ) );
-$intro_video = apply_filters( 'infometry_conversa_intro_video_url', 'https://wordpress-1633295-6507153.cloudwaysapps.com/wp-content/uploads/2026/04/Copy-of-Infometry-32.mp4' );
 
 $problems = array(
 	array( 'icon' => 'gauge', 'title' => 'Too many dashboards', 'copy' => 'Teams struggle to find the right view or build the right report.' ),
@@ -285,7 +284,30 @@ $other_products = array(
 	<section class="icp-intro" id="icp-intro" aria-labelledby="icp-intro-title">
 		<div class="icp-shell icp-intro-grid">
 			<div class="icp-intro-showcase-head"><p class="icp-kicker">Meet INFOFISCUS Conversa</p><h2 id="icp-intro-title">See the answer. Understand the why. Act with confidence.</h2><p>Ask questions in everyday language and turn complex enterprise data into clear, governed insights your teams can trust and act on.</p></div>
-			<div class="icp-intro-video-frame"><div class="icp-intro-video-bar"><span><i></i><i></i><i></i></span><strong>Conversa Product Experience</strong><small>Interactive analytics</small></div><video autoplay muted loop playsinline preload="metadata" poster="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/conversa-ai-hero-original.png' ); ?>" aria-label="INFOFISCUS Conversa product tour animation"><source src="<?php echo esc_url( $intro_video ); ?>" type="video/mp4"></video><div class="icp-intro-video-badge"><svg><use href="#icp-i-spark"></use></svg><span><small>From question to insight</small><strong>Powered by governed enterprise data</strong></span></div></div>
+			<div class="icp-intro-video-frame icp-architecture-frame">
+				<div class="icp-intro-video-bar"><span><i></i><i></i><i></i></span><strong>Conversa Intelligence Architecture</strong><small>Governed analytics</small></div>
+				<div class="icp-architecture" aria-label="INFOFISCUS Conversa architecture from governed context to trusted answer">
+					<div class="icp-architecture-query"><svg><use href="#icp-i-spark"></use></svg><span>Why did customer engagement drop last week?</span></div>
+					<div class="icp-architecture-grid">
+						<div class="icp-architecture-sources">
+							<small>Governed context</small>
+							<span>Data dictionary</span><span>Semantic definitions</span><span>Business rules</span><span>Metric definitions</span><span>Decision history</span><span>Table descriptions</span>
+						</div>
+						<div class="icp-architecture-engine">
+							<div class="icp-engine-orb"><svg><use href="#icp-i-nodes"></use></svg></div>
+							<strong>Conversa Intelligence Engine</strong>
+							<small>Adaptive context + governed reasoning</small>
+						</div>
+						<div class="icp-architecture-flow">
+							<article><b>1</b><span>Query received</span></article>
+							<article><b>2</b><span>Interpret intent and resolve entities</span></article>
+							<article><b>3</b><span>Apply semantic and business context</span></article>
+							<article><b>4</b><span>Generate governed SQL and analysis</span></article>
+							<article class="is-answer"><b>5</b><span>Deliver a trusted answer</span><i></i></article>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="icp-intro-value-row"><article><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Ask naturally</strong><small>Explore data naturally—no SQL, complex reports, or dashboards.</small></div></article><article><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Get governed answers</strong><small>Trusted answers with consistent metrics and secure permissions.</small></div></article><article><span><svg><use href="#icp-i-trend"></use></svg></span><div><strong>Move to action</strong><small>See key drivers and turn insights into confident next steps.</small></div></article></div>
 		</div>
 	</section>
