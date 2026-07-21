@@ -41,10 +41,10 @@ $steps = array(
 );
 
 $outcomes = array(
-	array( 'icon' => 'bank', 'stat' => '3X', 'copy' => 'Faster time to insight' ),
-	array( 'icon' => 'trend', 'stat' => '75%', 'copy' => 'Increase in self-service analytics' ),
-	array( 'icon' => 'path', 'stat' => '2X', 'copy' => 'Productivity boost for data teams' ),
-	array( 'icon' => 'trust', 'stat' => '92%+', 'copy' => 'Trusted answers and user satisfaction' ),
+	array( 'icon' => 'bank', 'stat' => '3X', 'copy' => 'Faster time to insights' ),
+	array( 'icon' => 'trend', 'stat' => '75%', 'copy' => 'Self-service analytics growth' ),
+	array( 'icon' => 'path', 'stat' => '2X', 'copy' => 'Data team productivity boost' ),
+	array( 'icon' => 'trust', 'stat' => '92%+', 'copy' => 'Trusted answers, happier users' ),
 );
 
 $personas = array(
@@ -308,7 +308,7 @@ $other_products = array(
 					</div>
 				</div>
 			</div>
-			<div class="icp-intro-value-row"><article><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Ask naturally</strong><small>Explore data naturally—no SQL, complex reports, or dashboards.</small></div></article><article><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Get governed answers</strong><small>Trusted answers with consistent metrics and secure permissions.</small></div></article><article><span><svg><use href="#icp-i-trend"></use></svg></span><div><strong>Move to action</strong><small>See key drivers and turn insights into confident next steps.</small></div></article></div>
+			<div class="icp-intro-value-row"><article><span><svg><use href="#icp-i-chat"></use></svg></span><div><strong>Ask naturally</strong><small>Explore data naturally—no SQL, complex reports, or dashboards.</small></div></article><article><span><svg><use href="#icp-i-trust"></use></svg></span><div><strong>Governed answers</strong><small>Trusted answers with consistent metrics and secure permissions.</small></div></article><article><span><svg><use href="#icp-i-trend"></use></svg></span><div><strong>Move to action</strong><small>See key drivers and turn insights into confident next steps.</small></div></article></div>
 		</div>
 	</section>
 

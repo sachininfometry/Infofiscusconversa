@@ -6282,6 +6282,62 @@ body .infometry-conversa-product .icp-footer-bottom p {
   }
 }
 
+/* Modernized workflow palette using electric product gradients. */
+body .infometry-conversa-product .icp-workflow {
+  background:
+    radial-gradient(circle at 8% 16%, rgba(6, 182, 212, .24), transparent 30%),
+    radial-gradient(circle at 52% 115%, rgba(37, 99, 235, .26), transparent 42%),
+    radial-gradient(circle at 94% 20%, rgba(124, 58, 237, .24), transparent 31%),
+    linear-gradient(118deg, #020617 0%, #071b3d 48%, #11124a 100%) !important;
+}
+
+body .infometry-conversa-product .icp-workflow::before {
+  opacity: .28 !important;
+  background-image: radial-gradient(circle, rgba(56, 189, 248, .38) 1px, transparent 1.15px) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row::before {
+  background-image: linear-gradient(90deg, rgba(34, 211, 238, .76) 50%, transparent 0) !important;
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, .48)) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row::after {
+  background:
+    radial-gradient(circle at 50% 50%, #fff 0 4px, transparent 5px),
+    radial-gradient(circle at 50% 50%, #22d3ee, #2563eb) !important;
+  box-shadow: 0 0 0 7px rgba(34, 211, 238, .12), 0 0 26px rgba(34, 211, 238, .72) !important;
+}
+
+body .infometry-conversa-product .icp-step-icon {
+  opacity: .82;
+  filter: saturate(1.08) brightness(1.02);
+  background: linear-gradient(145deg, #06b6d4, #2563eb) !important;
+  box-shadow: 0 16px 38px rgba(14, 165, 233, .32) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(2) .icp-step-icon {
+  background: linear-gradient(145deg, #3b82f6, #4f46e5) !important;
+  box-shadow: 0 16px 38px rgba(79, 70, 229, .3) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(3) .icp-step-icon {
+  background: linear-gradient(145deg, #14b8a6, #0891b2) !important;
+  box-shadow: 0 16px 38px rgba(20, 184, 166, .3) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(4) .icp-step-icon {
+  background: linear-gradient(145deg, #8b5cf6, #6366f1) !important;
+  box-shadow: 0 16px 38px rgba(124, 58, 237, .3) !important;
+}
+
+body .infometry-conversa-product .icp-step-icon::before {
+  border-color: rgba(103, 232, 249, .54) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row p {
+  color: rgba(231, 243, 255, .88) !important;
+}
+
 /* Conversa governed-intelligence architecture replacing the intro video. */
 body .infometry-conversa-product .icp-intro-video-frame.icp-architecture-frame {
   height: auto !important;
@@ -7353,4 +7409,204 @@ body .infometry-conversa-product .icp-architecture-flow article:nth-child(4) {
 
 body .infometry-conversa-product .icp-architecture-flow .is-answer i {
   background: linear-gradient(90deg, #35bce8 0 12%, transparent 12% 18%, #159bd5 18% 34%, transparent 34% 40%, #287fc5 40% 59%, transparent 59% 65%, #58c8e7 65% 82%, transparent 82%) !important;
+}
+
+/* Layout sizing aligned with the current Infometry homepage. */
+body .infometry-conversa-product,
+body .infometry-conversa-product * {
+  box-sizing: border-box;
+}
+
+body .infometry-conversa-product > section > .icp-shell,
+body .infometry-conversa-product > section > .icp-shell.icp-center {
+  width: min(calc(100% - 48px), 1440px) !important;
+  max-width: 1440px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+body .infometry-conversa-product .icp-hero {
+  min-height: 670px !important;
+}
+
+body .infometry-conversa-product > .icp-hero > .icp-shell {
+  width: min(calc(100% - 48px), 1440px) !important;
+  max-width: 1440px !important;
+}
+
+body .infometry-conversa-product .icp-hero .icp-hero-grid {
+  min-height: 670px !important;
+  padding: 108px 0 92px !important;
+  grid-template-columns: minmax(380px, .84fr) minmax(600px, 1.4fr) !important;
+  gap: 52px !important;
+}
+
+body .infometry-conversa-product .icp-hero-copy {
+  width: 100% !important;
+  max-width: 520px !important;
+}
+
+body .infometry-conversa-product .icp-hero-slider {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 1.605 / 1 !important;
+}
+
+body .infometry-conversa-product .icp-hero-slide {
+  inset: 0 0 24px !important;
+}
+
+body .infometry-conversa-product .icp-hero-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+body .infometry-conversa-product .icp-problem .icp-shell {
+  width: min(calc(100% - 48px), 1440px) !important;
+  max-width: 1440px !important;
+}
+
+@media (max-width: 1240px) {
+  body .infometry-conversa-product .icp-hero .icp-hero-grid {
+    grid-template-columns: minmax(360px, .78fr) minmax(0, 1.22fr) !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  body .infometry-conversa-product .icp-hero {
+    min-height: auto !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-hero-grid {
+    min-height: 0 !important;
+    padding: 96px 0 72px !important;
+    grid-template-columns: 1fr !important;
+    gap: 44px !important;
+  }
+  body .infometry-conversa-product .icp-hero-copy {
+    max-width: 680px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+  body .infometry-conversa-product .icp-hero-copy .icp-hero-text {
+    margin-inline: auto !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-actions {
+    justify-content: center !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-hero-icons {
+    margin-inline: auto !important;
+  }
+  body .infometry-conversa-product .icp-hero-slider {
+    width: min(100%, 760px) !important;
+    margin-inline: auto !important;
+    justify-self: center !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body .infometry-conversa-product > section > .icp-shell,
+  body .infometry-conversa-product > section > .icp-shell.icp-center,
+  body .infometry-conversa-product > .icp-hero > .icp-shell,
+  body .infometry-conversa-product .icp-problem .icp-shell {
+    width: min(calc(100% - 32px), 1440px) !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-hero-grid {
+    padding: 78px 0 46px !important;
+    gap: 24px !important;
+  }
+  body .infometry-conversa-product .icp-hero-copy h1 {
+    font-size: clamp(36px, 11vw, 48px) !important;
+    letter-spacing: 0 !important;
+  }
+  body .infometry-conversa-product .icp-hero-copy .icp-hero-text {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-actions {
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-actions .icp-button {
+    min-width: 0 !important;
+    min-height: 46px !important;
+    padding: 11px 12px !important;
+    flex: 1 1 0 !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-hero-icons {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body .infometry-conversa-product .icp-hero .icp-actions {
+    flex-wrap: wrap !important;
+  }
+  body .infometry-conversa-product .icp-hero .icp-actions .icp-button {
+    flex-basis: 100% !important;
+  }
+}
+
+/* Slightly narrower outcome and LLM strip. */
+body .infometry-conversa-product > .icp-hero-strip > .icp-shell {
+  width: min(calc(100% - 80px), 1380px) !important;
+  max-width: 1380px !important;
+}
+
+body .infometry-conversa-product .icp-strip-stat span {
+  font-size: clamp(13px, 1vw, 15px) !important;
+}
+
+@media (max-width: 900px) {
+  body .infometry-conversa-product > .icp-hero-strip > .icp-shell {
+    width: min(calc(100% - 48px), 1380px) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body .infometry-conversa-product > .icp-hero-strip > .icp-shell {
+    width: min(calc(100% - 28px), 1380px) !important;
+  }
+}
+
+/* Lighter Open Sans copy inside the architecture cards and steps. */
+body .infometry-conversa-product .icp-architecture-sources > span,
+body .infometry-conversa-product .icp-architecture-flow span {
+  font-family: "Open Sans", "Segoe UI", Arial, sans-serif !important;
+  font-weight: 600 !important;
+  text-shadow: .15px 0 0 currentColor !important;
+}
+
+/* Keep the three intro value-card headings compact and aligned. */
+body .infometry-conversa-product .icp-intro-value-row article strong {
+  font-size: 16.5px !important;
+  line-height: 1.35 !important;
+  white-space: nowrap !important;
+}
+
+/* Compact the challenge section's excessive vertical whitespace. */
+body .infometry-conversa-product .icp-problem {
+  padding-top: 32px !important;
+  padding-bottom: 38px !important;
+}
+
+body .infometry-conversa-product .icp-problem .icp-shell {
+  padding-top: 24px !important;
+  padding-bottom: 20px !important;
+}
+
+@media (max-width: 700px) {
+  body .infometry-conversa-product .icp-problem {
+    padding-top: 24px !important;
+    padding-bottom: 28px !important;
+  }
+  body .infometry-conversa-product .icp-problem .icp-shell {
+    padding-top: 20px !important;
+    padding-bottom: 18px !important;
+  }
 }
