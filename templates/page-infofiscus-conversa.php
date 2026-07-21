@@ -296,7 +296,7 @@ $other_products = array(
 						<div class="icp-architecture-engine">
 							<div class="icp-engine-orb"><svg><use href="#icp-i-nodes"></use></svg></div>
 							<strong>Conversa Intelligence Engine</strong>
-							<small>Adaptive context + governed reasoning</small>
+							<small>Business Ontology + Context + LLM/SLM + Governance = Accuracy</small>
 						</div>
 						<div class="icp-architecture-flow">
 							<article><b>1</b><span>Query received</span></article>
