@@ -6166,6 +6166,9 @@ body .infometry-conversa-product .icp-problem .icp-shell {
   background: rgba(3,18,59,.16) !important;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
 }
+body .infometry-conversa-product .icp-problem .icp-shell::before {
+  display: none !important;
+}
 body .infometry-conversa-product .icp-problem .icp-section-heading::before {
   border-color: rgba(93,216,255,.55) !important;
   color: #9be9ff !important;
