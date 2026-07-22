@@ -8978,11 +8978,11 @@ body .infometry-conversa-product .icp-demo-form-section {
 }
 
 body .infometry-conversa-product .icp-demo-visual {
-  border-color: rgba(74, 161, 238, .5) !important;
+  border-color: rgba(94, 180, 244, .58) !important;
   background:
-    radial-gradient(circle at 12% 12%, rgba(49, 211, 224, .24), transparent 31%),
-    radial-gradient(circle at 88% 82%, rgba(119, 92, 246, .35), transparent 38%),
-    linear-gradient(142deg, #05264a 0%, #074f7c 48%, #34308b 100%) !important;
+    radial-gradient(circle at 12% 12%, rgba(79, 225, 235, .3), transparent 32%),
+    radial-gradient(circle at 88% 82%, rgba(145, 111, 250, .38), transparent 39%),
+    linear-gradient(142deg, #0b4774 0%, #146b9c 48%, #5141aa 100%) !important;
   box-shadow:
     0 28px 64px rgba(16, 54, 105, .22),
     inset 0 1px rgba(255, 255, 255, .16) !important;
@@ -9280,5 +9280,174 @@ body .infometry-conversa-product .icp-architecture-flow b {
   body .infometry-conversa-product .icp-capability-carousel {
     width: calc(100% + 48px) !important;
     max-width: none !important;
+  }
+}
+
+/* Final CTA redesign. */
+body .infometry-conversa-product .icp-final-cta {
+  position: relative !important;
+  padding: 62px 0 66px !important;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(20, 160, 229, .09), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(100, 76, 226, .08), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%) !important;
+}
+
+body .infometry-conversa-product .icp-final-panel {
+  position: relative !important;
+  isolation: isolate !important;
+  min-height: 150px !important;
+  padding: 34px 38px !important;
+  overflow: hidden !important;
+  grid-template-columns: 64px minmax(0, 1fr) auto auto !important;
+  gap: 26px !important;
+  border: 1px solid rgba(92, 135, 235, .48) !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at 8% 30%, rgba(20, 197, 225, .22), transparent 31%),
+    radial-gradient(circle at 86% 20%, rgba(113, 75, 241, .4), transparent 36%),
+    linear-gradient(112deg, #031b49 0%, #073b78 46%, #2e1a8b 100%) !important;
+  box-shadow:
+    0 24px 58px rgba(16, 42, 101, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .14) !important;
+}
+
+body .infometry-conversa-product .icp-final-panel::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 !important;
+  opacity: .26 !important;
+  background-image: radial-gradient(rgba(113, 199, 255, .55) 1px, transparent 1px) !important;
+  background-size: 14px 14px !important;
+  mask-image: linear-gradient(90deg, #000, transparent 44%, #000) !important;
+  pointer-events: none !important;
+}
+
+body .infometry-conversa-product .icp-final-panel::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 24px auto !important;
+  height: 3px !important;
+  border-radius: 0 0 8px 8px !important;
+  background: linear-gradient(90deg, #22c9e8, #3486f3 48%, #8660f2) !important;
+  box-shadow: 0 5px 18px rgba(48, 143, 243, .3) !important;
+}
+
+body .infometry-conversa-product .icp-final-panel .icp-rocket {
+  display: grid !important;
+  width: 58px !important;
+  height: 58px !important;
+  margin: 0 !important;
+  place-items: center !important;
+  border: 1px solid rgba(138, 202, 255, .34) !important;
+  border-radius: 17px !important;
+  color: #ffffff !important;
+  background: linear-gradient(145deg, rgba(30, 184, 232, .34), rgba(94, 82, 226, .42)) !important;
+  box-shadow: 0 12px 28px rgba(2, 14, 55, .26), inset 0 1px rgba(255, 255, 255, .2) !important;
+}
+
+body .infometry-conversa-product .icp-final-panel .icp-rocket svg {
+  width: 27px !important;
+  height: 27px !important;
+}
+
+body .infometry-conversa-product .icp-final-panel h2 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(26px, 2.15vw, 36px) !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+  text-shadow: 0 7px 24px rgba(0, 0, 0, .22) !important;
+}
+
+body .infometry-conversa-product .icp-final-panel p {
+  margin: 8px 0 0 !important;
+  color: #d8e7fb !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+body .infometry-conversa-product .icp-final-panel .icp-button {
+  min-height: 50px !important;
+  padding: 13px 20px !important;
+  justify-content: center !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  white-space: nowrap !important;
+}
+
+body .infometry-conversa-product .icp-final-panel .icp-button-primary {
+  border: 1px solid rgba(255, 255, 255, .2) !important;
+  background: linear-gradient(105deg, #078cf3 0%, #486ce9 54%, #704fdf 100%) !important;
+  box-shadow: 0 13px 28px rgba(26, 55, 166, .32), inset 0 1px rgba(255, 255, 255, .25) !important;
+}
+
+body .infometry-conversa-product .icp-final-panel .icp-button-secondary {
+  border: 1px solid rgba(187, 210, 255, .38) !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, .08) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .09) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Richer comparison-table blue, aligned with the challenge section. */
+body .infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
+  border-color: rgba(83, 149, 255, .46) !important;
+  background:
+    radial-gradient(circle at 10% 32%, rgba(35, 203, 235, .3), transparent 35%),
+    radial-gradient(circle at 86% 34%, rgba(130, 91, 245, .38), transparent 40%),
+    linear-gradient(112deg, #073064 0%, #125295 48%, #4933a8 100%) !important;
+  box-shadow:
+    0 30px 72px rgba(12, 37, 98, .25),
+    inset 0 1px 0 rgba(255, 255, 255, .12) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th,
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td {
+  border-top-color: rgba(145, 192, 255, .2) !important;
+  border-bottom-color: rgba(145, 192, 255, .2) !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .075), rgba(255, 255, 255, .035)) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2),
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td:nth-child(2) {
+  background: linear-gradient(90deg, rgba(15, 139, 236, .23), rgba(96, 70, 238, .2)) !important;
+  box-shadow: inset 0 0 30px rgba(67, 153, 255, .11), 0 0 30px rgba(62, 105, 242, .12) !important;
+}
+
+@media (max-width: 860px) {
+  body .infometry-conversa-product .icp-final-panel {
+    padding: 30px 24px !important;
+    grid-template-columns: 58px minmax(0, 1fr) !important;
+  }
+  body .infometry-conversa-product .icp-final-panel .icp-button {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body .infometry-conversa-product .icp-final-cta {
+    padding: 46px 0 50px !important;
+  }
+  body .infometry-conversa-product .icp-final-panel {
+    padding: 28px 20px !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    text-align: center !important;
+  }
+  body .infometry-conversa-product .icp-final-panel .icp-rocket {
+    margin-inline: auto !important;
+  }
+}
+
+/* Final table width balance. */
+@media (min-width: 1101px) {
+  body .infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
+    width: min(100%, 1380px) !important;
+    max-width: 1380px !important;
+    margin-inline: auto !important;
   }
 }
