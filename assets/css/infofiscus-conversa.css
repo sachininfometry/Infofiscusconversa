@@ -8716,3 +8716,132 @@ body .infometry-conversa-product .icp-workflow::before {
   background-size: 12px 12px !important;
   mask-image: linear-gradient(90deg, #000, transparent 44%, #000) !important;
 }
+
+/* Final responsive layout system: match the main Infometry site's measured
+   content rhythm while keeping every section background full bleed. */
+body.infometry-conversa-product-page,
+body.infometry-conversa-product-page #Wrapper,
+body.infometry-conversa-product-page #Content,
+body.infometry-conversa-product-page .content_wrapper,
+body.infometry-conversa-product-page .sections_group,
+body.infometry-conversa-product-page .entry-content,
+body.infometry-conversa-product-page .infometry-conversa-product {
+  width: 100% !important;
+  max-width: none !important;
+  margin-inline: 0 !important;
+  overflow-x: clip !important;
+}
+
+body .infometry-conversa-product > section {
+  width: 100% !important;
+  max-width: none !important;
+  margin-inline: 0 !important;
+}
+
+body .infometry-conversa-product > section > .icp-shell,
+body .infometry-conversa-product > section > .icp-shell.icp-center,
+body .infometry-conversa-product > .icp-hero > .icp-shell,
+body .infometry-conversa-product .icp-problem > .icp-shell,
+body .infometry-conversa-product .icp-product-footer > .icp-shell {
+  width: min(calc(100% - 48px), 1380px) !important;
+  max-width: 1380px !important;
+  margin-inline: auto !important;
+}
+
+body .infometry-conversa-product .icp-intro > .icp-intro-grid {
+  width: min(calc(100% - 48px), 1380px) !important;
+  max-width: 1380px !important;
+}
+
+body .infometry-conversa-product .icp-shell > *,
+body .infometry-conversa-product [class*="grid"] > *,
+body .infometry-conversa-product [class*="row"] > * {
+  min-width: 0;
+}
+
+body .infometry-conversa-product .icp-comparison-table-wrap,
+body .infometry-conversa-product .icp-capability-scroll {
+  max-width: 100% !important;
+  overscroll-behavior-inline: contain;
+}
+
+@media (max-width: 1024px) {
+  body .infometry-conversa-product > section > .icp-shell,
+  body .infometry-conversa-product > section > .icp-shell.icp-center,
+  body .infometry-conversa-product > .icp-hero > .icp-shell,
+  body .infometry-conversa-product .icp-problem > .icp-shell,
+  body .infometry-conversa-product .icp-product-footer > .icp-shell {
+    width: calc(100% - 40px) !important;
+  }
+  body .infometry-conversa-product .icp-intro > .icp-intro-grid {
+    width: calc(100% - 40px) !important;
+  }
+
+  body .infometry-conversa-product .icp-demo-grid,
+  body .infometry-conversa-product .icp-demo-form-grid,
+  body .infometry-conversa-product .icp-intro-grid,
+  body .infometry-conversa-product .icp-outcome-journey-grid,
+  body .infometry-conversa-product .icp-footer-grid {
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body .infometry-conversa-product > section > .icp-shell,
+  body .infometry-conversa-product > section > .icp-shell.icp-center,
+  body .infometry-conversa-product > .icp-hero > .icp-shell,
+  body .infometry-conversa-product .icp-problem > .icp-shell,
+  body .infometry-conversa-product .icp-product-footer > .icp-shell {
+    width: calc(100% - 32px) !important;
+    padding-inline: 0 !important;
+  }
+  body .infometry-conversa-product .icp-intro > .icp-intro-grid {
+    width: calc(100% - 32px) !important;
+  }
+
+  body .infometry-conversa-product .icp-demo-grid,
+  body .infometry-conversa-product .icp-demo-form-grid,
+  body .infometry-conversa-product .icp-intro-grid,
+  body .infometry-conversa-product .icp-outcome-journey-grid,
+  body .infometry-conversa-product .icp-footer-grid,
+  body .infometry-conversa-product .icp-final-panel {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body .infometry-conversa-product .icp-section-heading h2 {
+    font-size: clamp(30px, 8vw, 42px) !important;
+    line-height: 1.12 !important;
+  }
+
+  body .infometry-conversa-product .icp-section-heading p {
+    font-size: 15px !important;
+  }
+
+  body .infometry-conversa-product .icp-demo-calendar,
+  body .infometry-conversa-product .icp-demo-form-card,
+  body .infometry-conversa-product .icp-outcome-journey-board {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body .infometry-conversa-product > section > .icp-shell,
+  body .infometry-conversa-product > section > .icp-shell.icp-center,
+  body .infometry-conversa-product > .icp-hero > .icp-shell,
+  body .infometry-conversa-product .icp-problem > .icp-shell,
+  body .infometry-conversa-product .icp-product-footer > .icp-shell {
+    width: calc(100% - 24px) !important;
+  }
+  body .infometry-conversa-product .icp-intro > .icp-intro-grid {
+    width: calc(100% - 24px) !important;
+  }
+
+  body .infometry-conversa-product .icp-section-heading {
+    margin-bottom: 28px !important;
+  }
+
+  body .infometry-conversa-product .icp-button {
+    max-width: 100%;
+  }
+}
