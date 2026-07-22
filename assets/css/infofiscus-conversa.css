@@ -9244,3 +9244,41 @@ body .infometry-conversa-product .icp-architecture-engine > strong,
 body .infometry-conversa-product .icp-architecture-flow b {
   font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
 }
+
+/* Final desktop width precedence. */
+@media (min-width: 1101px) {
+  body .infometry-conversa-product > section > .icp-shell,
+  body .infometry-conversa-product > section > .icp-shell.icp-center,
+  body .infometry-conversa-product > .icp-hero > .icp-shell,
+  body .infometry-conversa-product .icp-problem > .icp-shell,
+  body .infometry-conversa-product .icp-product-footer > .icp-shell,
+  body .infometry-conversa-product .icp-intro > .icp-intro-grid,
+  body .infometry-conversa-product > .icp-hero-strip > .icp-shell {
+    width: min(calc(100% - 48px), 1600px) !important;
+    max-width: 1600px !important;
+  }
+
+  body .infometry-conversa-product .icp-problem > .icp-shell {
+    padding-inline: 0 !important;
+  }
+
+  body .infometry-conversa-product .icp-problem .icp-four,
+  body .infometry-conversa-product .icp-outcomes .icp-four,
+  body .infometry-conversa-product .icp-workflow-row,
+  body .infometry-conversa-product .icp-use-case-panel,
+  body .infometry-conversa-product .icp-persona-grid,
+  body .infometry-conversa-product .icp-logo-slider,
+  body .infometry-conversa-product .icp-other-grid,
+  body .infometry-conversa-product .icp-shift-board,
+  body .infometry-conversa-product .icp-comparison-table-wrap,
+  body .infometry-conversa-product .icp-demo-form-grid {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+  }
+
+  body .infometry-conversa-product .icp-capability-carousel {
+    width: calc(100% + 48px) !important;
+    max-width: none !important;
+  }
+}
