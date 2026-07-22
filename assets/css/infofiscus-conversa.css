@@ -6282,6 +6282,86 @@ body .infometry-conversa-product .icp-footer-bottom p {
   }
 }
 
+/* Premium workflow icon finish: jewel gradients, glass depth and vivid idle state. */
+body .infometry-conversa-product .icp-step-icon {
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, .34) !important;
+  opacity: .86;
+  filter: saturate(1.08) brightness(1.03);
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, #22d3ee 0%, #3b82f6 48%, #4f46e5 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .34),
+    inset 0 -10px 22px rgba(21, 44, 143, .2),
+    0 16px 38px rgba(37, 99, 235, .34) !important;
+  animation-name: icpWorkflowIconPremium !important;
+}
+
+body .infometry-conversa-product .icp-step-icon::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  z-index: 0;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .15), transparent 42%);
+  pointer-events: none;
+}
+
+body .infometry-conversa-product .icp-step-icon svg {
+  z-index: 2 !important;
+  filter: drop-shadow(0 2px 5px rgba(3, 16, 64, .28));
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(2) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .4), transparent 25%),
+    linear-gradient(145deg, #60a5fa 0%, #6366f1 52%, #7c3aed 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .34),
+    inset 0 -10px 22px rgba(55, 35, 145, .2),
+    0 16px 38px rgba(99, 102, 241, .34) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(3) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .4), transparent 25%),
+    linear-gradient(145deg, #2dd4bf 0%, #06b6d4 52%, #0284c7 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .34),
+    inset 0 -10px 22px rgba(2, 92, 135, .2),
+    0 16px 38px rgba(6, 182, 212, .34) !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(4) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, #c084fc 0%, #8b5cf6 50%, #4f46e5 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .34),
+    inset 0 -10px 22px rgba(66, 38, 145, .22),
+    0 16px 38px rgba(139, 92, 246, .36) !important;
+}
+
+body .infometry-conversa-product .icp-step-icon::before {
+  border-color: rgba(125, 211, 252, .62) !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, .22);
+}
+
+@keyframes icpWorkflowIconPremium {
+  0%, 22% {
+    transform: translateY(-4px) scale(1.08);
+    opacity: 1;
+    filter: saturate(1.2) brightness(1.08);
+  }
+  30%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: .86;
+    filter: saturate(1.08) brightness(1.03);
+  }
+}
+
 /* Modernized workflow palette using electric product gradients. */
 body .infometry-conversa-product .icp-workflow {
   background:
@@ -7283,6 +7363,960 @@ body .infometry-conversa-product .icp-problem::before {
   mask-image: linear-gradient(90deg, #000, transparent 44%, #000) !important;
 }
 
+/* Prevent Enterprise Outcomes cards from stretching across wide viewports. */
+body .infometry-conversa-product .icp-outcomes .icp-four {
+  width: min(100%, 1380px) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+body .infometry-conversa-product .icp-outcomes .icp-outcome-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 150px !important;
+  grid-template-columns: 50px minmax(0, 1fr) !important;
+  column-gap: 12px !important;
+  padding: 22px 18px !important;
+}
+
+body .infometry-conversa-product .icp-outcomes .icp-outcome-card p {
+  white-space: nowrap !important;
+}
+
+/* Premium outcome journey: deep enterprise contrast with luminous transformation accents. */
+body .infometry-conversa-product .icp-outcome-journey .icp-shell {
+  border-color: rgba(111, 151, 255, .24) !important;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(18, 186, 255, .16), transparent 28%),
+    radial-gradient(circle at 92% 20%, rgba(124, 92, 255, .19), transparent 32%),
+    linear-gradient(135deg, #f8fbff 0%, #f3f7ff 48%, #f7f4ff 100%) !important;
+  box-shadow: 0 30px 80px rgba(21, 44, 105, .16), inset 0 1px rgba(255, 255, 255, .94) !important;
+}
+
+body .infometry-conversa-product .icp-shift-board {
+  border-color: rgba(77, 123, 220, .28) !important;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(24, 161, 255, .13), transparent 28%),
+    radial-gradient(circle at 88% 82%, rgba(128, 78, 255, .17), transparent 30%),
+    linear-gradient(135deg, #06132f 0%, #091c46 52%, #11154a 100%) !important;
+  box-shadow: 0 28px 66px rgba(7, 22, 67, .28), inset 0 1px rgba(255, 255, 255, .08) !important;
+}
+
+body .infometry-conversa-product .icp-shift-labels span {
+  border-color: rgba(151, 180, 233, .28) !important;
+  color: #d6e5ff !important;
+  background: rgba(12, 30, 70, .78) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .08) !important;
+}
+
+body .infometry-conversa-product .icp-shift-labels span:nth-child(2) {
+  border: 1px solid rgba(111, 211, 255, .45) !important;
+  color: #fff !important;
+  background: linear-gradient(110deg, #087cff, #635bff 58%, #8b5cf6) !important;
+  box-shadow: 0 10px 28px rgba(53, 104, 255, .34) !important;
+}
+
+body .infometry-conversa-product .icp-shift-labels span:nth-child(3) {
+  border-color: rgba(72, 220, 238, .35) !important;
+  color: #bdf8ff !important;
+  background: rgba(5, 77, 105, .46) !important;
+}
+
+body .infometry-conversa-product .icp-shift-labels span:nth-child(2) {
+  border-color: rgba(73, 158, 255, .38) !important;
+  color: #fff !important;
+  background: linear-gradient(110deg, #1688f8, #6659ed) !important;
+  box-shadow: 0 9px 24px rgba(65, 101, 222, .25) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem {
+  border-color: rgba(131, 151, 205, .25) !important;
+  background:
+    radial-gradient(circle at 6% 18%, rgba(111, 91, 255, .14), transparent 34%),
+    linear-gradient(135deg, rgba(17, 31, 70, .98), rgba(12, 24, 57, .98)) !important;
+  box-shadow: 0 14px 32px rgba(2, 10, 35, .26), inset 0 1px rgba(255, 255, 255, .06) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem::before {
+  background: linear-gradient(180deg, #8b7cff, #38bdf8) !important;
+  box-shadow: 0 0 20px rgba(88, 157, 255, .42) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result {
+  border-color: color-mix(in srgb, var(--shift-accent) 50%, #637fb4) !important;
+  background:
+    radial-gradient(circle at 92% 18%, color-mix(in srgb, var(--shift-accent) 22%, transparent), transparent 38%),
+    linear-gradient(135deg, rgba(12, 42, 84, .98), rgba(17, 30, 79, .98)) !important;
+  box-shadow: 0 16px 38px color-mix(in srgb, var(--shift-accent) 18%, rgba(3, 12, 40, .25)), inset 0 1px rgba(255, 255, 255, .08) !important;
+}
+
+body .infometry-conversa-product .icp-shift-row article > span {
+  border-color: rgba(125, 190, 255, .3) !important;
+  color: #dff8ff !important;
+  background: linear-gradient(145deg, rgba(27, 133, 239, .42), rgba(104, 76, 235, .38)) !important;
+  box-shadow: 0 10px 26px rgba(25, 108, 229, .25), inset 0 1px rgba(255, 255, 255, .15) !important;
+}
+
+body .infometry-conversa-product .icp-shift-row small,
+body .infometry-conversa-product .icp-shift-result small {
+  color: #78d8ff !important;
+}
+
+body .infometry-conversa-product .icp-shift-row h3 {
+  color: #f7faff !important;
+}
+
+body .infometry-conversa-product .icp-shift-row p {
+  color: #b9c8e4 !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow::before {
+  background: linear-gradient(90deg, #776bff 0%, #33c5f4 52%, var(--shift-accent) 100%) !important;
+  box-shadow: 0 0 18px rgba(47, 190, 246, .32) !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow i {
+  background: #e8fbff !important;
+  box-shadow: 0 0 0 5px #0a1940, 0 0 0 8px rgba(70, 207, 255, .34), 0 0 24px #43d5ff !important;
+}
+
+/* Keep the journey bright while retaining premium blue-violet detailing. */
+body .infometry-conversa-product .icp-shift-board {
+  border-color: #d6e3f4 !important;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(35, 174, 255, .08), transparent 28%),
+    radial-gradient(circle at 92% 90%, rgba(116, 88, 255, .09), transparent 30%),
+    #fff !important;
+  box-shadow: 0 24px 58px rgba(25, 58, 112, .12), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-labels span {
+  border-color: #d3e0f0 !important;
+  color: #344b66 !important;
+  background: #fff !important;
+  box-shadow: 0 7px 18px rgba(28, 65, 121, .08) !important;
+}
+
+body .infometry-conversa-product .icp-shift-labels span:nth-child(3) {
+  border-color: #9edff0 !important;
+  color: #08758f !important;
+  background: #edfbff !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem {
+  border-color: #d8e2f2 !important;
+  background:
+    radial-gradient(circle at 5% 15%, rgba(93, 91, 255, .08), transparent 34%),
+    linear-gradient(135deg, #fff 0%, #f8faff 100%) !important;
+  box-shadow: 0 12px 28px rgba(27, 56, 105, .09), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-result {
+  border-color: color-mix(in srgb, var(--shift-accent) 34%, #d8e4f2) !important;
+  background:
+    radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--shift-accent) 12%, transparent), transparent 38%),
+    linear-gradient(135deg, #fff 0%, color-mix(in srgb, var(--shift-accent) 6%, #fff) 100%) !important;
+  box-shadow: 0 13px 30px color-mix(in srgb, var(--shift-accent) 11%, rgba(23, 56, 109, .08)), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-row article > span {
+  border-color: rgba(83, 143, 235, .22) !important;
+  color: #146fc2 !important;
+  background: linear-gradient(145deg, #edf8ff, #edf0ff) !important;
+  box-shadow: 0 9px 22px rgba(34, 104, 201, .14), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-row small,
+body .infometry-conversa-product .icp-shift-result small {
+  color: #157ca5 !important;
+}
+
+body .infometry-conversa-product .icp-shift-row h3 {
+  color: #0b2148 !important;
+}
+
+body .infometry-conversa-product .icp-shift-row p {
+  color: #52647c !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow i {
+  background: #fff !important;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 8px rgba(57, 180, 237, .28), 0 0 20px #52c9f4 !important;
+}
+
+/* Harmonize the result column with a restrained blue-cyan palette. */
+body .infometry-conversa-product .icp-shift-row { --shift-accent: #168cf8 !important; }
+body .infometry-conversa-product .icp-shift-row:nth-child(3) { --shift-accent: #06a4c7 !important; }
+body .infometry-conversa-product .icp-shift-row:nth-child(4) { --shift-accent: #3478df !important; }
+body .infometry-conversa-product .icp-shift-row:nth-child(5) { --shift-accent: #128fb8 !important; }
+
+body .infometry-conversa-product .icp-shift-result {
+  border-color: color-mix(in srgb, var(--shift-accent) 28%, #d9e5f2) !important;
+  background:
+    radial-gradient(circle at 96% 8%, color-mix(in srgb, var(--shift-accent) 9%, transparent), transparent 40%),
+    linear-gradient(135deg, #fff 0%, color-mix(in srgb, var(--shift-accent) 4%, #f8fbff) 100%) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result::before {
+  background: linear-gradient(90deg, #168cf8, var(--shift-accent), #34c8e8) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result > span {
+  color: var(--shift-accent) !important;
+  background: linear-gradient(145deg, #f4fbff, color-mix(in srgb, var(--shift-accent) 9%, #fff)) !important;
+}
+
+/* One cohesive premium identity for every result card. */
+body .infometry-conversa-product .icp-shift-row,
+body .infometry-conversa-product .icp-shift-row:nth-child(3),
+body .infometry-conversa-product .icp-shift-row:nth-child(4),
+body .infometry-conversa-product .icp-shift-row:nth-child(5) {
+  --shift-accent: #425de8 !important;
+}
+
+body .infometry-conversa-product .icp-shift-result {
+  border-color: rgba(77, 105, 225, .28) !important;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(94, 78, 235, .11), transparent 38%),
+    radial-gradient(circle at 5% 92%, rgba(39, 190, 226, .07), transparent 34%),
+    linear-gradient(135deg, #fff 0%, #f7f8ff 56%, #f3f6ff 100%) !important;
+  box-shadow: 0 14px 34px rgba(47, 71, 159, .11), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-result::before {
+  background: linear-gradient(90deg, #147cf3 0%, #6257e8 55%, #27badf 100%) !important;
+  box-shadow: 0 5px 18px rgba(79, 88, 227, .2) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result > span {
+  border-color: rgba(72, 104, 224, .22) !important;
+  color: #3558d8 !important;
+  background: linear-gradient(145deg, #eef6ff 0%, #eeedff 100%) !important;
+  box-shadow: 0 9px 24px rgba(57, 82, 190, .14), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-result small {
+  color: #3868c8 !important;
+}
+
+/* Distinct, refined jewel tones for the four positive outcomes. */
+body .infometry-conversa-product .icp-shift-row {
+  --result-a: #2563eb;
+  --result-b: #38bdf8;
+  --result-tint: #edf6ff;
+}
+
+body .infometry-conversa-product .icp-shift-row:nth-child(3) {
+  --result-a: #0f9388;
+  --result-b: #2dd4bf;
+  --result-tint: #edfbf8;
+}
+
+body .infometry-conversa-product .icp-shift-row:nth-child(4) {
+  --result-a: #6d50d8;
+  --result-b: #a78bfa;
+  --result-tint: #f4f1ff;
+}
+
+body .infometry-conversa-product .icp-shift-row:nth-child(5) {
+  --result-a: #c64b78;
+  --result-b: #f07b68;
+  --result-tint: #fff1f5;
+}
+
+body .infometry-conversa-product .icp-shift-result {
+  border-color: color-mix(in srgb, var(--result-a) 27%, #dbe5f1) !important;
+  background:
+    radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--result-b) 12%, transparent), transparent 38%),
+    linear-gradient(135deg, #fff 0%, var(--result-tint) 100%) !important;
+  box-shadow: 0 14px 34px color-mix(in srgb, var(--result-a) 11%, rgba(36, 55, 100, .06)), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-result::before {
+  background: linear-gradient(90deg, var(--result-a), var(--result-b)) !important;
+  box-shadow: 0 5px 17px color-mix(in srgb, var(--result-a) 24%, transparent) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result > span {
+  border-color: color-mix(in srgb, var(--result-a) 22%, #dce6f2) !important;
+  color: var(--result-a) !important;
+  background: linear-gradient(145deg, #fff, var(--result-tint)) !important;
+  box-shadow: 0 9px 22px color-mix(in srgb, var(--result-a) 14%, transparent), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-result small {
+  color: color-mix(in srgb, var(--result-a) 88%, #17395d) !important;
+}
+
+/* Keep the complete transformation section on a clean white canvas. */
+body .infometry-conversa-product .icp-outcome-journey {
+  background: #fff !important;
+}
+
+body .infometry-conversa-product .icp-outcome-journey .icp-shell {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+body .infometry-conversa-product .icp-outcome-journey .icp-shell::after {
+  display: none !important;
+}
+
+/* Add premium depth and richer accents without losing the white canvas. */
+body .infometry-conversa-product .icp-shift-row {
+  --problem-a: #3157d5;
+  --problem-b: #25aee8;
+}
+
+body .infometry-conversa-product .icp-shift-row:nth-child(3) {
+  --problem-a: #087f78;
+  --problem-b: #22bfae;
+}
+
+body .infometry-conversa-product .icp-shift-row:nth-child(4) {
+  --problem-a: #6445c5;
+  --problem-b: #9575e8;
+}
+
+body .infometry-conversa-product .icp-shift-row:nth-child(5) {
+  --problem-a: #b83f69;
+  --problem-b: #e76b7b;
+}
+
+body .infometry-conversa-product .icp-shift-problem {
+  border-color: color-mix(in srgb, var(--problem-a) 24%, #dce5f1) !important;
+  background:
+    radial-gradient(circle at 2% 50%, color-mix(in srgb, var(--problem-b) 13%, transparent), transparent 30%),
+    linear-gradient(135deg, #fff 0%, color-mix(in srgb, var(--problem-a) 5%, #f9fbff) 100%) !important;
+  box-shadow: 0 15px 36px color-mix(in srgb, var(--problem-a) 10%, rgba(27, 50, 94, .07)), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem::before {
+  width: 6px !important;
+  background: linear-gradient(180deg, var(--problem-a), var(--problem-b)) !important;
+  box-shadow: 4px 0 18px color-mix(in srgb, var(--problem-b) 34%, transparent) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem > span,
+body .infometry-conversa-product .icp-shift-result > span {
+  border-color: rgba(255, 255, 255, .56) !important;
+  color: #fff !important;
+  box-shadow: 0 11px 26px color-mix(in srgb, var(--problem-a, var(--result-a)) 26%, transparent), inset 0 1px rgba(255, 255, 255, .38) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem > span {
+  background: linear-gradient(145deg, var(--problem-b), var(--problem-a)) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result > span {
+  background: linear-gradient(145deg, var(--result-b), var(--result-a)) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result {
+  background:
+    radial-gradient(circle at 94% 10%, color-mix(in srgb, var(--result-b) 19%, transparent), transparent 40%),
+    linear-gradient(135deg, #fff 0%, var(--result-tint) 100%) !important;
+  box-shadow: 0 16px 38px color-mix(in srgb, var(--result-a) 14%, rgba(30, 48, 92, .06)), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow::before {
+  background: linear-gradient(90deg, var(--problem-a), var(--result-b)) !important;
+  box-shadow: 0 3px 14px color-mix(in srgb, var(--result-a) 25%, transparent) !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow i {
+  border: 3px solid #fff !important;
+  background: linear-gradient(145deg, var(--result-b), var(--result-a)) !important;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--result-a) 16%, #fff), 0 7px 18px color-mix(in srgb, var(--result-a) 30%, transparent) !important;
+}
+
+/* Separate Before from After: neutral slate problems versus jewel-tone outcomes. */
+body .infometry-conversa-product .icp-shift-problem {
+  border-color: #d4dde9 !important;
+  background:
+    radial-gradient(circle at 3% 50%, rgba(100, 116, 139, .08), transparent 32%),
+    linear-gradient(135deg, #fff 0%, #f3f6fa 100%) !important;
+  box-shadow: 0 12px 30px rgba(51, 65, 85, .09), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem::before {
+  background: linear-gradient(180deg, #475569, #94a3b8) !important;
+  box-shadow: 4px 0 16px rgba(71, 85, 105, .18) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem > span {
+  border-color: rgba(255, 255, 255, .7) !important;
+  color: #fff !important;
+  background: linear-gradient(145deg, #64748b, #334155) !important;
+  box-shadow: 0 10px 24px rgba(51, 65, 85, .2), inset 0 1px rgba(255, 255, 255, .28) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem small {
+  color: #64748b !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow::before {
+  background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 38%, var(--result-b) 100%) !important;
+}
+
+/* Final balance: softly colored Before cards and strongly highlighted After cards. */
+body .infometry-conversa-product .icp-shift-problem {
+  border-color: color-mix(in srgb, var(--problem-a) 18%, #dce5f1) !important;
+  background:
+    radial-gradient(circle at 3% 50%, color-mix(in srgb, var(--problem-b) 7%, transparent), transparent 32%),
+    linear-gradient(135deg, #fff 0%, color-mix(in srgb, var(--problem-a) 3%, #f9fbff) 100%) !important;
+  box-shadow: 0 10px 26px rgba(38, 57, 94, .07), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem::before {
+  background: linear-gradient(180deg, var(--problem-a), var(--problem-b)) !important;
+  box-shadow: 3px 0 14px color-mix(in srgb, var(--problem-b) 20%, transparent) !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem > span {
+  border-color: color-mix(in srgb, var(--problem-a) 17%, #e1e8f2) !important;
+  color: var(--problem-a) !important;
+  background: linear-gradient(145deg, #fff, color-mix(in srgb, var(--problem-b) 8%, #f4f8ff)) !important;
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--problem-a) 10%, transparent), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-problem small {
+  color: color-mix(in srgb, var(--problem-a) 72%, #38516c) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result {
+  border-color: color-mix(in srgb, var(--result-a) 42%, #d8e2ef) !important;
+  background:
+    radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--result-b) 25%, transparent), transparent 42%),
+    linear-gradient(135deg, #fff 0%, color-mix(in srgb, var(--result-a) 10%, var(--result-tint)) 100%) !important;
+  box-shadow: 0 18px 42px color-mix(in srgb, var(--result-a) 19%, rgba(30, 48, 92, .06)), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-shift-result::before {
+  height: 5px !important;
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--result-a) 34%, transparent) !important;
+}
+
+body .infometry-conversa-product .icp-shift-result > span {
+  color: #fff !important;
+  background: linear-gradient(145deg, var(--result-b), var(--result-a)) !important;
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--result-a) 28%, transparent), inset 0 1px rgba(255, 255, 255, .38) !important;
+}
+
+body .infometry-conversa-product .icp-shift-flow::before {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--problem-a) 55%, #cbd5e1), var(--result-b)) !important;
+}
+
+/* Keep grid lines negligible across every graph while preserving chart surfaces. */
+body .infometry-conversa-product .icp-line-chart,
+body .infometry-conversa-product .icp-chart-card-line {
+  background: linear-gradient(90deg, rgba(255, 255, 255, .018), rgba(42, 202, 255, .055)) !important;
+}
+
+body .infometry-conversa-product .icp-revenue-line {
+  background: linear-gradient(180deg, rgba(95, 55, 255, .055), rgba(35, 130, 255, .012)) !important;
+}
+
+body .infometry-conversa-product .icp-chart-grid path {
+  stroke: rgba(157, 203, 255, .025) !important;
+}
+
+/* Remove SVG grid guides completely and keep plotted graph lines refined. */
+body .infometry-conversa-product .icp-chart-grid {
+  display: none !important;
+}
+
+body .infometry-conversa-product .icp-chart-line,
+body .infometry-conversa-product .icp-chart-line-gold {
+  stroke-width: 2.25 !important;
+}
+
+body .infometry-conversa-product .icp-chart-target {
+  stroke-width: 1.25 !important;
+  opacity: .62 !important;
+}
+
+body .infometry-conversa-product .icp-chart-line-gold {
+  stroke-width: 1.15 !important;
+  filter: drop-shadow(0 0 1.5px rgba(255, 204, 70, .28)) !important;
+}
+
+/* Match KPI status colors to their card accents instead of generic green. */
+body .infometry-conversa-product .icp-finance-kpis article:first-child small {
+  color: #1478b8 !important;
+}
+
+body .infometry-conversa-product .icp-finance-kpis article:first-child small::before {
+  background: linear-gradient(145deg, #28bde8, #1478c8) !important;
+}
+
+body .infometry-conversa-product .icp-finance-kpis article:nth-child(2) small {
+  color: #6552ce !important;
+}
+
+body .infometry-conversa-product .icp-finance-kpis article:nth-child(2) small::before {
+  background: linear-gradient(145deg, #9577ef, #654bd2) !important;
+}
+
+/* Align use-case checklist icons and labels on one consistent center line. */
+body .infometry-conversa-product .icp-finance-copy li {
+  display: flex !important;
+  min-height: 44px !important;
+  padding: 9px 12px !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+body .infometry-conversa-product .icp-finance-copy li::before {
+  position: static !important;
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px !important;
+  transform: none !important;
+}
+
+/* Match the comparison surface to The Problem gradient and highlight Capabilities. */
+body .infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
+  border-color: rgba(74, 180, 255, .38) !important;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(0, 168, 228, .24), transparent 34%),
+    radial-gradient(circle at 84% 38%, rgba(103, 55, 235, .34), transparent 38%),
+    linear-gradient(112deg, #03143f 0%, #073270 47%, #281886 100%) !important;
+  box-shadow: 0 30px 76px rgba(8, 30, 88, .28) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child,
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th {
+  border-right: 2px solid #3f8cff !important;
+  border-left: 2px solid #5a5cff !important;
+  background: linear-gradient(90deg, rgba(31, 81, 188, .13), rgba(95, 65, 255, .09)) !important;
+  box-shadow: 0 0 32px rgba(48, 105, 255, .11) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child {
+  padding-left: 18px !important;
+  border-top: 2px solid #6d63ff !important;
+  border-radius: 16px 16px 0 0 !important;
+  color: #dce9ff !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child th {
+  border-bottom: 2px solid #4c78ff !important;
+  border-radius: 0 0 16px 16px !important;
+}
+
+/* Highlight only the Capabilities heading, not its complete column. */
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th {
+  border-right: 0 !important;
+  border-left: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Premium demo experience: unified heading, calendar, and form treatment. */
+body .infometry-conversa-product .icp-demo-form-section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 92px 0 104px !important;
+  background:
+    radial-gradient(circle at 8% 26%, rgba(25, 178, 239, .1), transparent 28%),
+    radial-gradient(circle at 91% 18%, rgba(108, 82, 235, .1), transparent 30%),
+    linear-gradient(180deg, #fff 0%, #f7faff 100%) !important;
+}
+
+body .infometry-conversa-product .icp-demo-form-section .icp-section-heading {
+  max-width: 980px !important;
+  margin: 0 auto 50px !important;
+  padding-top: 48px !important;
+}
+
+body .infometry-conversa-product .icp-demo-form-section .icp-section-heading::before {
+  min-height: 36px !important;
+  padding: 9px 17px !important;
+  border-color: rgba(70, 178, 243, .42) !important;
+  color: #eaf8ff !important;
+  background: linear-gradient(110deg, #087fbf, #4263df 58%, #6850da) !important;
+  box-shadow: 0 12px 30px rgba(44, 96, 196, .22) !important;
+  letter-spacing: .16em !important;
+}
+
+body .infometry-conversa-product .icp-demo-form-section .icp-section-heading h2 {
+  max-width: 900px !important;
+  margin-inline: auto !important;
+  color: #081c46 !important;
+  font-size: clamp(42px, 4vw, 58px) !important;
+  font-weight: 800 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.045em !important;
+}
+
+body .infometry-conversa-product .icp-demo-form-section .icp-section-heading p:first-of-type {
+  margin-top: 20px !important;
+  color: #18416b !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+}
+
+body .infometry-conversa-product .icp-demo-form-section .icp-section-heading p:last-of-type {
+  max-width: 760px !important;
+  margin-top: 9px !important;
+  color: #60718a !important;
+  font-size: 16px !important;
+}
+
+body .infometry-conversa-product .icp-demo-form-grid {
+  width: min(100%, 1400px) !important;
+  margin: 0 auto !important;
+  grid-template-columns: minmax(430px, .92fr) minmax(520px, 1.08fr) !important;
+  gap: 26px !important;
+}
+
+body .infometry-conversa-product .icp-demo-visual {
+  min-height: 640px !important;
+  padding: 38px !important;
+  border: 1px solid rgba(67, 166, 255, .42) !important;
+  border-radius: 26px !important;
+  background:
+    radial-gradient(circle at 15% 16%, rgba(23, 205, 240, .25), transparent 30%),
+    radial-gradient(circle at 86% 82%, rgba(111, 72, 255, .34), transparent 34%),
+    linear-gradient(140deg, #04163b 0%, #082c68 56%, #25166c 100%) !important;
+  box-shadow: 0 28px 70px rgba(7, 35, 93, .25), inset 0 1px rgba(255, 255, 255, .1) !important;
+}
+
+body .infometry-conversa-product .icp-demo-card {
+  width: min(100%, 470px) !important;
+  padding: 30px !important;
+  border: 1px solid rgba(205, 224, 249, .8) !important;
+  border-radius: 22px !important;
+  background: linear-gradient(155deg, rgba(255, 255, 255, .99), rgba(244, 248, 255, .97)) !important;
+  box-shadow: 0 26px 58px rgba(0, 12, 46, .3), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-demo-card > span {
+  max-width: 330px !important;
+  color: #081d47 !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.025em !important;
+}
+
+body .infometry-conversa-product .icp-demo-schedule-trigger {
+  margin-top: 20px !important;
+  padding: 11px 16px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(100deg, #087ff4, #5d59e8) !important;
+  box-shadow: 0 10px 24px rgba(60, 91, 224, .25) !important;
+}
+
+body .infometry-conversa-product .icp-demo-calendar {
+  margin-top: 22px !important;
+  padding: 20px !important;
+  border: 1px solid #d8e5f5 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #f8fbff, #eef4ff) !important;
+  box-shadow: inset 0 1px #fff, 0 12px 30px rgba(35, 75, 135, .09) !important;
+}
+
+body .infometry-conversa-product .icp-demo-calendar-nav {
+  width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  border: 1px solid #d6e3f4 !important;
+  color: #285c91 !important;
+  background: #fff !important;
+  box-shadow: 0 7px 16px rgba(28, 72, 128, .1) !important;
+}
+
+body .infometry-conversa-product .icp-demo-weekdays i {
+  color: #66809e !important;
+  font-size: 10px !important;
+  letter-spacing: .04em !important;
+}
+
+body .infometry-conversa-product .icp-demo-days button {
+  min-height: 35px !important;
+  border: 1px solid rgba(207, 221, 240, .8) !important;
+  border-radius: 10px !important;
+  color: #214d7b !important;
+  background: rgba(255, 255, 255, .9) !important;
+  box-shadow: 0 4px 10px rgba(43, 79, 128, .06) !important;
+}
+
+body .infometry-conversa-product .icp-demo-calendar .is-selected,
+body .infometry-conversa-product .icp-demo-days button:hover,
+body .infometry-conversa-product .icp-demo-days button:focus-visible {
+  border-color: transparent !important;
+  color: #fff !important;
+  background: linear-gradient(145deg, #168cf8, #6359ea) !important;
+  box-shadow: 0 8px 18px rgba(64, 91, 222, .26) !important;
+}
+
+body .infometry-conversa-product .icp-demo-form {
+  position: relative !important;
+  align-content: start !important;
+  gap: 18px !important;
+  padding: 36px !important;
+  overflow: hidden !important;
+  border: 1px solid #d5e2f2 !important;
+  border-radius: 26px !important;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(73, 153, 255, .08), transparent 30%),
+    linear-gradient(150deg, #fff, #f9fbff) !important;
+  box-shadow: 0 28px 68px rgba(24, 54, 105, .14), inset 0 1px #fff !important;
+}
+
+body .infometry-conversa-product .icp-demo-form::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 32px auto !important;
+  height: 4px !important;
+  border-radius: 0 0 8px 8px !important;
+  background: linear-gradient(90deg, #168cf8, #6559e9, #22bddb) !important;
+}
+
+body .infometry-conversa-product .icp-demo-form label {
+  gap: 9px !important;
+  color: #18355b !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  letter-spacing: .01em !important;
+}
+
+body .infometry-conversa-product .icp-demo-form input {
+  height: 52px !important;
+  padding: 0 15px !important;
+  border: 1px solid #d3dfef !important;
+  border-radius: 12px !important;
+  color: #0f2749 !important;
+  background: rgba(248, 251, 255, .92) !important;
+  box-shadow: inset 0 1px 2px rgba(28, 54, 94, .025) !important;
+}
+
+body .infometry-conversa-product .icp-demo-form input:focus {
+  border-color: #438cf1 !important;
+  outline: 0 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 4px rgba(67, 140, 241, .13), 0 9px 22px rgba(34, 91, 173, .08) !important;
+}
+
+body .infometry-conversa-product .icp-demo-form > .icp-button {
+  width: 100% !important;
+  min-height: 52px !important;
+  margin-top: 4px !important;
+  justify-content: center !important;
+  border-radius: 12px !important;
+  background: linear-gradient(100deg, #087ff4, #5f59e9 58%, #1db9dc) !important;
+  box-shadow: 0 14px 30px rgba(58, 93, 220, .25) !important;
+}
+
+@media (max-width: 980px) {
+  body .infometry-conversa-product .icp-demo-form-grid {
+    width: min(100%, 760px) !important;
+    grid-template-columns: 1fr !important;
+  }
+  body .infometry-conversa-product .icp-demo-visual { min-height: 560px !important; }
+}
+
+@media (max-width: 620px) {
+  body .infometry-conversa-product .icp-demo-form-section { padding: 72px 0 80px !important; }
+  body .infometry-conversa-product .icp-demo-form-section .icp-section-heading h2 { font-size: 38px !important; }
+  body .infometry-conversa-product .icp-demo-visual { min-height: 0 !important; padding: 18px !important; border-radius: 20px !important; }
+  body .infometry-conversa-product .icp-demo-card,
+  body .infometry-conversa-product .icp-demo-form { padding: 22px !important; border-radius: 18px !important; }
+  body .infometry-conversa-product .icp-form-row { grid-template-columns: 1fr !important; }
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child {
+  padding-left: 18px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(177, 199, 235, .16) !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child th {
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Replace basic status dots with refined, descriptive support badges. */
+body .infometry-conversa-product .icp-comparison-simple .icp-status {
+  min-width: 118px !important;
+  min-height: 32px !important;
+  padding: 6px 11px 6px 7px !important;
+  gap: 7px !important;
+  border: 1px solid rgba(133, 164, 213, .22) !important;
+  border-radius: 999px !important;
+  color: #dce7f8 !important;
+  background: rgba(13, 31, 76, .44) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .05) !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status::before {
+  display: grid !important;
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-yes {
+  border-color: rgba(41, 211, 157, .28) !important;
+  color: #c9ffec !important;
+  background: linear-gradient(90deg, rgba(10, 130, 102, .2), rgba(16, 185, 129, .1)) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-yes::before {
+  content: "\2713" !important;
+  background: linear-gradient(145deg, #2bd6a3, #0e9f79) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-partial {
+  border-color: rgba(244, 181, 70, .3) !important;
+  color: #ffe4ab !important;
+  background: linear-gradient(90deg, rgba(170, 105, 13, .2), rgba(245, 158, 11, .1)) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-partial::before {
+  content: "\2013" !important;
+  background: linear-gradient(145deg, #f8bf54, #d58a12) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-no {
+  border-color: rgba(244, 103, 123, .3) !important;
+  color: #ffd5dc !important;
+  background: linear-gradient(90deg, rgba(160, 49, 72, .2), rgba(239, 84, 110, .1)) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-status-no::before {
+  content: "\00d7" !important;
+  background: linear-gradient(145deg, #f8798d, #d74760) !important;
+}
+
+/* Give the comparison matrix distinct glass rows and stronger hierarchy. */
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table {
+  border-spacing: 0 8px !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr {
+  --matrix-accent: #3aa9ff;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:nth-child(4n + 2) {
+  --matrix-accent: #27c7bd;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:nth-child(4n + 3) {
+  --matrix-accent: #8b72f4;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:nth-child(4n) {
+  --matrix-accent: #54bfe7;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th,
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td {
+  height: 58px !important;
+  border-top: 1px solid rgba(142, 180, 238, .14) !important;
+  border-bottom: 1px solid rgba(142, 180, 238, .14) !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .026)) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th {
+  position: relative !important;
+  padding-left: 24px !important;
+  border-left: 4px solid var(--matrix-accent) !important;
+  border-radius: 11px 0 0 11px !important;
+  color: #e8f2ff !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td:last-child {
+  border-radius: 0 11px 11px 0 !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th {
+  height: 74px !important;
+  border-bottom-color: rgba(150, 190, 255, .26) !important;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, .2) !important;
+}
+
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2),
+body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td:nth-child(2) {
+  border-right-color: #42a2ff !important;
+  border-left-color: #6b63ff !important;
+  background: linear-gradient(90deg, rgba(20, 117, 231, .22), rgba(97, 73, 239, .17)) !important;
+  box-shadow: inset 0 0 26px rgba(54, 135, 255, .09), 0 0 28px rgba(49, 107, 255, .12) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:hover th,
+  body .infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:hover td {
+    background: linear-gradient(90deg, rgba(75, 153, 255, .13), rgba(115, 83, 244, .1)) !important;
+    border-color: color-mix(in srgb, var(--matrix-accent) 38%, rgba(142, 180, 238, .2)) !important;
+  }
+}
+
+/* Show status icon and label without a pill/button field. */
+body .infometry-conversa-product .icp-comparison-simple .icp-status,
+body .infometry-conversa-product .icp-comparison-simple .icp-status-yes,
+body .infometry-conversa-product .icp-comparison-simple .icp-status-partial,
+body .infometry-conversa-product .icp-comparison-simple .icp-status-no {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 1100px) {
+  body .infometry-conversa-product .icp-outcomes .icp-four {
+    width: min(100%, 980px) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  body .infometry-conversa-product .icp-outcomes .icp-four {
+    width: min(100%, 520px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  body .infometry-conversa-product .icp-outcomes .icp-outcome-card {
+    min-height: 130px !important;
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 10px !important;
+    padding: 20px 14px !important;
+  }
+  body .infometry-conversa-product .icp-outcomes .icp-outcome-card p {
+    font-size: 14px !important;
+  }
+}
+
 /* Match architecture colors to the page's blue, cyan, navy and coral system. */
 body .infometry-conversa-product .icp-architecture {
   background:
@@ -7609,4 +8643,76 @@ body .infometry-conversa-product .icp-problem .icp-shell {
     padding-top: 20px !important;
     padding-bottom: 18px !important;
   }
+}
+
+/* Final workflow icon palette precedence. */
+body .infometry-conversa-product .icp-workflow-row article:nth-child(1) {
+  --icp-step-a: #a5f3fc;
+  --icp-step-b: #22d3ee;
+  --icp-step-c: #0e7490;
+  --icp-step-glow: #22d3ee;
+}
+body .infometry-conversa-product .icp-workflow-row article:nth-child(2) {
+  --icp-step-a: #c4b5fd;
+  --icp-step-b: #8b5cf6;
+  --icp-step-c: #6d28d9;
+  --icp-step-glow: #8b5cf6;
+}
+body .infometry-conversa-product .icp-workflow-row article:nth-child(3) {
+  --icp-step-a: #99f6e4;
+  --icp-step-b: #14b8a6;
+  --icp-step-c: #0f766e;
+  --icp-step-glow: #14b8a6;
+}
+body .infometry-conversa-product .icp-workflow-row article:nth-child(4) {
+  --icp-step-a: #f0abfc;
+  --icp-step-b: #d946ef;
+  --icp-step-c: #a21caf;
+  --icp-step-glow: #d946ef;
+}
+body .infometry-conversa-product .icp-workflow-row article .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, var(--icp-step-a) 0%, var(--icp-step-b) 50%, var(--icp-step-c) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .34),
+    inset 0 -10px 22px color-mix(in srgb, var(--icp-step-c) 24%, transparent),
+    0 16px 38px color-mix(in srgb, var(--icp-step-glow) 36%, transparent) !important;
+  animation-name: icpWorkflowIconPremium !important;
+}
+
+body .infometry-conversa-product .icp-workflow-row article:nth-child(1) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, #a5f3fc 0%, #22d3ee 50%, #0e7490 100%) !important;
+}
+body .infometry-conversa-product .icp-workflow-row article:nth-child(2) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, #c4b5fd 0%, #8b5cf6 50%, #6d28d9 100%) !important;
+}
+body .infometry-conversa-product .icp-workflow-row article:nth-child(3) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, #99f6e4 0%, #14b8a6 50%, #0f766e 100%) !important;
+}
+body .infometry-conversa-product .icp-workflow-row article:nth-child(4) .icp-step-icon {
+  background:
+    radial-gradient(circle at 27% 18%, rgba(255, 255, 255, .42), transparent 25%),
+    linear-gradient(145deg, #f0abfc 0%, #d946ef 50%, #a21caf 100%) !important;
+}
+
+/* Match the workflow canvas to the challenge section background. */
+body .infometry-conversa-product .icp-workflow {
+  background:
+    radial-gradient(circle at 14% 35%, rgba(0, 168, 228, .25), transparent 34%),
+    radial-gradient(circle at 82% 48%, rgba(103, 55, 235, .38), transparent 38%),
+    linear-gradient(112deg, #03143f 0%, #073270 47%, #281886 100%) !important;
+}
+
+body .infometry-conversa-product .icp-workflow::before {
+  opacity: .34 !important;
+  background-image: radial-gradient(rgba(75, 182, 255, .5) 1px, transparent 1px) !important;
+  background-size: 12px 12px !important;
+  mask-image: linear-gradient(90deg, #000, transparent 44%, #000) !important;
 }

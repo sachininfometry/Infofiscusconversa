@@ -78,30 +78,6 @@ $comparison_rows = array(
 	array( 'capability' => 'Custom UI', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'no' ),
 );
 
-$pricing_plans = array(
-	array(
-		'name'     => 'Advanced',
-		'price'    => '$60,000',
-		'period'   => '/ year',
-		'featured' => false,
-		'features' => array( '5 Users', 'Annual Subscription', 'Conversational Analytics', 'Semantic Model Framework', 'Limited Multi-LLM Support', '2 Data Sources', 'Standard Support' ),
-	),
-	array(
-		'name'     => 'Professional',
-		'price'    => '$100,000',
-		'period'   => '/ year',
-		'featured' => true,
-		'features' => array( '10 Users', 'Annual Subscription', 'Conversational Analytics', 'Semantic Model Framework', 'Expanded Multi-LLM Support', '5 Data Sources', 'Priority Support' ),
-	),
-	array(
-		'name'     => 'Enterprise',
-		'price'    => 'Talk To Sales',
-		'period'   => '',
-		'featured' => false,
-		'features' => array( '10+ Users', 'Annual Subscription', 'Conversational Analytics', 'Semantic Model Framework', 'Expanded Multi-LLM Support', 'Custom Data Sources', 'Dedicated Support' ),
-	),
-);
-
 $customer_logos = array(
 	array( 'name' => 'Sanofi', 'file' => 'customer-sanofi-logo.png' ),
 	array( 'name' => 'Belk', 'file' => 'customer-belk-logo.png' ),
@@ -526,7 +502,7 @@ $other_products = array(
 									<?php
 									$status       = $row[ $column ];
 									$status_label = 'yes' === $status ? 'Included' : ( 'partial' === $status ? 'Partial' : 'Not included' );
-									$status_text  = 'yes' === $status ? 'Yes' : ( 'partial' === $status ? 'Some' : 'No' );
+									$status_text  = 'yes' === $status ? 'Full Support' : ( 'partial' === $status ? 'Partial' : 'Not Supported' );
 									?>
 									<td><span class="icp-status icp-status-<?php echo esc_attr( $status ); ?>" aria-label="<?php echo esc_attr( $status_label ); ?>"><?php echo esc_html( $status_text ); ?></span></td>
 								<?php endforeach; ?>
@@ -537,31 +513,6 @@ $other_products = array(
 			</div>
 			<div class="icp-section-action">
 				<a class="icp-button icp-button-primary" href="<?php echo esc_url( $demo_url ); ?>">Book a Demo</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="icp-pricing" id="icp-pricing" aria-labelledby="icp-pricing-title">
-		<div class="icp-shell">
-			<div class="icp-section-heading icp-center">
-				<h2 id="icp-pricing-title">INFOFISCUS Conversa Plans &amp; Pricing</h2>
-				<p>Choose the package that fits your analytics rollout.</p>
-			</div>
-			<div class="icp-pricing-grid">
-				<?php foreach ( $pricing_plans as $plan ) : ?>
-					<article class="icp-pricing-card<?php echo $plan['featured'] ? ' is-featured' : ''; ?>">
-						<div class="icp-pricing-head">
-							<h3><?php echo esc_html( $plan['name'] ); ?></h3>
-							<p><strong><?php echo esc_html( $plan['price'] ); ?></strong><?php echo esc_html( $plan['period'] ); ?></p>
-						</div>
-						<ul>
-							<?php foreach ( $plan['features'] as $feature ) : ?>
-								<li><span class="icp-price-check">Yes</span><?php echo esc_html( $feature ); ?></li>
-							<?php endforeach; ?>
-						</ul>
-						<a class="icp-button <?php echo $plan['featured'] ? 'icp-button-primary' : 'icp-button-secondary'; ?>" href="<?php echo esc_url( $demo_url ); ?>"><?php echo 'Enterprise' === $plan['name'] ? 'Talk To Sales' : 'Book a Demo'; ?></a>
-					</article>
-				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
