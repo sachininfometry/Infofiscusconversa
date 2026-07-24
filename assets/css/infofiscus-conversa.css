@@ -6026,6 +6026,54 @@ body .infometry-conversa-product .icp-personas .icp-persona-tags span {
   white-space: nowrap !important;
 }
 
+/* Final comparison-table border and typography refinement. */
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
+  border: 2px solid #cbd7e6 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  box-shadow: 0 16px 38px rgba(31, 54, 88, .1) !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table {
+  overflow: hidden !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table th,
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table td {
+  border-right: 1px solid #d8e1ec !important;
+  border-bottom: 1px solid #d8e1ec !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table th:last-child,
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table td:last-child {
+  border-right: 0 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child th,
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th {
+  height: 60px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .01em !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child {
+  font-size: 14px !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
 body .infometry-conversa-product.infometry-conversa-product .icp-problem .icp-section-heading::before,
 body .infometry-conversa-product.infometry-conversa-product .icp-demo-form-section .icp-section-heading::before,
 body .infometry-conversa-product.infometry-conversa-product .icp-customers .icp-section-heading::before,
