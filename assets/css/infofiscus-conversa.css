@@ -6026,6 +6026,72 @@ body .infometry-conversa-product .icp-personas .icp-persona-tags span {
   white-space: nowrap !important;
 }
 
+/* Stronger comparison column titles and a distinct Modern AI palette. */
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th {
+  height: 70px !important;
+  font-size: 17px !important;
+  line-height: 1.2 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child {
+  font-size: 18px !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2) img {
+  width: auto !important;
+  max-width: 148px !important;
+  max-height: 38px !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(5) {
+  color: #ffffff !important;
+  background: #5b4eb7 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td:nth-child(5) {
+  background: #f3f0fb !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody tr:hover td:nth-child(5) {
+  background: #ebe6f8 !important;
+}
+
+/* Final comparison hierarchy and single-colour Conversa treatment. */
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison .icp-section-heading h2 {
+  font-size: clamp(44px, 3.6vw, 56px) !important;
+  line-height: 1.08 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:first-child {
+  font-size: 18px !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody th {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table thead th:nth-child(2) {
+  border-right: 1px solid #d8e1ec !important;
+  border-left: 1px solid #d8e1ec !important;
+  border-radius: 0 !important;
+  background: #245c91 !important;
+  box-shadow: none !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product.infometry-conversa-product .icp-comparison-simple .icp-comparison-table tbody td:nth-child(2) {
+  border-right: 1px solid #d8e1ec !important;
+  border-left: 0 !important;
+  background: #f1f6fc !important;
+  box-shadow: none !important;
+}
+
 /* Final comparison-table border and typography refinement. */
 body .infometry-conversa-product.infometry-conversa-product .icp-comparison-table-wrap.icp-comparison-simple {
   border: 2px solid #cbd7e6 !important;

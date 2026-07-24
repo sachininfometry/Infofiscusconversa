@@ -73,9 +73,7 @@ $comparison_rows = array(
 	array( 'capability' => 'SQL Transparency', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
 	array( 'capability' => 'Multi Data Sources', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'partial' ),
 	array( 'capability' => 'Unstructured Data', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'partial' ),
-	array( 'capability' => 'Narrative Summaries', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'partial', 'ai' => 'partial' ),
 	array( 'capability' => 'Governance', 'conversa' => 'yes', 'tableau' => 'yes', 'powerbi' => 'yes', 'ai' => 'partial' ),
-	array( 'capability' => 'Custom UI', 'conversa' => 'yes', 'tableau' => 'no', 'powerbi' => 'no', 'ai' => 'no' ),
 );
 
 $customer_logos = array(

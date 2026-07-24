@@ -90,9 +90,7 @@
       'SQL Transparency',
       'Multi Data Sources',
       'Unstructured Data',
-      'Narrative Summaries',
-      'Governance',
-      'Custom UI'
+      'Governance'
     ];
     Array.prototype.slice.call(table.querySelectorAll('tbody tr')).forEach(function (row) {
       var heading = row.querySelector('th');
@@ -111,9 +109,7 @@
       'SQL Transparency',
       'Multi Data Sources',
       'Unstructured Data',
-      'Narrative Summaries',
-      'Governance',
-      'Custom UI'
+      'Governance'
     ];
     var allRows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
     var rows = preferredCapabilities.map(function (capability) {
