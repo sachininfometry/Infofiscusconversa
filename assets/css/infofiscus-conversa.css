@@ -6026,6 +6026,130 @@ body .infometry-conversa-product .icp-personas .icp-persona-tags span {
   white-space: nowrap !important;
 }
 
+body .infometry-conversa-product.infometry-conversa-product .icp-problem .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-demo-form-section .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-customers .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-other-products .icp-section-heading::before {
+  min-height: 34px !important;
+  padding: 8px 16px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(61, 191, 244, .68) !important;
+  border-radius: 999px !important;
+  color: #ffffff !important;
+  background: linear-gradient(110deg, #0876b7 0%, #075591 100%) !important;
+  box-shadow: 0 10px 24px rgba(7, 103, 164, .24) !important;
+  font-family: "Open Sans", "Segoe UI", Arial, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  white-space: nowrap !important;
+}
+
+/* Typography lock — keep this final so theme and legacy rules cannot override it. */
+body .infometry-conversa-product.infometry-conversa-product :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  th,
+  .icp-kicker,
+  .icp-eyebrow,
+  .icp-feature-kicker,
+  .icp-persona-eyebrow,
+  .icp-strip-heading,
+  .icp-journey-heading > span,
+  .icp-demo-form-head strong,
+  .icp-demo-calendar-head strong
+) {
+  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product :is(
+  p,
+  li,
+  label,
+  input,
+  select,
+  textarea,
+  button,
+  a,
+  td,
+  small,
+  .icp-button,
+  .icp-demo-selected-date
+) {
+  font-family: "Open Sans", "Segoe UI", Arial, sans-serif !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-problem .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-demo-form-section .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-customers .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-other-products .icp-section-heading::before {
+  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Final font contract: Open Sans for copy/UI, Roboto for every heading. */
+body .infometry-conversa-product,
+body .infometry-conversa-product :is(
+  p,
+  li,
+  label,
+  input,
+  select,
+  textarea,
+  button,
+  a,
+  td,
+  small,
+  .icp-button,
+  .icp-demo-selected-date
+) {
+  font-family: "Open Sans", "Segoe UI", Arial, sans-serif !important;
+}
+
+body .infometry-conversa-product :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  th,
+  .icp-kicker,
+  .icp-eyebrow,
+  .icp-feature-kicker,
+  .icp-persona-eyebrow,
+  .icp-strip-heading,
+  .icp-journey-heading > span,
+  .icp-demo-form-head strong,
+  .icp-demo-calendar-head strong
+) {
+  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-problem .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-demo-form-section .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-customers .icp-section-heading::before,
+body .infometry-conversa-product.infometry-conversa-product .icp-other-products .icp-section-heading::before {
+  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+}
+
+body .infometry-conversa-product.infometry-conversa-product .icp-intro-showcase-head .icp-kicker,
+body .infometry-conversa-product.infometry-conversa-product .icp-journey-heading > span,
+body .infometry-conversa-product.infometry-conversa-product .icp-strip-heading,
+body .infometry-conversa-product.infometry-conversa-product .icp-persona-eyebrow,
+body .infometry-conversa-product.infometry-conversa-product .icp-feature-kicker,
+body .infometry-conversa-product.infometry-conversa-product .icp-eyebrow {
+  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+}
+
 /* Premium demo CTA typography. */
 body .infometry-conversa-product .icp-demo-form-section .icp-section-heading {
   position: relative !important;
@@ -10148,4 +10272,35 @@ body .infometry-conversa-product .icp-demo-selected-date::before {
   box-shadow: 0 5px 12px rgba(75, 90, 221, .25) !important;
   font-size: 11px !important;
   font-weight: 900 !important;
+}
+
+/* One consistent capsule style for every section eyebrow. */
+body .infometry-conversa-product :is(
+  .icp-intro-showcase-head .icp-kicker,
+  .icp-journey-heading > span,
+  .icp-strip-heading,
+  .icp-persona-eyebrow,
+  .icp-problem .icp-section-heading::before,
+  .icp-demo-form-section .icp-section-heading::before,
+  .icp-customers .icp-section-heading::before,
+  .icp-other-products .icp-section-heading::before
+) {
+  min-height: 34px !important;
+  padding: 8px 16px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(61, 191, 244, .68) !important;
+  border-radius: 999px !important;
+  color: #ffffff !important;
+  background: linear-gradient(110deg, #0876b7 0%, #075591 100%) !important;
+  box-shadow: 0 10px 24px rgba(7, 103, 164, .24) !important;
+  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  white-space: nowrap !important;
 }
