@@ -263,7 +263,7 @@ $other_products = array(
 			<div class="icp-intro-video-frame icp-architecture-frame">
 				<div class="icp-intro-video-bar"><span><i></i><i></i><i></i></span><strong>Conversa Intelligence Architecture</strong><small>Governed analytics</small></div>
 				<div class="icp-architecture" aria-label="INFOFISCUS Conversa architecture from governed context to trusted answer">
-					<div class="icp-architecture-query"><svg><use href="#icp-i-spark"></use></svg><span>Why did customer engagement drop last week?</span></div>
+					<div class="icp-architecture-query"><span class="icp-query-brand-mark"><img src="<?php echo esc_url( INFOMETRY_PT_URL . 'assets/images/infometry-mark-white.png' ); ?>" alt="" aria-hidden="true"></span><span>Why did customer engagement drop last week?</span></div>
 					<div class="icp-architecture-grid">
 						<div class="icp-architecture-sources">
 							<small>Governed context</small>

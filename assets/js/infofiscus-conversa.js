@@ -294,6 +294,120 @@
     button.addEventListener('click', focusDemoForm);
   });
 
+  root.querySelectorAll('.icp-capability-carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.icp-capability-grid');
+    var dragging = false;
+    var dragged = false;
+    var pointerStart = 0;
+    var scrollStart = 0;
+    var resumeAt = 0;
+    var previousFrame = performance.now();
+
+    if (!track) {
+      return;
+    }
+
+    carousel.classList.add('is-hand-slider');
+    carousel.setAttribute('tabindex', '0');
+    carousel.setAttribute('aria-label', 'Platform capabilities. Drag or swipe horizontally to browse.');
+
+    function loopPoint() {
+      return track.scrollWidth / 2;
+    }
+
+    function normalizeScroll() {
+      var midpoint = loopPoint();
+      if (!midpoint) {
+        return;
+      }
+      if (carousel.scrollLeft >= midpoint) {
+        carousel.scrollLeft -= midpoint;
+      } else if (carousel.scrollLeft < 0) {
+        carousel.scrollLeft += midpoint;
+      }
+    }
+
+    carousel.addEventListener('pointerdown', function (event) {
+      if (event.pointerType === 'mouse' && event.button !== 0) {
+        return;
+      }
+      dragging = true;
+      dragged = false;
+      pointerStart = event.clientX;
+      scrollStart = carousel.scrollLeft;
+      resumeAt = Infinity;
+      carousel.classList.add('is-dragging');
+      carousel.setPointerCapture(event.pointerId);
+    });
+
+    carousel.addEventListener('pointermove', function (event) {
+      var delta;
+      if (!dragging) {
+        return;
+      }
+      delta = event.clientX - pointerStart;
+      if (Math.abs(delta) > 4) {
+        dragged = true;
+      }
+      carousel.scrollLeft = scrollStart - delta;
+      normalizeScroll();
+    });
+
+    function finishDrag(event) {
+      if (!dragging) {
+        return;
+      }
+      dragging = false;
+      resumeAt = performance.now() + 1400;
+      carousel.classList.remove('is-dragging');
+      if (carousel.hasPointerCapture(event.pointerId)) {
+        carousel.releasePointerCapture(event.pointerId);
+      }
+    }
+
+    carousel.addEventListener('pointerup', finishDrag);
+    carousel.addEventListener('pointercancel', finishDrag);
+    carousel.addEventListener('lostpointercapture', function () {
+      if (dragging) {
+        dragging = false;
+        resumeAt = performance.now() + 1400;
+        carousel.classList.remove('is-dragging');
+      }
+    });
+
+    carousel.addEventListener('click', function (event) {
+      if (dragged) {
+        event.preventDefault();
+        event.stopPropagation();
+        dragged = false;
+      }
+    }, true);
+
+    carousel.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+        return;
+      }
+      event.preventDefault();
+      carousel.scrollBy({
+        left: event.key === 'ArrowRight' ? 300 : -300,
+        behavior: 'smooth'
+      });
+      resumeAt = performance.now() + 1600;
+    });
+
+    function autoScroll(now) {
+      var elapsed = Math.min(now - previousFrame, 40);
+      previousFrame = now;
+      if (!dragging && now >= resumeAt && !carousel.matches(':hover') && document.visibilityState === 'visible') {
+        carousel.scrollLeft += elapsed * 0.035;
+        normalizeScroll();
+      }
+      window.requestAnimationFrame(autoScroll);
+    }
+
+    window.requestAnimationFrame(autoScroll);
+  });
+
   function animateCounter(el) {
     if (el.icpCounterFrame) {
       window.cancelAnimationFrame(el.icpCounterFrame);
