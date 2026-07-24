@@ -10063,6 +10063,7 @@ body .infometry-conversa-product .icp-demo-form label {
   display: flex !important;
   flex-wrap: wrap !important;
   align-items: center !important;
+  margin: 0 !important;
   column-gap: 4px !important;
   row-gap: 9px !important;
   font-size: 15px !important;
@@ -10073,6 +10074,7 @@ body .infometry-conversa-product .icp-demo-form input {
   width: 100% !important;
   flex: 0 0 100% !important;
   height: 54px !important;
+  margin: 0 !important;
   padding-inline: 16px !important;
   border-radius: 12px !important;
   font-size: 15px !important;
