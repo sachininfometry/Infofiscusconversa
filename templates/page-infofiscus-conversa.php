@@ -354,24 +354,6 @@ $other_products = array(
 		</div>
 	</section>
 
-	<section class="icp-outcomes" aria-labelledby="icp-outcomes-title">
-		<div class="icp-shell">
-			<div class="icp-section-heading icp-center">
-				<h2 id="icp-outcomes-title">Enterprise Outcomes</h2>
-				<p>Delivered for leading organizations.</p>
-			</div>
-			<div class="icp-card-grid icp-four">
-				<?php foreach ( $outcomes as $outcome ) : ?>
-					<article class="icp-outcome-card">
-						<span class="icp-icon"><svg><use href="#icp-i-<?php echo esc_attr( $outcome['icon'] ); ?>"></use></svg></span>
-						<strong data-icp-count="<?php echo esc_attr( preg_replace( '/[^0-9.]/', '', $outcome['stat'] ) ); ?>" data-icp-suffix="<?php echo esc_attr( preg_replace( '/[0-9.]/', '', $outcome['stat'] ) ); ?>"><?php echo esc_html( $outcome['stat'] ); ?></strong>
-						<p><?php echo esc_html( $outcome['copy'] ); ?></p>
-					</article>
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</section>
-
 	<section class="icp-outcome-journey" aria-labelledby="icp-outcome-journey-title">
 		<div class="icp-shell">
 			<div class="icp-journey-heading">
@@ -545,6 +527,10 @@ $other_products = array(
 				</div>
 				<form class="icp-demo-form" id="icp-demo-request-form" action="<?php echo esc_url( $demo_url ); ?>" method="post">
 					<input type="hidden" name="selected_demo_date" data-icp-demo-date value="">
+					<div class="icp-demo-form-head">
+						<strong>Request your personalized demo</strong>
+						<p>Share your details and our analytics team will connect with you.</p>
+					</div>
 					<div class="icp-form-row">
 						<label>Preferred Demo Date<input type="text" name="preferred_demo_date" data-icp-demo-date-display readonly></label>
 						<label>Preferred Demo Time<input type="time" name="preferred_demo_time" data-icp-demo-time required></label>
@@ -553,8 +539,10 @@ $other_products = array(
 						<label>First Name <span>*</span><input type="text" name="first_name" autocomplete="given-name" required></label>
 						<label>Last Name <span>*</span><input type="text" name="last_name" autocomplete="family-name" required></label>
 					</div>
-					<label>Company Email <span>*</span><input type="email" name="company_email" autocomplete="email" required></label>
-					<label>Contact Number <span>*</span><input type="tel" name="contact_number" autocomplete="tel" required></label>
+					<div class="icp-form-row">
+						<label>Company Email <span>*</span><input type="email" name="company_email" autocomplete="email" required></label>
+						<label>Contact Number <span>*</span><input type="tel" name="contact_number" autocomplete="tel" required></label>
+					</div>
 					<label>Company<input type="text" name="company" autocomplete="organization"></label>
 					<button class="icp-button icp-button-primary" type="submit">Book a Demo</button>
 				</form>

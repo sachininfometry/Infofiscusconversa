@@ -6,6 +6,19 @@
     return;
   }
 
+  var demoForm = root.querySelector('.icp-demo-form');
+  if (demoForm && !demoForm.querySelector('.icp-demo-form-head')) {
+    var demoFormHead = document.createElement('div');
+    demoFormHead.className = 'icp-demo-form-head';
+    demoFormHead.innerHTML = '<strong>Request your personalized demo</strong><p>Share your details and our analytics team will connect with you.</p>';
+    var demoFormHiddenField = demoForm.querySelector('input[type="hidden"]');
+    if (demoFormHiddenField) {
+      demoFormHiddenField.insertAdjacentElement('afterend', demoFormHead);
+    } else {
+      demoForm.prepend(demoFormHead);
+    }
+  }
+
   var demoHeading = root.querySelector('.icp-demo-form-section .icp-section-heading');
   if (demoHeading) {
     var demoTitle = demoHeading.querySelector('h2');
@@ -68,6 +81,25 @@
     }
 
     wrap.classList.add('icp-comparison-simple');
+    var comparisonCapabilities = [
+      'Natural Language Query',
+      'Automated Insights',
+      'Root Cause Analysis',
+      'Predictive Analytics',
+      'Semantic Layer',
+      'SQL Transparency',
+      'Multi Data Sources',
+      'Unstructured Data',
+      'Narrative Summaries',
+      'Governance',
+      'Custom UI'
+    ];
+    Array.prototype.slice.call(table.querySelectorAll('tbody tr')).forEach(function (row) {
+      var heading = row.querySelector('th');
+      if (heading && comparisonCapabilities.indexOf(heading.textContent.trim()) === -1) {
+        row.remove();
+      }
+    });
     return;
 
     var preferredCapabilities = [
